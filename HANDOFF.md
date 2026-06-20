@@ -1,88 +1,79 @@
-# HANDOFF · YouTube Content Pipeline
+# HANDOFF · 猫波信号站
 
 > 打开新会话时读此文件，了解当前状态和下一步。
 
 ## 当前状态
 
-项目已从纯规范文档落地为可运行代码。上一次会话的核心产出：
+Kevin Weil 期已完成制作。架构调整：管线 SDK 在 lab，制作全周期在 output/视频/YYYYMMDD_slug/。
 
-- `pipeline.py` — 完整 CLI，6 步管线（下载→断句→翻译→字数控制→ASS→渲染），已通过单元测试
-- `_tools/gen_cover.py` — PIL 封面生成器，SimHei 暖黄主题，命令行独立运行
-- `_ref/pitfalls.md` — 8 条详细踩坑记录
-- `SKILL.md` — Claude Code 技能定义（`~/.claude/skills/youtube-content-pipeline/`）
-- GitHub: https://github.com/wampeeHuang/youtube-content-pipeline
-- GitHub: https://github.com/wampeeHuang/screenshot-vision
+## 已做 (2026-06-20)
 
-已处理的视频：Boris Cherny Sequoia AI Ascent 2026（上次会话完成，产物不在此工作区）
+- [x] Kevin Weil 期完成：下载 → 断句(245条) → 翻译 → ASS → 渲染 → 封面 → 发布面板
+- [x] 架构调整：lab = 管线 SDK，output/视频/ = 制作全周期
+- [x] lab CLAUDE.md 重写：明确 SDK 定位，`_runtime/` 仅开发测试用
+- [x] output CLAUDE.md 修正：视频目录 YYYYMMDD_slug/（纯英文），`_runtime/` 归视频目录
+- [x] Kevin Weil 文件搬家：从 lab `_runtime/` → output `20260620_kevin-weil-lenny/`
+- [x] 飞书表格 Kevin Weil 状态→已发布，B站标题已写入
+- [x] 飞书 API 踩坑：更新记录用**字段名**不是字段 ID（PUT records 用中文名，fields API 用 ID）
 
-## 已做
+## Kevin Weil 交付物
 
-- [x] 管线 6 步全部实现并可独立运行
-- [x] SRT 解析/序列化（零依赖）
-- [x] DeepSeek API 批量翻译（并行 5 并发，行数对齐，3 次重试）
-- [x] 中文字数控制（≤28 字，标点拆分 + 无标点硬切 fallback）
-- [x] ASS 双语字幕生成（单事件 \N 模式，SimHei + Segoe UI）
-- [x] FFmpeg 渲染
-- [x] 封面生成脚本（独立 CLI）
-- [x] 项目规范文档（CLAUDE.md）
-- [x] 踩坑日志（`_ref/pitfalls.md` + 工具架 `tips/windows-gbk-python-io.md`）
-- [x] GitHub 仓库创建并推送
+```
+D:\workspace\_output\猫波信号站\视频\20260620_kevin-weil-lenny\
+├── 成片/OpenAI CPO Kevin Weil：你现在用的AI是你余生最差的——AI每两个月就颠覆一次.mp4
+├── cover.jpg
+├── 发布面板.html
+└── _runtime/
+    ├── draft.md (专栏文章草稿)
+    ├── frames/frame_2700s.jpg
+    └── 字幕/ (01_raw~05.ass + transcript.txt)
+```
+
+## 飞书选题库
+
+| 项目 | 值 |
+|------|-----|
+| URL | https://fcn7dgp1xcm8.feishu.cn/base/F7E8bJie5aX3BvsZz1Xc9KiznNb?table=tblIs359fHfIapwd |
+| App Token | F7E8bJie5aX3BvsZz1Xc9KiznNb |
+| Table ID | tblIs359fHfIapwd |
+| Token 刷新 | `echo '{"ids":["app-cli_aa992600d0215cb2"]}' \| lark-channel-bridge secrets get` |
 
 ## 未做 / 下一步
 
-### 高优先级：补全封面生成能力
+### 剩余选题
 
-当前 `_tools/gen_cover.py` **可以独立运行**（`python _tools/gen_cover.py <frame> <output> --title "..." --sub "..."`），但有两处缺口：
+飞书表格 2 个候选 (2026-06-19 入库)：
 
-1. **未集成到 pipeline.py 主流程**：`pipeline.py all` 跑完后不自动生成封面，需要手动调用 gen_cover.py
-2. **封面文字需人工提供**：gen_cover.py 需要 `--title` 和 `--sub` 参数。缺少"从 transcript 自动提取封面标题"的能力
+| # | 候选 | 评分 | 来源 |
+|---|------|------|------|
+| 1 | Cursor Team：AI 编程的未来 | 29 | Lex Fridman |
+| 2 | Dan Shipper：AI 原生创业 | 26 | Lenny's Podcast |
 
-建议做法：
-- pipeline.py 增加 `--cover-title` 和 `--cover-sub` 参数（可选）
-- 如果提供了封面文字，渲染完成后自动调用 gen_cover.py
-- 如果没提供，提示用户手动生成
+### 管线改进
 
-### 转译新视频
+- Kevin Weil 翻译有 50+ 条"未翻译"（赞助商口播 + 语速过快段落），后续可改进 prompt 或加 fallback
+- pipeline.py 需要 `--work-dir` 参数支持目标目录
+- 字幕同步未做全局偏移修正
 
-1. 获取 YouTube URL
-2. `python pipeline.py all <url> --slug <name>`
-3. 截图 5+ 张到 `frames/`，选正脸最清晰的保留
-4. `python _tools/gen_cover.py frames/best_frame.jpg output/cover.jpg --title "..." --sub "..."`
-5. 填写 `output/B站上传信息.txt` 和 `output/B站专栏文章.md`
-6. 清理原始 mp4
-
-### 待扩展（不改代码，先记着）
-
-- 掐头去尾自动化（检测低密度段）
-- 术语表/上下文翻译
-- 多 API 翻译后端切换
-- 字幕全局时间偏移修正
-
-## 项目结构
+## 关键文件指针
 
 ```
-D:\Claude code_workspace\2026-06-16-youtube-content-pipeline\
-  pipeline.py          ← 核心 CLI，唯一真相源
-  SKILL.md             ← Claude Code 技能定义（副本，原件在 ~/.claude/skills/）
-  CLAUDE.md            ← 项目规范
-  HANDOFF.md           ← 本文件
-  _tools/
-    gen_cover.py       ← 封面生成
-  _ref/
-    pitfalls.md        ← 踩坑日志
-  _runtime/            ← 运行时产出（按视频分子文件夹）
-    <video_slug>/
-      _process/        ← 管线中间产物（01_raw.srt ~ 05.ass + transcript.txt）
-      frames/          ← 截图
-      output/          ← 最终交付物（mp4 + cover.jpg + B站上传信息.txt + B站专栏文章.md）
+D:\workspace\lab\2026-06-16-猫波信号站\         ← 管线 SDK
+D:\workspace\_output\猫波信号站\                 ← 产出根
+D:\workspace\_output\猫波信号站\CLAUDE.md        ← 产出宪法
+D:\workspace\_output\猫波信号站\视频\CLAUDE.md    ← 视频目录规范 + 生命周期
+D:\workspace\_output\猫波信号站\视频\20260620_kevin-weil-lenny\  ← Kevin Weil 期
+D:\workspace\_output\猫波信号站\选题库\飞书选题库.md  ← API 参数 + 字段速查
 ```
 
 ## 关键约束
 
 - 文件名禁止全角冒号 U+FF1A
-- Python 文件 I/O 必须显式 `encoding='utf-8'`
+- Python 文件 I/O 显式 `encoding='utf-8'`
 - yt-dlp 必须指定 H.264+AAC
-- ASS 用单事件 `\N` 双语，不用双 Dialogue
-- 封面亮度 0.80，SimHei 字体，#FFC82D 暖黄，无频道水印
-- 视频文件名 = B站标题（B站自动识别）
-- 完整已知坑清单见 `_ref/pitfalls.md`
+- ASS 用单事件 `\N` 双语
+- 封面亮度 0.80，SimHei，#FFC82D 暖黄
+- 视频文件名 = B站标题，标题 ≤80 字
+- 飞书 API：更新记录用字段名（中文），不用 field_id
+- 视频目录命名：YYYYMMDD_slug/（纯英文）
+- ffmpeg Windows 路径有 `:` 时用相对路径绕开 filter parser
