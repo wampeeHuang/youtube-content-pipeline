@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -128,12 +128,75 @@ pre .arg { color: var(--yellow); font-weight: 600; }
 
 .cover-diagram {
   font-family: "SF Mono", "Cascadia Code", monospace;
-  font-size: 0.78em; line-height: 1.45; padding: 16px 20px;
+  font-size: 0.78em; line-height: 1.15; padding: 16px 20px;
   background: var(--card); border: 1px solid var(--border);
-  border-radius: 12px; text-align: center; margin: 10px 0;
+  border-radius: 12px; text-align: left; margin: 10px 0;
   color: var(--muted);
+  white-space: pre;
   box-shadow: 0 2px 12px rgba(0,0,0,0.03);
 }
+
+/* ── 封面布局 mini-mockup ── */
+.layout-mock {
+  width: 100%; aspect-ratio: 16 / 9;
+  border: 2px solid var(--border); border-radius: 6px;
+  background: #1a1a1a; color: #ccc;
+  font-size: 11px; position: relative; overflow: hidden;
+  margin: 6px 0;
+}
+.lm-title  { color: #FFC82D; font-weight: 700; }
+.lm-sub    { color: #ddd; }
+.lm-source { color: #888; font-size: 10px; }
+.lm-line   { width: 60px; height: 2px; background: #FFC82D; margin: 4px 0; }
+
+/* A: 人物左 40% + 文字右 */
+.layout-a { display: flex; align-items: stretch; }
+.layout-a .lm-person {
+  width: 40%; background: #2a2a3a; display: flex;
+  align-items: center; justify-content: center;
+  border-right: 1px solid var(--border); font-size: 10px; color: #999;
+}
+.layout-a .lm-text {
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: center; padding: 8px 12px; gap: 2px;
+}
+.layout-a .lm-source { margin-top: auto; }
+
+/* B: 全幅底图 + 半透明叠层 */
+.layout-b {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #2a2a3a 0%, #1a1a2e 100%);
+}
+.layout-b .lm-overlay {
+  background: rgba(0,0,0,0.7); border: 1px solid rgba(255,255,255,0.15);
+  padding: 12px 24px; text-align: center; border-radius: 4px;
+}
+.layout-b .lm-source { position: absolute; bottom: 6px; right: 10px; }
+.layout-b .lm-bg-label { position: absolute; bottom: 6px; left: 10px; font-size: 9px; color: #555; }
+
+/* C: 居中对称 */
+.layout-c {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 4px;
+}
+.layout-c .lm-person-ctr {
+  width: 35%; min-height: 36px; background: #2a2a3a;
+  display: flex; align-items: center; justify-content: center;
+  margin: 8px 0; border-radius: 2px; font-size: 10px; color: #999;
+}
+
+/* D: 上下分割 35/65 */
+.layout-d { display: flex; flex-direction: column; }
+.layout-d .lm-bar-top {
+  height: 35%; background: #1a1a1a; display: flex;
+  align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+.layout-d .lm-bar-img {
+  flex: 1; background: #2a2a3a; display: flex;
+  align-items: center; justify-content: center; font-size: 10px; color: #999;
+}
+.layout-d .lm-source { position: absolute; bottom: 4px; right: 10px; }
 
 .tree {
   font-family: "SF Mono", "Cascadia Code", "JetBrains Mono", monospace;
@@ -285,32 +348,34 @@ pre .arg { color: var(--yellow); font-weight: 600; }
     <thead><tr><th>维度</th><th>权重</th><th>3 分</th><th>2 分</th><th>1 分</th></tr></thead>
     <tbody>
     <tr><td><strong>时效性</strong></td><td>×3</td><td>6 个月内</td><td>1 年内</td><td>&gt;1 年</td></tr>
-    <tr><td><strong>独占性</strong></td><td>×3</td><td>B站零中字</td><td>有搬运无中字</td><td>已有精品中字 → <strong>一票否决</strong></td></tr>
+    <tr><td><strong>独占性</strong></td><td>×3</td><td>B站零中字</td><td>有搬运无中字</td><td>已有精品中字</td></tr>
     <tr><td><strong>人物权威</strong></td><td>×2</td><td>CEO / 核心团队 / 学界领袖</td><td>知名创作者</td><td>素人</td></tr>
     <tr><td><strong>长期价值</strong></td><td>×2</td><td>方法论 / 框架 / 哲学</td><td>趋势分析</td><td>纯新闻</td></tr>
     <tr><td><strong>字幕可用</strong></td><td>×1</td><td>官方字幕</td><td>高质量 auto</td><td>需 whisper</td></tr>
     </tbody>
   </table>
   <div class="hl hl-y"><strong>总分 = 时效性×3 + 独占性×3 + 人物权威×2 + 长期价值×2 + 字幕可用×1</strong>（满分 33）<br>
-  <span class="tag tag-go">≥25 立即做</span> &nbsp; <span class="tag tag-warn">20–24 备选</span> &nbsp; <span class="tag tag-no">&lt;20 排除</span></div>
+  <span class="tag tag-go">≥25 立即做</span> &nbsp; <span class="tag tag-warn">20–24 备选</span> &nbsp; <span class="tag tag-no">&lt;20 排除</span><br><span style="font-size:12px;color:var(--muted);">独占性得分低 ≠ 一票否决。长期价值 = 3（方法论/框架/哲学）时，即使独占性 = 1 仍可入选——优质内容放进我们的图书馆本身就是策展增量。只有当独占性 = 1 <strong>且</strong> 长期价值 ≤ 2 时才触发排除。</span></div>
 
   <h4>排除标准（一票否决）</h4>
   <table>
     <thead><tr><th>#</th><th>条件</th><th>原因</th></tr></thead>
     <tbody>
-    <tr><td>1</td><td>B站已有精品双语翻译</td><td>零独占性</td></tr>
+    <tr><td>1</td><td>B站已有精品中字 <strong>且</strong> 内容为纯新闻/时效型（≤1 个月有效期）</td><td>需求已被满足 + 无长尾价值</td></tr>
     <tr><td>2</td><td>版权敏感（电影/音乐为主）</td><td>合规红线</td></tr>
     <tr><td>3</td><td>纯娱乐 / 标题党 / 营销号风格</td><td>与频道定位不符</td></tr>
-    <tr><td>4</td><td>无英文字幕 + 语音质量差</td><td>whisper 成本高，翻译不可控</td></tr>
+    <tr><td>4</td><td>语音质量差——口音过重/背景噪音大/多说话人重叠/远场录音</td><td>ASR 准确率 &lt; 85%，翻译质量不可控</td></tr>
     <tr><td>5</td><td>翻译后主观判定搬运价值不足</td><td>Cat Wu Tokyo 2026 先例</td></tr>
+	    <tr><td>6</td><td>纯 talker——嘉宾无建造/研究记录，仅观点输出</td><td>信息密度低，观点缺乏实践验证</td></tr>
+	    <tr><td>7</td><td>内容为纯新闻/时效型（&le;1 周有效）</td><td>与长期价值定位冲突</td></tr>
     </tbody>
   </table>
   </div>
 
-  <!-- 0.7 内容发现 -->
+  <h4>信息密度（操作化定义）</h4><p style="font-size:13px;">信息密度不是感觉，是<strong>可计量的比率</strong>。初筛快速估算，翻译后精算：</p><table><thead><tr><th>指标</th><th>算法</th><th>高密度</th><th>低密度（排除）</th></tr></thead><tbody><tr><td><strong>观点密度</strong></td><td>独特观点数 &divide; 视频时长（分钟）</td><td>&ge; 2 个/分</td><td>&lt; 0.5 个/分</td></tr><tr><td><strong>数据引述率</strong></td><td>数字/百分比/时间跨度的出现频率</td><td>&ge; 1 次/3 分钟</td><td>无数据仅观点</td></tr><tr><td><strong>实操占比</strong></td><td>包含具体步骤/方法/工具的句段 &divide; 总句段</td><td>&ge; 30%</td><td>&lt; 10%</td></tr><tr><td><strong>语音填充率</strong></td><td>非信息填充词（um/you know/我觉得）占比</td><td>&lt; 15%</td><td>&gt; 30%（访谈松垮信号）</td></tr></tbody></table><p style="font-size:12px;color:var(--muted);">翻译后精算：随机抽 3 段 &times; 2 分钟人工评估，与估算值偏差 &gt; 30% 时以精算为准。AI 辅助自动评分待建设。</p></div><!-- 0.7 内容发现 -->
   <div class="card">
   <h3>0.6 内容发现</h3>
-  <p>每周至少一次按清单巡检。完整清单见 <code>选题库/内容源.md</code>。</p>
+  <p><strong>巡检频率：</strong>优先频道（★★★）<strong>每日</strong>快速扫一眼新上传（工作日 5 分钟），次要频道（★★☆/★☆☆）<strong>每周</strong>全量巡检。YouTube AI 访谈/播客集中工作日发布，日检确保不丢窗口期。完整清单见 <code>选题库/内容源.md</code>。</p>
   <table>
     <thead><tr><th>类型</th><th>优先巡检（★★★）</th><th>次要（★★☆/★☆☆）</th></tr></thead>
     <tbody>
@@ -337,11 +402,13 @@ pre .arg { color: var(--yellow); font-weight: 600; }
     </div>
     <div>
       <h4>状态流转</h4>
-      <pre style="font-size:0.78em; line-height:1.8;">发现 → [初筛通过] → 候选池
-     → [≥25分+排期] → 生产中
-     → [已发布] → 已发布/
-     → [翻译后判定排除] → 已废弃/
-     → [&lt;20分] → 已废弃/</pre>
+      
+      <pre style="font-size:0.78em; line-height:1.8;">发现 → 初筛(4维) → B站交叉检索 → 五维评分
+  ├─ &lt;20 分 → 已废弃/（直接排除）
+  ├─ 20–24 分 → 候选池（备选）
+  └─ ≥25 分 → 候选池（优先）→ 排期 → 生产中
+         ├─ 翻译后判定不通过 → 已废弃/（+判定原因）
+         └─ 通过 → 制作完成 → 已发布/</pre>
       <h4 style="margin-top:12px;">排期优先级</h4>
       <p style="font-size:13px;">总分降序 → 时效性降序 → 人物热度 → 多样性。直接在 CSV 排序对比。</p>
     </div>
@@ -349,9 +416,42 @@ pre .arg { color: var(--yellow); font-weight: 600; }
   <p style="font-size:12px;color:var(--muted);">飞书表格同步：选题库/飞书选题库.md — API 参数 + 字段速查 + Token 刷新。</p>
   </div>
 
-  <!-- 0.9 文件管理体系 -->
+  <!-- 0.9 发布节奏 -->
   <div class="card">
-  <h3>0.8 文件管理体系</h3>
+  <h3>0.8 发布节奏</h3>
+  <div class="grid-2">
+    <div>
+      <h4>更新频率</h4>
+      <p><strong>日均 2 条，上限 3 条。</strong>AI 管线日产能力远超此数，约束不在人力在算法——同频道日发 3 条以上内部抢量，边际播放递减。数据依据见 <a href="#s5">§5.3 投稿频率限制测绘</a>。</p>
+      <p style="margin-top:8px;"><strong>周均 12-15 条。</strong>周末流量不衰减（知识区用户周末深度观看时长更长），照常更新不降频。</p>
+    </div>
+    <div>
+      <h4>发布时间窗</h4>
+      <p><strong>推荐时点：10:00 / 14:00 / 18:00。</strong>间隔 ≥ 2 小时，给每条留出算法消化窗口。</p>
+      <p style="margin-top:8px;font-size:12px;color:var(--muted);">B站风控下限 12-15 分钟间隔，但 30 分钟内连发触发隐性降权。规划时距 ≥ 2 小时。</p>
+    </div>
+  </div>
+  <h4 style="margin-top:14px;">单日管线流</h4>
+  <table>
+    <thead><tr><th>动作</th><th>窗口</th><th>产出</th></tr></thead>
+    <tbody>
+    <tr><td>扫源 + 评分</td><td>09:00-10:00</td><td>候选池新增 + 排期决定</td></tr>
+    <tr><td>批量触发翻译管线（多点并行）</td><td>10:00-12:00</td><td>ASR + 翻译 + ASS（2-3 条同时跑）</td></tr>
+    <tr><td>审校 + 封装 + 封面</td><td>13:00-16:00</td><td>终版字幕 + 成片 + cover.jpg</td></tr>
+    <tr><td>分批发布</td><td>10:00 / 14:00 / 18:00</td><td>B站上传 + 信息填写</td></tr>
+    <tr><td>复盘（次日）</td><td>09:00</td><td>24h 数据记录</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:var(--muted);margin-top:6px;">管线一条从选题到发布标准跨度 <strong>12-24h</strong>（AI 并行缩短了人力串行瓶颈）。当天选题当天发是常态。</p>
+  <h4 style="margin-top:14px;">发稿节奏优先级</h4>
+  <p><strong>匀速日更 &gt; 囤积爆发。</strong>宁可今天发 1 条保节奏，不等 3 天后一天发 4 条。突发大事件（GPT-6 发布会等）→ 优先插队，常规排期顺延。</p>
+  <h4 style="margin-top:14px;">缓冲机制</h4>
+  <p>维持 <strong>3-5 条备选稿</strong>（已完成翻译审校，待发布）。周末不生产，备选稿覆盖。囤稿 ≤ 5 条，超限停止生产先消化。管线中断时备选稿保证当天不断更。</p>
+  </div>
+
+  <!-- 0.10 文件管理体系 -->
+  <div class="card">
+  <h3>0.9 文件管理体系</h3>
   <div class="grid-2">
     <div>
       <h4>管线 SDK（lab）</h4>
@@ -399,41 +499,12 @@ pre .arg { color: var(--yellow); font-weight: 600; }
   <p style="font-size:13px;color:var(--muted);">反馈路径：数据记录到 CSV（候选池行 + 已发布/slug.md）→ 定期回顾 → 调整评分权重、内容源优先级、封面/标题策略。</p>
   </div>
 
-  <!-- 0.10 决策纪要 -->
-  <div class="card">
-  <h3>0.10 决策纪要</h3>
-
-  <h4>什么算决策（写入条件）</h4>
-  <p>不是所有选择都叫决策。满足<strong>全部三条</strong>才写入：</p>
-  <table>
-    <thead><tr><th>条件</th><th>说明</th><th>反例（不算决策）</th></tr></thead>
-    <tbody>
-    <tr><td><strong>有选项对比</strong></td><td>两个或多个明确选项，选了其一</td><td>「字幕用 SimHei」— 只有一种合理选择</td></tr>
-    <tr><td><strong>影响面 ≥2</strong></td><td>影响至少 2 个环节，或后续 ≥2 期</td><td>「这期封面用蓝色」— 只影响当前期</td></tr>
-    <tr><td><strong>选错有代价</strong></td><td>选错可感知（时间/质量/一致性受损）</td><td>「先渲染还是先写简介」— 顺序可逆</td></tr>
-    </tbody>
-  </table>
-  <p style="font-size:12px;color:var(--muted);">边界判定：可逆的实验不算决策（试了不行换回来）。只有选了之后很难回头、或回头成本高，才写入。</p>
-
-  <h4>决策纪要（按时间排序）</h4>
-  <table>
-    <thead><tr><th>#</th><th>日期</th><th>议题</th><th>选项</th><th>决议</th><th>理由</th></tr></thead>
-    <tbody>
-    <tr><td>D-01</td><td>2026-06-19</td><td>五维评分阈值</td><td>A) 25/20 &nbsp; B) 30/25</td><td>A</td><td>B 过严会导致候选池枯竭；25 分已过滤低质选题</td></tr>
-    <tr><td>D-02</td><td>2026-06-19</td><td>赞助商口播处理</td><td>A) 保留翻译 &nbsp; B) 直接剪掉</td><td>B</td><td>B站观众对此类内容零兴趣，保留徒增跳失率</td></tr>
-    <tr><td>D-03</td><td>2026-06-20</td><td>lab 与 output 分离</td><td>A) 单目录 &nbsp; B) lab(SDK) + output(制作)</td><td>B</td><td>管线迭代和视频制作混在一起，文件管理必然乱</td></tr>
-    <tr><td>D-04</td><td>2026-06-20</td><td>初筛人设</td><td>A) 工程师视角（查可行性）&nbsp; B) 策展人视角（判内容价值）</td><td>B</td><td>初筛是内容判断不是技术判断，工程师视角导致标准偏移</td></tr>
-    <tr><td>D-05</td><td>2026-06-20</td><td>角色分工模型</td><td>A) 单人全包 &nbsp; B) 四人分工（任务书/案例/封面标题/管线发布）</td><td>B</td><td>全包导致各环节标准模糊；分工让每个决策有明确判断参照</td></tr>
-    </tbody>
-  </table>
-  <p style="font-size:12px;color:var(--muted);">新决议追加到表末，序号递增。被推翻的决议保留原行，在理由列追加「<strong>[被 D-XX 推翻]</strong>」并注明新决议编号。不删行——决策历史是频道演进的审计轨迹。</p>
-  </div>
 </section>
 
 <!-- ════════════════ §1 案例分析 ════════════════ -->
 <section id="s1">
   <h2><span class="num">01</span>案例分析 <span style="font-weight:400;font-size:0.55em;color:var(--muted);margin-left:12px;">· 潘乱</span></h2>
-  <p style="margin-bottom:24px;">三个案例，三个视角：影视飓风（原创方法论，差异中找可借鉴）、AI译片君（赛道参照，借鉴/不借鉴）、Kevin Weil 期（自评复盘，调优基线）。</p>
+  <p style="margin-bottom:24px;">三个正面案例 + 一个反面案例。每个案例分析五个维度：<strong>可借鉴的结构、不借鉴的原因、利益结构、分发逻辑、不可替代性</strong>。正面案例告诉我们怎么做，反面案例告诉我们为什么不做——两者同等重要。</p>
 
   <!-- 1.1 影视飓风 -->
   <div class="card">
@@ -520,7 +591,7 @@ pre .arg { color: var(--yellow); font-weight: 600; }
   </div>
 </section>
 
-<!-- ════════════════ §2 封面 & 标题 ════════════════ -->
+<div class="card"><h3>1.4 反面案例：Cat Wu Tokyo 2026（被排除）</h3><p style="color:var(--muted); font-size:13px;">反面案例的价值不小于正面案例——知道"为什么不做"和知道"为什么做"同等重要。</p><div class="case"><h4>基本事实</h4><table><thead><tr><th>维度</th><th>情况</th></tr></thead><tbody><tr><td>嘉宾</td><td>Cat Wu，AI 创作者</td></tr><tr><td>活动</td><td>Tokyo 2026，英文演讲</td></tr><tr><td>五维评分</td><td>时效性 3 + 独占性 3 + 人物权威 1 + 长期价值 1 + 字幕可用 2 = 23 分（备选）</td></tr><tr><td>翻译后判定</td><td><span class="tag tag-no">排除</span></td></tr></tbody></table></div><div class="case"><h4>排除根因分析</h4><table><thead><tr><th>维度</th><th>发现</th><th>教训</th></tr></thead><tbody><tr><td><strong>利益结构</strong></td><td>个人创作者宣传型演讲，无机构/平台/资本视角</td><td>利益结构越单一，信息独特性越低。优先选多重利益交叉点上的嘉宾</td></tr><tr><td><strong>分发逻辑</strong></td><td>内容已在多个英文渠道广泛分发，B站搬运差异性不足</td><td>独占性不止看B站——看全平台分发广度</td></tr><tr><td><strong>不可替代性</strong></td><td>核心观点在其他访谈中已有更深度表达</td><td>同一嘉宾多期内容横向对比后再决定做哪期</td></tr></tbody></table></div><div class="hl hl-y"><strong>反方观点（为什么这个排除可能错了）：</strong>Cat Wu 在 AI 创作者社区有真实影响力，演讲中的实操细节可能对 B站 AI 创作者有参考价值。排除是因为"23 分 + 翻译后信息密度低"，但作为新人嘉宾试水可能值得。记录此反方观点供未来复盘。</div></div></section><!-- ════════════════ §2 封面 & 标题 ════════════════ -->
 <section id="s2">
   <h2><span class="num">02</span>封面 & 标题 <span style="font-weight:400;font-size:0.55em;color:var(--muted);margin-left:12px;">· 李晨阳</span></h2>
   <p style="margin-bottom:24px;">封面和标题是 B站信息流中<strong>同时展示的两个钩子</strong>，各承担 50% 的点击驱动。影视飓风方法论：先定壳（封面+标题），再裹核（内容）。我们的适配版：翻译完成后从 transcript 提取最佳金句做壳。</p>
@@ -530,7 +601,7 @@ pre .arg { color: var(--yellow); font-weight: 600; }
   <h3>2.1 封面设计系统</h3>
 
   <h4>色彩策略</h4>
-  <div class="hl hl-y"><strong>深色底 + 暖色大字（#FFC82D）+ 人物正脸 = B站科技访谈类最优解。</strong>白色信息流中深色封面天然跳出。不采用白底极简（淹没在信息流中）。</div>
+  <div class="hl hl-y"><strong>深色底 + 暖色大字（#FFC82D）+ 人物正脸 = B站科技访谈类最优解。</strong>白色信息流中深色封面天然跳出。不推荐白底极简作为默认——除非底图信息密度极高、画面元素足够抓眼（关键是对比差，不是颜色本身）。</div>
 
   <h4>字体层级（1920×1080 画布）</h4>
   <table>
@@ -547,54 +618,49 @@ pre .arg { color: var(--yellow); font-weight: 600; }
   <div class="grid-2">
     <div>
       <h5>A：人物左 + 文字右 <span class="tag tag-go">首选</span></h5>
-      <div class="cover-diagram" style="font-size:0.6em; line-height:1.25; padding:10px;">
-┌──────────────────────┐
-│ ┌────────┐           │
-│ │ 人物   │ 主标题    │
-│ │ 正脸   │ 暖黄大字  │
-│ │ 40%    │ ───      │
-│ │        │ 副标题    │
-│ └────────┘ 出处行    │
-└──────────────────────┘</div>
-      <p style="font-size:11px;">人物半身清晰偏左/右。B站高播放封面 80% 用此。</p>
+      <div class="layout-mock layout-a">
+        <div class="lm-person">人物正脸<br>40%</div>
+        <div class="lm-text">
+          <div class="lm-title">主标题 暖黄大字</div>
+          <div class="lm-line"></div>
+          <div class="lm-sub">副标题</div>
+          <div class="lm-source">出处行</div>
+        </div>
+      </div>
+      <p style="font-size:11px;">人物半身清晰偏左/右。B站高播放封面此布局最常见（基于观察，非精确统计）。</p>
     </div>
     <div>
       <h5>B：全幅底图 + 叠层</h5>
-      <div class="cover-diagram" style="font-size:0.6em; line-height:1.25; padding:10px;">
-┌──────────────────────┐
-│ ╔══════════════╗     │
-│ ║ [半透明黑底] ║     │
-│ ║  主标题      ║     │
-│ ║  副标题      ║     │
-│ ╚══════════════╝     │
-│  [底图:人物/场景]    │
-│             出处行    │
-└──────────────────────┘</div>
+      <div class="layout-mock layout-b">
+        <div class="lm-overlay">
+          <div class="lm-title">主标题</div>
+          <div class="lm-sub">副标题</div>
+        </div>
+        <div class="lm-source">出处行</div>
+        <div class="lm-bg-label">底图：人物/场景</div>
+      </div>
       <p style="font-size:11px;">底图信息丰富时。文字需半透明黑底衬。</p>
     </div>
     <div>
       <h5>C：居中对称</h5>
-      <div class="cover-diagram" style="font-size:0.6em; line-height:1.25; padding:10px;">
-┌──────────────────────┐
-│                       │
-│    主标题（居中）     │
-│    ─── 装饰线 ───    │
-│    副标题            │
-│    [人物居中半身]     │
-│    出处行            │
-└──────────────────────┘</div>
+      <div class="layout-mock layout-c">
+        <div class="lm-title">主标题（居中）</div>
+        <div class="lm-line"></div>
+        <div class="lm-sub">副标题</div>
+        <div class="lm-person-ctr">人物居中半身</div>
+        <div class="lm-source">出处行</div>
+      </div>
       <p style="font-size:11px;">单人演讲、正脸居中。文字不挡脸。</p>
     </div>
     <div>
       <h5>D：上下分割</h5>
-      <div class="cover-diagram" style="font-size:0.6em; line-height:1.25; padding:10px;">
-┌──────────────────────┐
-│ ▓▓▓▓ 深色背景区 ▓▓▓▓│
-│  主标题 + 副标题     │
-│ ░░░░░░ 图片区 ░░░░░░│
-│ [人物/场景截图]       │
-│             出处行    │
-└──────────────────────┘</div>
+      <div class="layout-mock layout-d">
+        <div class="lm-bar-top">
+          <div class="lm-title">主标题 + 副标题</div>
+        </div>
+        <div class="lm-bar-img">人物/场景截图</div>
+        <div class="lm-source">出处行</div>
+      </div>
       <p style="font-size:11px;">底图不够大。上35%文字+下65%图。</p>
     </div>
   </div>
@@ -618,11 +684,11 @@ pre .arg { color: var(--yellow); font-weight: 600; }
   <strong>改进后：</strong>① transcript 找最精彩 3 句开场金句 → ② 定位时间戳 → ③ 提取对应帧 → ④ 视觉模型评分（清晰度+表情+构图+光照）→ ⑤ 选最高分。</div>
   <pre><span class="cmd">ffmpeg</span> -i video.mp4 -ss <span class="arg">&lt;timestamp&gt;</span> -vframes 1 frames/candidate.jpg</pre>
 
-  <h4>AI 多方案择优（影视飓风借鉴）</h4>
+  <div class="hl hl-p"><strong>金句帧假设验证：</strong>访谈视频截图通常是"一个人坐着说话"，信息密度低于专门设计的封面。如果最优金句对应帧视觉张力不足（表情平淡、光线差、背景杂乱），应切换到布局 B/C/D 而非强行用 A。金句好 &ne; 截图好。</div><h4>AI 多方案择优（影视飓风借鉴）</h4>
   <p style="font-size:13px;">不是"做一张封面"，是生成 3-5 个金句方案 + 不同布局 + 不同帧，挑最好的。工具链待建设。</p>
   </div>
 
-  <!-- 2.2 标题 -->
+  <h4>频道品牌锚点</h4><div class="hl hl-y"><strong>决策：当前不加频道视觉水印。</strong>封面以内容钩子为唯一优先级。未来如频道规模化（&ge; 10 期），重新评估统一品牌元素需求（logo 固定位置、色彩锚点、字体一致性）。李晨阳的墨镜是个人品牌符号——猫波信号站的品牌符号待建设中。</div><!-- 2.2 标题 -->
   <div class="card">
   <h3>2.2 标题系统</h3>
 
@@ -648,7 +714,7 @@ pre .arg { color: var(--yellow); font-weight: 600; }
     <tr><td><strong>可量化</strong></td><td>数字、百分比、时间跨度</td></tr>
     <tr><td><strong>独特性</strong></td><td>第一人称经历、公司内幕、个人判断</td></tr>
     <tr><td><strong>情感张力</strong></td><td>极端形容词、对比、比喻</td></tr>
-    <tr><td><strong>行动导向</strong></td><td>"你应该…"、"核心是…"、"关键是…"</td></tr>
+    <tr><td><strong>行动导向</strong></td><td>"你应该…"、"核心是…"、"关键是…"</td></tr><tr><td><strong>时效敏感度</strong></td><td>低（永恒判断，优先选）/ 中（行业趋势）/ 高（版本预测，谨慎用）</td></tr>
     </tbody>
   </table>
 
@@ -726,7 +792,7 @@ pre .arg { color: var(--yellow); font-weight: 600; }
     <tr><td class="nowrap"><strong>判定</strong></td><td><strong>人工</strong></td><td>翻译结果 → Go/No-Go</td><td>~5m</td></tr>
     <tr><td class="nowrap">ASS</td><td><code>pipeline.py</code></td><td>04_split.srt → 05.ass</td><td>&lt;1s</td></tr>
     <tr><td class="nowrap">渲染</td><td><code>ffmpeg</code></td><td>mp4 + ass → mp4</td><td>~5m</td></tr>
-    <tr><td class="nowrap">金句提取</td><td>人工</td><td>transcript → 封面大字 + 标题候选</td><td>~5m</td></tr>
+    <tr><td class="nowrap">金句提取</td><td>AI 辅助 + 人工确认</td><td>transcript → 封面大字 + 标题候选</td><td>~5m</td></tr>
     <tr><td class="nowrap">封面</td><td><code>gen_cover.py</code></td><td>截图 + 金句 → cover.jpg</td><td>~2m</td></tr>
     <tr><td class="nowrap">标题</td><td>人工</td><td>金句 → 嘉宾身份 + 嘉宾名：核心论断</td><td>~3m</td></tr>
     <tr><td class="nowrap">元数据</td><td>人工 + 发布面板</td><td>transcript → 标签/简介/章节节点</td><td>~10m</td></tr>
@@ -734,7 +800,7 @@ pre .arg { color: var(--yellow); font-weight: 600; }
     </tbody>
   </table>
   <div class="hl hl-y"><strong>一键命令（<code>--work-dir</code> 待实现）：</strong><code>python pipeline.py all &lt;url&gt; --slug &lt;name&gt; --output-title "标题"</code></div>
-  <p style="font-size:12px;color:var(--muted);">⑤ 判定 = 翻译完成后的人工 Go/No-Go 关口。素材质量不达标 → 排除（§00 排除标准第 5 条）。⑧ 金句提取 = 从 transcript 中选最有力的钩子，同时决定封面大字和标题。</p>
+  <p style="font-size:12px;color:var(--muted);">⑤ 判定 = 翻译完成后的人工 Go/No-Go 关口。⑧ 金句提取 = 从 transcript 中选最有力的钩子。</p><h4>⑤ 判定 Go/No-Go Checklist</h4><p style="font-size:13px;">翻译完成后逐项打钩。任一 <span class="tag tag-no">No-Go</span> = 排除，全部 <span class="tag tag-go">Go</span> = 继续。不是感觉，是打钩。</p><table><thead><tr><th>#</th><th>检查项</th><th>Go 标准</th><th>No-Go 标准</th></tr></thead><tbody><tr><td>G1</td><td><strong>信息密度</strong></td><td>观点密度 &ge; 2/分，实操占比 &ge; 30%</td><td>观点密度 &lt; 0.5/分，或实操占比 &lt; 10%</td></tr><tr><td>G2</td><td><strong>翻译覆盖率</strong></td><td>非赞助段 &ge; 95% 有翻译</td><td>&lt; 80% 非赞助段翻译（赞助段不计）</td></tr><tr><td>G3</td><td><strong>金句可提取性</strong></td><td>至少 2 个满足 &ge;3 维度的可提取金句</td><td>无满足 &ge;2 维度的金句候选</td></tr><tr><td>G4</td><td><strong>嘉宾视觉可用性</strong></td><td>至少 1 帧正脸清晰（光照好、表情自然）</td><td>所有帧模糊/侧脸/表情崩坏</td></tr><tr><td>G5</td><td><strong>B站独占性复核</strong></td><td>翻译后重新 B站搜索，仍零中字</td><td>发现新增中字或同类内容已上传</td></tr><tr><td>G6</td><td><strong>时效敏感度</strong></td><td>时效敏感度 = 低或中（&ge; 6 个月有效）</td><td>时效敏感度 = 高（&lt; 1 个月失效）</td></tr></tbody></table><div class="hl hl-y"><strong>判定流程：</strong>翻译完成 → 跑 checklist → 6/6 Go → 继续管线。任一 No-Go → 记录原因 → 移至已废弃/。</div>
   </div>
 
   <div class="card">
@@ -753,7 +819,7 @@ pre .arg { color: var(--yellow); font-weight: 600; }
     <tr><td><strong>断句</strong></td><td>~18 英文词/句，句尾标点切割，硬切上限 27 词，carryover 只裁文本不移时间戳</td></tr>
     <tr><td><strong>翻译</strong></td><td>DeepSeek Chat, temp=0.3, 10条/批, 并发5, 超时120s, 重试3次退避1s/2s/4s</td></tr>
     <tr><td><strong>中文字数</strong></td><td>上限 28 字，拆分点 ，。！？；、，硬切兜底 56 字，时间按字数比例分配</td></tr>
-    <tr><td><strong>ASS</strong></td><td>画布 1920×1080，中文 SimHei 42px，英文 Segoe UI 32px Bold，\N 单事件双语，MarginV=45，Alignment=2</td></tr>
+    <tr><td><strong>ASS</strong></td><td>画布 1920×1080，中文 SimHei 42px（SimHei = Windows only），英文 Segoe UI 32px Bold，\N 单事件双语，MarginV=45，Alignment=2</td></tr>
     <tr><td><strong>渲染</strong></td><td><code>ffmpeg -y -i video.mp4 -vf "ass=05.ass" -c:v libx264 -crf 23 -c:a aac -b:a 128k output.mp4</code></td></tr>
     </tbody>
   </table>
@@ -770,12 +836,13 @@ Keep it concise and natural. Preserve technical terms where appropriate.</pre>
   </div>
 
   <div class="card">
-  <h3>3.4 已知改进项</h3>
+  <h3>3.4 金句提取（可复现流程）</h3><p style="font-size:13px;">金句提取不是"凭感觉挑"。步骤如下：</p><ol><li>将翻译后的 transcript（03_zh.srt 纯文本）传入以下 prompt</li><li>取 AI 输出的 Top 5 候选</li><li>人工从中选最优 1-2 句，确认符合 &ge;3 维度</li></ol><pre>从以下访谈 transcript 中提取 5 句最有冲击力的金句。每条金句要求：<br>1. 一句话能读懂（不依赖上下文）<br>2. 反直觉或带数字<br>3. 长度 15-40 个中文字<br>4. 来自嘉宾本人（不是主持人）<br><br>输出格式（每行一条）：<br>【时间戳】金句内容 | 反直觉/可量化/独特性/情感/行动（标注满足哪几个维度）<br><br>Transcript:<br>---<br>[粘贴 03_zh.srt 纯文本]<br>---</pre><p style="font-size:12px;color:var(--muted);">AI 模型建议：DeepSeek Chat, temp=0.3。验证标准：5 条候选中至少 3 条经人工确认满足 &ge;3 维度。不达标 → 换 prompt 温度或扩大候选到 10 条。</p><h3>3.5 已知改进项</h3>
   <ul>
     <li><strong>赞助商检测：</strong>Kevin Weil 期 50+ 条未翻译来自赞助商口播。需增加检测 + 自动跳过</li>
     <li><strong>全局偏移修正：</strong>字幕同步未做整体校准</li>
     <li><strong>pipeline.py --work-dir：</strong>需支持目标目录参数</li>
     <li><strong>AI 封面多方案：</strong>当前 gen_cover.py 单张输出 → 改为批量生成 + 评分择优</li>
+        <li><strong>英文字幕两种路线对比：</strong>视频自带英文字幕时，A) 保留原字幕位置 + 叠加中文（需协调时间轴/位置/样式避免冲突）vs B) 删除原有字幕 + 重新生成干净双语 ASS（当前做法）。两种路线在制作效率、字幕可读性、最终效果上的差异待实测对比。</li>
   </ul>
   </div>
 </section>
@@ -803,7 +870,7 @@ Keep it concise and natural. Preserve technical terms where appropriate.</pre>
   <table>
     <thead><tr><th>操作</th><th>位置</th></tr></thead>
     <tbody>
-    <tr><td>选题库状态→已发布</td><td>候选池.csv + 飞书表格（字段名：状态=已发布）</td></tr>
+    <tr><td>选题库状态→已发布</td><td><strong>候选池.csv 是主表（唯一真相源）</strong>，飞书表格是镜像（对外展示/团队协作）。冲突时以 CSV 为准。</td></tr>
     <tr><td>写入 BV号/B站标题/播放量</td><td>CSV 行 + 飞书表格（字段名：B站BV号、B站标题、播放量）</td></tr>
     <tr><td>已发布归档</td><td>已发布/slug.md</td></tr>
     <tr><td>数据复盘节点</td><td>24h / 7d / 30d 记录 → 反馈到选题决策（§00 反馈闭环）</td></tr>
@@ -817,7 +884,7 @@ Keep it concise and natural. Preserve technical terms where appropriate.</pre>
     <thead><tr><th>变更</th><th>更新路径</th></tr></thead>
     <tbody>
     <tr><td>封面/标题/字幕参数变</td><td><code>_ref/生产参数.md</code> → 本文档 §02–03 → <code>gen_cover.py</code> / pipeline</td></tr>
-    <tr><td>新踩坑</td><td><code>_ref/pitfalls.md</code> → 本文档 §05.3</td></tr>
+    <tr><td>新踩坑</td><td><code>_ref/pitfalls.md</code> → 本文档 §5.4</td></tr>
     <tr><td>选题标准变</td><td>本文档 §00 → 候选池.csv 评分公式</td></tr>
     <tr><td>pipeline 功能扩展</td><td><code>CLAUDE.md</code> → 本文档 §03</td></tr>
     <tr><td>产出规范变</td><td><code>D:\workspace\_output\猫波信号站\CLAUDE.md</code></td></tr>
@@ -826,7 +893,7 @@ Keep it concise and natural. Preserve technical terms where appropriate.</pre>
   </div>
 </section>
 
-<!-- ════════════════ §5 附录 ════════════════ -->
+<div class="card"><h3>4.4 复盘触发机制</h3><p style="font-size:13px;">不等人想起来才复盘——以下事件<strong>自动触发</strong>：</p><table><thead><tr><th>触发条件</th><th>复盘动作</th><th>负责人</th></tr></thead><tbody><tr><td>发布后 <strong>24h</strong></td><td>记录初始播放/点击率，判断封面+标题效果</td><td>李晨阳（封面标题）</td></tr><tr><td>发布后 <strong>7d</strong></td><td>全维度复盘：播放趋势、留存率、互动、粉丝转化。写复盘笔记到已发布/slug.md</td><td>潘乱（案例分析）</td></tr><tr><td>发布后 <strong>30d</strong></td><td>长尾判断：是否持续有播放。反馈到选题评分权重调整</td><td>Zara Zhang（选题）</td></tr><tr><td><strong>播放量 &lt; 频道均值 50%</strong>（7d）</td><td>根因分析：选题？封面标题？翻译质量？管线 bug？</td><td>潘乱 + 对应环节负责人</td></tr><tr><td><strong>负面评论/争议</strong></td><td>24h 内评估——翻译错误？观点争议？嘉宾争议？决定是否修正/下架</td><td>Zara Zhang</td></tr><tr><td><strong>管线异常</strong>（翻译失败/ASS 报错/压制失败）</td><td>记录到 pitfalls.md，更新 &sect;5.3 已知坑</td><td>Karpathy</td></tr></tbody></table><p style="font-size:12px;color:var(--muted);">复盘笔记路径：<code>D:\workspace\_output\猫波信号站\视频\YYYYMMDD_slug\_runtime\复盘.md</code></p></div><div class="card"><h3>4.5 投稿 Checklist（执行版）</h3><p style="font-size:13px;color:var(--muted);">&sect;5.2 是规范速查（全量），此处是发布时逐项打钩的执行版。两处同步更新。</p><table><thead><tr><th>#</th><th>检查项</th><th>状态</th></tr></thead><tbody><tr><td>1</td><td>视频文件命名 = 标题（B站自动识别填入）</td><td>&#x2B1C;</td></tr><tr><td>2</td><td>投稿类型 = <strong>转载</strong>（不是自制！）</td><td>&#x2B1C;</td></tr><tr><td>3</td><td>创作声明：勾「内容为转载」+「含有 AI 生成内容」</td><td>&#x2B1C;</td></tr><tr><td>4</td><td>撞车检查：B站搜索确认无相同视频</td><td>&#x2B1C;</td></tr><tr><td>5</td><td>转载出处：原作者名 + YouTube + 原链接</td><td>&#x2B1C;</td></tr><tr><td>6</td><td>分区：知识 &gt; 科技 &gt; 人工智能</td><td>&#x2B1C;</td></tr><tr><td>7</td><td>合集：猫波译站</td><td>&#x2B1C;</td></tr><tr><td>8</td><td>封面上传：1920&times;1080 JPG &le; 4.8MB</td><td>&#x2B1C;</td></tr><tr><td>9</td><td>标题：&le;80 字，格式 = 嘉宾身份 嘉宾名：核心论断</td><td>&#x2B1C;</td></tr><tr><td>10</td><td>标签：3-10 个，英文逗号分隔</td><td>&#x2B1C;</td></tr><tr><td>11</td><td>简介：核心论点 + 嘉宾信息 + 出处 + 章节时间戳</td><td>&#x2B1C;</td></tr><tr><td>12</td><td>发布后：24h 内更新 CSV + 飞书表格</td><td>&#x2B1C;</td></tr></tbody></table></div></section><!-- ════════════════ §5 附录 ════════════════ -->
 <section id="s5">
   <h2><span class="num">05</span>附录 <span style="font-weight:400;font-size:0.55em;color:var(--muted);margin-left:12px;">· 潘乱</span></h2>
 
@@ -906,7 +973,29 @@ Keep it concise and natural. Preserve technical terms where appropriate.</pre>
   </div>
 
   <div class="card">
-  <h3>5.3 已知坑（速查）</h3>
+  <h3>5.3 投稿频率限制测绘</h3>
+  <p style="font-size:13px;color:var(--muted);">B站不公开固定数量上限，以下为社区实测数据。风控策略不定期调整，以实际触发为准。</p>
+
+  <h4>频率限制</h4>
+  <table>
+    <thead><tr><th>维度</th><th>实测值</th><th>来源</th></tr></thead>
+    <tbody>
+    <tr><td>每小时上限</td><td>&le; 5 条安全，逾 20 条触发 406 封禁 1 小时</td><td><a href="https://github.com/renmu123/biliLive-tools/issues/297" target="_blank">biliLive-tools #297</a></td></tr>
+    <tr><td>建议间隔</td><td>&ge; 12 分钟（常规），&ge; 18 分钟（晚高峰 19-22 点）</td><td>社区实测</td></tr>
+    <tr><td>每日建议</td><td>3-5 条（普通号），高等级 +30%，新号低约 40%</td><td>社区经验值</td></tr>
+    <tr><td>晚高峰限流</td><td>19:00-22:00 风控动态收紧，间隔 &times;1.5</td><td>社区实测</td></tr>
+    <tr><td>相似内容惩罚</td><td>短时间同质标题/封面/标签 → 额外限流，要求标题差异度 &ge; 30%</td><td>社区实测</td></tr>
+    <tr><td>单视频时长</td><td>上限 10 小时/P</td><td>B站官方</td></tr>
+    </tbody>
+  </table>
+
+  <h4>对我们的约束</h4>
+  <p>AI 管线日产能力远超 B站投稿上限，<strong>唯一瓶颈在平台规则而非产能</strong>。实际排期以 <strong>算法消化能力</strong> 为第一约束——同频道日发 &gt; 3 条内部抢量，边际播放递减——而非 B站风控下限（日发 5 条+ 间隔 12 分钟）。</p>
+  <p style="margin-top:8px;"><strong>结论：日均 2 条推荐，3 条上限。</strong>不是不能发更多，是发了也没额外收益。本测绘数据用于向上校准——频道等级提升后可重新评估上限。</p>
+  </div>
+
+  <div class="card">
+  <h3>5.4 已知坑（速查）</h3>
   <table>
     <thead><tr><th>#</th><th>坑</th><th>修复</th></tr></thead>
     <tbody>
@@ -929,7 +1018,7 @@ Keep it concise and natural. Preserve technical terms where appropriate.</pre>
   </div>
 
   <div class="card">
-  <h3>5.4 角色分工</h3>
+  <h3>5.5 角色分工</h3>
   <p>每个环节有一个负责人——不是头衔，是<strong>判断标准的人格化</strong>。做决策时问自己：这个人看到我做的东西，会摇头还是会点头？</p>
   <table>
     <thead><tr><th>领域</th><th>角色</th><th>负责人</th><th>核心判断</th><th>类型</th></tr></thead>
@@ -946,29 +1035,121 @@ Keep it concise and natural. Preserve technical terms where appropriate.</pre>
 
   <div>
   <p><strong>张咋啦 · Zara Zhang</strong> &nbsp; <span style="font-size:12px;color:var(--muted);">任务书负责人 · <span class="tag tag-go">已有</span> 信号人物 #29</span></p>
-  <p style="font-size:13px;">华裔，哈佛教育学院毕业。在 a16z 和红杉资本做过投资和内容，现在全职运营 <strong>AI Builder Library</strong>（zara.faces.site/ai）——一个 AI 人物和内容的策展数据库。她的日常就是刷 YouTube、听播客、翻 Twitter，从海量 AI 内容里挑出<strong>真正值得花时间看的</strong>。我们做的事情跟她高度重合，只是她策展给英文读者，我们搬运给 B站中文观众。</p>
-  <p style="font-size:12px;color:var(--muted);">如果你想知道 AI 领域谁说了什么值得听，问 Zara。</p>
+  <p style="font-size:13px;">华裔，哈佛学院心理学专业毕业（Phi Beta Kappa）。GGV Capital 投资人 → 字节跳动飞书产品营销 → AI 产品建造者：TLDW（长视频 AI 高光）、AI 学习工具、Substack + YouTube 频道。<strong>AI Builder Library</strong>（zara.faces.site/ai）——AI 人物和内容策展数据库。日常刷 YouTube、听播客、翻 Twitter，从海量 AI 内容里挑出<strong>真正值得花时间看的</strong>。我们做的事高度重合——她在英文世界策展 AI 信号，我们搬运到 B站中文社区。</p>
+  <p style="font-size:12px;color:var(--muted);">不止策展——她自己在做 AI 产品。所以她知道谁在建造、谁只是在说话。</p>
+      <p style="font-size:11px;color:var(--muted);">诚实边界：偏向建造者视角。纯学术/研究型内容可能被低估。策展标准更接近"这对建造者有用吗"而非"这对大众有科普价值吗"。</p>
+  <img src="_runtime/screenshots/ref-zara-ai-library.png" style="width:100%; margin-top:8px; border:1px solid var(--border); border-radius:4px;" alt="Zara's AI Builder Library" loading="lazy">
+  <p style="font-size:10px;color:var(--muted);margin-top:2px;">▲ Zara 的 AI Builder Library（zara.faces.site/ai）— 截于 2026-06-20</p>
   </div>
 
   <div>
   <p><strong>潘乱</strong> &nbsp; <span style="font-size:12px;color:var(--muted);">案例 + 附录负责人 · <span class="tag tag-go">已有</span> 蒸馏人设</span></p>
   <p style="font-size:13px;"><strong>「乱翻书」主理人</strong>，中文科技领域最擅长深度案例拆解的人。他的节目不是访谈——是<strong>拉片级拆解</strong>：一个产品为什么在这个时间点长出来、一个公司为什么在这个决策上犯错、一个创始人为什么在这个方向上赌对了。每期就是一场结构化复盘。我们的案例分析需要的正是这种能力：<strong>不是看完感叹"这期真好"，是拆出骨架——哪些是可迁移的结构、哪些是只能发生一次的偶然。</strong>B站+播客双平台，中文领域。</p>
   <p style="font-size:12px;color:var(--muted);">已蒸馏人设，perspective-router 可路由。</p>
+      <p style="font-size:11px;color:var(--muted);">能力边界：擅长从产品逻辑、公司战略、创始人决策视角拆解案例。纯技术实现细节（架构选型、算法优劣）不在核心能力圈内，需由 Karpathy 视角补位。</p>
+  <img src="_runtime/screenshots/ref-panluan-bilibili.png" style="width:100%; margin-top:8px; border:1px solid var(--border); border-radius:4px;" alt="乱翻书 B站" loading="lazy">
+  <p style="font-size:10px;color:var(--muted);margin-top:2px;">▲ 潘乱的「乱翻书」— B站搜索确认存在（截于 2026-06-20）</p>
   </div>
 
   <div>
   <p><strong>李晨阳</strong> &nbsp; <span style="font-size:12px;color:var(--muted);">封面 + 标题负责人 · <span class="tag tag-go">已有</span> 蒸馏人设</span></p>
-  <p style="font-size:13px;">B站百大 up主 <strong>-LKs-</strong>（437 万粉），港科大社会学硕士，频道定位"什锦区"——<strong>系统拆解 B站内容生态、平台机制、视觉语言</strong>。他做的内容就是研究"B站上什么内容为什么能火"——封面设计、标题策略、观众心理，几百个案例加数据验证。不是纯直觉，是<strong>"看了几万张封面 + 有数据支撑"的判断</strong>。他替我们回答那个核心问题：这张封面在 B站信息流里，能让人停下来吗？</p>
+  <p style="font-size:13px;">B站百大 up主 <strong>-LKs-</strong>（437 万粉），港科大社会学硕士，频道定位"什锦区"——<strong>系统拆解 B站内容生态、平台机制、视觉语言</strong>。他做的内容就是研究"B站上什么内容为什么能火"——封面设计、标题策略、观众心理，几百个案例加数据验证。不是纯直觉，是<strong>"大量B站封面案例研究 + 平台数据统计"的判断</strong>。他替我们回答那个核心问题：这张封面在 B站信息流里，能让人停下来吗？</p>
   <p style="font-size:12px;color:var(--muted);">已蒸馏人设，perspective-router 可路由。</p>
+      <p style="font-size:11px;color:var(--muted);">诚实边界：判断基于B站平台规律和大量案例观察，非精确数据统计。封面效果的结论是"在B站信息流中更可能停下来"，不保证具体点击率。</p>
+  <img src="_runtime/screenshots/ref-lks-bilibili.png" style="width:100%; margin-top:8px; border:1px solid var(--border); border-radius:4px;" alt="-LKs- B站频道" loading="lazy">
+  <p style="font-size:10px;color:var(--muted);margin-top:2px;">▲ -LKs- 的 B站频道（437万粉）— 截于 2026-06-20</p>
   </div>
 
   <div>
   <p><strong>Andrej Karpathy</strong> &nbsp; <span style="font-size:12px;color:var(--muted);">管线 + 发布负责人 · <span class="tag tag-go">已有</span> 信号人物 + 蒸馏人设</span></p>
   <p style="font-size:13px;">Tesla 前 AI 总监、OpenAI 联合创始人，<strong>零依赖、极致可复现</strong>工程哲学的代言人。他教神经网络课只用一个 Python 文件——没有框架、没有配置文件、没有依赖地狱。他的法则：<strong>"Don't tell it what to do, give it success criteria and watch it go."</strong> 管线的验收标准就是 Karpathy 的代码审查标准：换个人、换台机器、换一期素材，单文件脚本照着跑也能出一样的结果。不是"跑通了"，是"跑一百次不出岔子"。</p>
   <p style="font-size:12px;color:var(--muted);">跑一次叫运气，跑一百次不出岔子叫管线。</p>
+  <img src="_runtime/screenshots/ref-karpathy-github.png" style="width:100%; margin-top:8px; border:1px solid var(--border); border-radius:4px;" alt="Karpathy GitHub" loading="lazy">
+  <p style="font-size:10px;color:var(--muted);margin-top:2px;">▲ Karpathy 的 GitHub — 零依赖哲学的源头（截于 2026-06-20）</p>
   </div>
 
   </div>
+  </div>
+
+  <div class="card">
+  <h3>5.6 管线成本对照</h3>
+  <p style="font-size:13px;color:var(--muted);">单条视频全链路成本拆解。以"管线约束"视角标注——不计人力，只计系统调用。</p>
+
+  <h4>全链路成本表</h4>
+  <table>
+    <thead><tr><th>环节</th><th>工具/模型</th><th>计费方式</th><th>单条成本</th><th>备注</th></tr></thead>
+    <tbody>
+    <tr><td>内容发现</td><td>WebFetch / yt-dlp</td><td>—</td><td>$0</td><td>本地抓取，不计费</td></tr>
+    <tr><td>ASR 语音转写</td><td>whisper（本地）</td><td>—</td><td>$0</td><td>本地 GPU，不计费</td></tr>
+    <tr><td>翻译</td><td>DeepSeek V4 Flash</td><td>$0.14/1M input &middot; $0.28/1M output</td><td>~$0.02-0.05</td><td>60min 视频约 15K tokens in + 12K out</td></tr>
+    <tr><td>字幕格式转换</td><td>Python 脚本</td><td>—</td><td>$0</td><td>纯文本处理</td></tr>
+    <tr><td>封面帧提取</td><td>ffmpeg</td><td>—</td><td>$0</td><td>本地</td></tr>
+    <tr><td>封面排版合成</td><td>PIL（gen_cover.py）</td><td>—</td><td>$0</td><td>截图叠文字，不触发 API</td></tr>
+    <tr><td>封面视觉检查</td><td>MiniCPM-V 4.6（本地）</td><td>—</td><td>$0</td><td>localhost:8080，约 2.5GB 显存</td></tr>
+    <tr><td>封面结论回传</td><td>DeepSeek V4 Flash</td><td>$0.14/1M input</td><td>&lt; $0.001</td><td>仅传文字结论约 500 tokens</td></tr>
+    <tr><td>视频封装</td><td>ffmpeg</td><td>—</td><td>$0</td><td>本地</td></tr>
+    <tr><td>B站上传</td><td>B站网页端</td><td>—</td><td>$0</td><td>手动</td></tr>
+    </tbody>
+  </table>
+
+  <h4>成本热力图</h4>
+  <table>
+    <thead><tr><th>计费方式</th><th>环节</th><th>模型/工具</th><th>单条成本</th></tr></thead>
+    <tbody>
+    <tr><td style="background:#ECFDF5;"><strong>本地零成本</strong></td><td>ASR / 字幕 / 封面帧 / 封装 / 上传</td><td>whisper / PIL / ffmpeg</td><td><strong>$0</strong></td></tr>
+    <tr><td style="background:#ECFDF5;"><strong>本地视觉零成本</strong></td><td>封面检查</td><td>MiniCPM-V 4.6 (llama-server)</td><td><strong>$0</strong></td></tr>
+    <tr><td style="background:#ECFDF5;"><strong>云端备选零成本</strong></td><td>封面检查（备选）</td><td>GLM-4.6V-Flash（智谱免费）</td><td><strong>$0</strong></td></tr>
+    <tr><td style="background:#FFF7ED;"><strong>API 计费</strong></td><td>翻译</td><td>DeepSeek V4 Flash</td><td><strong>~$0.03</strong></td></tr>
+    <tr><td style="background:#FFF7ED;"><strong>API 计费</strong></td><td>封面结论回传</td><td>DeepSeek V4 Flash（仅文本）</td><td><strong>&lt; $0.001</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h4>识别误区</h4>
+  <table>
+    <thead><tr><th>误区</th><th>为什么错</th><th>正确认识</th></tr></thead>
+    <tbody>
+    <tr><td>"识图通过 Claude 走 Anthropic API"</td><td>Claude Read 图片的确走 API 计费，但管线不是用 Read 看图</td><td>管线走 MiniCPM-V 本地（localhost:8080），不触发 Anthropic 计费</td></tr>
+    <tr><td>"DeepSeek 处理图片要 token"</td><td>DeepSeek V4 不支持视觉输入，无法直接"看"图</td><td>MiniCPM-V 本地消化图片 → 吐文字 → 文字进 DeepSeek，只计文字 token</td></tr>
+    <tr><td>"封面要 AI 生图"</td><td>B站科技区封面本质是排版设计，不是创意图像生成</td><td>PIL 截图叠文字即可，免费且排版可控</td></tr>
+    <tr><td>"成本估算用人时"</td><td>AI 管线并行，瓶颈不在人力在系统</td><td>先列系统约束（API 速率/平台规则/算力），人力只作为最终确认环节串联</td></tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:12px;color:var(--muted);margin-top:8px;"><strong>结论：全链路唯一计费点是 DeepSeek 翻译（~$0.03/条）。</strong>周均 12 条 → 月均 ~$1.80。其余环节均为本地零成本。§0.8 发布节奏中的产能估算基于此链路结构，以系统约束而非人力约束为准。</p>
+  </div>
+</section>
+
+<!-- ════════════════ §6 决策纪要 ════════════════ -->
+<section id="s6">
+  <h2><span class="num">06</span>决策纪要</h2>
+  <p style="margin-bottom:24px;">全文决策记录，独立于各章节。所有跨环节、不可逆的决策在此追溯。</p>
+
+  <div class="card">
+  <h3>什么算决策（写入条件）</h3>
+  <p>不是所有选择都叫决策。满足<strong>全部三条</strong>才写入：</p>
+  <table>
+    <thead><tr><th>条件</th><th>说明</th><th>反例（不算决策）</th></tr></thead>
+    <tbody>
+    <tr><td><strong>有选项对比</strong></td><td>两个或多个明确选项，选了其一</td><td>「字幕用 SimHei」— 只有一种合理选择</td></tr>
+    <tr><td><strong>影响面 ≥2</strong></td><td>影响至少 2 个环节，或后续 ≥2 期</td><td>「这期封面用蓝色」— 只影响当前期</td></tr>
+    <tr><td><strong>选错有代价</strong></td><td>选错可感知（时间/质量/一致性受损）</td><td>「先渲染还是先写简介」— 顺序可逆</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:var(--muted);">边界判定：可逆的实验不算决策（试了不行换回来）。只有选了之后很难回头、或回头成本高，才写入。</p>
+
+  <h4>决策纪要（按时间排序）</h4>
+  <table>
+    <thead><tr><th>#</th><th>日期</th><th>议题</th><th>选项</th><th>决议</th><th>理由</th></tr></thead>
+    <tbody>
+    <tr><td>D-01</td><td>2026-06-19</td><td>五维评分阈值</td><td>A) 25/20 &nbsp; B) 30/25</td><td>A</td><td>B 过严会导致候选池枯竭；25 分已过滤低质选题</td></tr>
+    <tr><td>D-02</td><td>2026-06-19</td><td>赞助商口播处理</td><td>A) 保留翻译 &nbsp; B) 直接剪掉</td><td>B</td><td>B站观众对此类内容零兴趣，保留徒增跳失率</td></tr>
+    <tr><td>D-03</td><td>2026-06-20</td><td>lab 与 output 分离</td><td>A) 单目录 &nbsp; B) lab(SDK) + output(制作)</td><td>B</td><td>管线迭代和视频制作混在一起，文件管理必然乱</td></tr>
+    <tr><td>D-04</td><td>2026-06-20</td><td>初筛人设</td><td>A) 工程师视角（查可行性）&nbsp; B) 策展人视角（判内容价值）</td><td>B</td><td>初筛是内容判断不是技术判断，工程师视角导致标准偏移</td></tr>
+    <tr><td>D-05</td><td>2026-06-20</td><td>角色分工模型</td><td>A) 单人全包 &nbsp; B) 四人分工（任务书/案例/封面标题/管线发布）</td><td>B</td><td>全包导致各环节标准模糊；分工让每个决策有明确判断参照</td></tr>
+    <tr><td>D-06</td><td>2026-06-20</td><td>独占性一票否决</td><td>A) 独占性=1 直接排除 &nbsp; B) 独占性=1 + 长期价值≤2 才排除</td><td>B</td><td>方法论/框架类内容（长期价值=3）即使B站已有，按我们的标准重译仍有策展增量。纯新闻/时效型不适用此例外</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:var(--muted);">新决议追加到表末，序号递增。被推翻的决议保留原行，在理由列追加「<strong>[被 D-XX 推翻]</strong>」并注明新决议编号。不删行——决策历史是频道演进的审计轨迹。</p>
   </div>
 </section>
 
