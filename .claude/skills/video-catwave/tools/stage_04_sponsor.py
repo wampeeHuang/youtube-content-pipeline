@@ -21,7 +21,8 @@ from _lib import (
 )
 
 
-def run(slug: str, *, api_key: str | None = None, batch_size: int = 20):
+def run(slug: str, *, api_key: str | None = None, batch_size: int = 20,
+        min_duration: float = 10.0):
     api_key = api_key or os.environ.get("DEEPSEEK_API_KEY")
     srt = srt_path(slug, "02_seg.srt")
     if not srt.exists():
@@ -65,15 +66,40 @@ def run(slug: str, *, api_key: str | None = None, batch_size: int = 20):
 
     cuts = _merge_ranges(sponsor_entries)
 
+    # Filter short sponsor segments back into clean (worth translating)
+    short_cuts = []
+    kept_cuts = []
+    for c in cuts:
+        dur = (time_to_ms(c["end"]) - time_to_ms(c["start"])) / 1000
+        if dur < min_duration:
+            short_cuts.append(c)
+        else:
+            kept_cuts.append(c)
+
+    if short_cuts:
+        restored = 0
+        for c in short_cuts:
+            for e in sponsor_entries:
+                if c["start"] <= e.start <= c["end"]:
+                    clean_entries.append(e)
+                    restored += 1
+        clean_entries.sort(key=lambda e: time_to_ms(e.start))
+        # Re-index
+        for i, e in enumerate(clean_entries):
+            e.index = i + 1
+        print(f"  Restored {restored} entries from {len(short_cuts)} short sponsor segment(s) "
+              f"(< {min_duration:.0f}s)")
+
     # Write clean SRT
     clean_path = srt_path(slug, "02_seg_clean.srt")
     write_srt(clean_entries, clean_path)
 
-    # Write cut ranges for stage_08
+    # Write cut ranges for stage_08 (only long cuts)
     cuts_path = srt_path(slug, "_sponsor_cuts.json")
-    cuts_path.write_text(json.dumps(cuts, ensure_ascii=False, indent=2), encoding="utf-8")
+    cuts_path.write_text(json.dumps(kept_cuts, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print(f"  Sponsored: {len(sponsor_entries)}/{len(entries)} → {len(cuts)} cut ranges")
+    print(f"  Sponsored: {len(sponsor_entries)}/{len(entries)} → {len(kept_cuts)} cut ranges "
+          f"(filtered {len(short_cuts)} short)")
     print(f"  → {clean_path.name}")
     print(f"  → {cuts_path.name}")
 
@@ -143,5 +169,7 @@ def _merge_ranges(entries: list[SubEntry]) -> list[dict]:
 if __name__ == "__main__":
     p = argparse.ArgumentParser(description="④ Sponsor detection")
     p.add_argument("--slug", required=True)
+    p.add_argument("--min-sponsor-duration", type=float, default=10.0,
+                   help="Minimum seconds for a sponsor segment to be cut (default 10)")
     args = p.parse_args()
-    run(args.slug)
+    run(args.slug, min_duration=args.min_sponsor_duration)
