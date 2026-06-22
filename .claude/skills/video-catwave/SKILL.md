@@ -1,9 +1,27 @@
 ---
-name: catwave
+name: video-catwave
 description: |
-  YouTube → B站 完整搬运管线。14 阶段：选题→下载→去重叠→赞助检测→翻译→字宽→ASS→渲染→金句→封面→标题→元数据→专栏→发布。
-  触发：做下一期、做视频、做 <嘉宾> 那期、跑管线、做 Cursor Team、新一期、catwave。
-  Do NOT trigger: 只是下载 YouTube 视频、只是翻译英文、和猫波信号站无关。
+  YouTube → B站 完整搬运管线，14 阶段流水线。
+  
+  用法：cd D:\workspace\lab\2026-06-16-猫波信号站；设置 $env:VORTEX_PROXY="127.0.0.1:7897"；$env:DEEPSEEK_API_KEY。
+  
+  机械段②-⑧（每阶段独立脚本，可单独重跑）：
+  ② 下载：python .claude/skills/video-catwave/tools/stage_02_download.py --url "<URL>" --slug <slug>
+  ③ 去重叠+LLM标点：python .claude/skills/video-catwave/tools/stage_03_segment.py --slug <slug>
+  ④ 赞助检测：python .claude/skills/video-catwave/tools/stage_04_sponsor.py --slug <slug>
+  ⑤ 翻译+专名修复：python .claude/skills/video-catwave/tools/stage_05_translate.py --slug <slug>
+  ⑥ 字宽拆分：python .claude/skills/video-catwave/tools/stage_06_split.py --slug <slug>
+  ⑦ ASS+transcript：python .claude/skills/video-catwave/tools/stage_07_ass.py --slug <slug>
+  ⑧ 渲染：python .claude/skills/video-catwave/tools/stage_08_render.py --slug <slug> --title "标题" [--duration 60]
+  
+  每阶段跑完后人工检查输出文件，不通过→修改脚本→从该阶段重跑。
+  
+  AI决策段⑨-⑭：金句提取→封面合成→标题→元数据→专栏→发布面板。逐项AI生成+人工确认。
+  
+  门禁标准：③每段5-15词/④cuts.json有效时间戳/⑤专有名词留英文/⑥中文像素宽≤1520px/⑦Outline=0,MarginL/R=200/⑧音画同步+赞助已裁。
+  
+  触发：做下一期、做视频、做 <嘉宾> 那期、跑管线、video-catwave、猫波信号站。
+  禁止触发：只是下载 YouTube 视频、只是翻译英文、和猫波信号站无关。
 ---
 
 # 猫波信号站 · 全流程管线
@@ -15,7 +33,7 @@ description: |
 
 ```
 Lab（管道代码）:  D:\workspace\lab\2026-06-16-猫波信号站\
-  .claude/skills/catwave/tools/   ← 所有阶段脚本 + _lib.py
+  .claude/skills/video-catwave/tools/   ← 所有阶段脚本 + _lib.py
   _runtime/<slug>_process/        ← 下载缓存（source.mp4 + 01_raw.srt）
 
 Output（产出物）: D:\workspace\_output\猫波信号站\视频\<YYYYMMDD_slug>\
@@ -45,25 +63,25 @@ $env:VORTEX_PROXY = "127.0.0.1:7897"
 $env:DEEPSEEK_API_KEY = "<key>"
 
 # ② 下载
-python .claude/skills/catwave/tools/stage_02_download.py --url "<YouTube URL>" --slug <slug>
+python .claude/skills/video-catwave/tools/stage_02_download.py --url "<YouTube URL>" --slug <slug>
 
 # ③ 去重叠 + LLM 补标点（→ 短句模式）
-python .claude/skills/catwave/tools/stage_03_segment.py --slug <slug>
+python .claude/skills/video-catwave/tools/stage_03_segment.py --slug <slug>
 
 # ④ 赞助检测（→ 02_seg_clean.srt + _sponsor_cuts.json）
-python .claude/skills/catwave/tools/stage_04_sponsor.py --slug <slug>
+python .claude/skills/video-catwave/tools/stage_04_sponsor.py --slug <slug>
 
 # ⑤ 翻译 + 专名修复
-python .claude/skills/catwave/tools/stage_05_translate.py --slug <slug>
+python .claude/skills/video-catwave/tools/stage_05_translate.py --slug <slug>
 
 # ⑥ 标点优先拆分 + 像素宽度检查
-python .claude/skills/catwave/tools/stage_06_split.py --slug <slug>
+python .claude/skills/video-catwave/tools/stage_06_split.py --slug <slug>
 
-# ⑦ ASS + transcript
-python .claude/skills/catwave/tools/stage_07_ass.py --slug <slug>
+# ⑦ ASS + transcript（背景框实验性功能，默认关闭）
+python .claude/skills/video-catwave/tools/stage_07_ass.py --slug <slug> [--bg-opacity 0.5] [--bg-padding 15]
 
-# ⑧ 渲染（--duration 60 做测试片，不传 = 全片）
-python .claude/skills/catwave/tools/stage_08_render.py --slug <slug> --title "output" [--duration 60]
+# ⑧ 渲染（--duration 60 做测试片，不传 = 全片；测试片用 --output-subdir "_runtime/测试片"）
+python .claude/skills/video-catwave/tools/stage_08_render.py --slug <slug> --title "output" [--duration 60] [--output-subdir "_runtime/测试片"]
 ```
 
 ## 各阶段门禁
@@ -105,7 +123,7 @@ cd D:\workspace\_output\猫波信号站\视频\<YYYYMMDD_slug>
 
 ### ⑩ 封面
 - 从 ⑨ 金句取最优 3 句 → 在 transcript 中定位时间戳 → ffmpeg 截图 → 肉眼评分
-- `python D:\workspace\lab\2026-06-16-猫波信号站\.claude\skills\catwave\tools\gen_cover.py <frame.jpg> cover.jpg --title "<金句>" --sub "<嘉宾·来源>" --source "YouTube · <频道>" --brightness 0.80 --color "#FFC82D"`
+- `python D:\workspace\lab\2026-06-16-猫波信号站\.claude\skills\video-catwave\tools\gen_cover.py <frame.jpg> cover.jpg --title "<金句>" --sub "<嘉宾·来源>" --source "YouTube · <频道>" --brightness 0.80 --color "#FFC82D"`
 - 约束：msyhbd.ttc 纯色无描边、#FFC82D、0.80 亮度、≤4.8MB、1920×1080
 
 ### ⑪ 标题
@@ -146,16 +164,16 @@ cd D:\workspace\_output\猫波信号站\视频\<YYYYMMDD_slug>
 ## 文件指针
 
 ```
-.claude/skills/catwave/SKILL.md              ← 本文档：唯一真相源
-.claude/skills/catwave/tools/_lib.py          ← 共享库
-.claude/skills/catwave/tools/stage_02_*.py    ← ② 下载
-.claude/skills/catwave/tools/stage_03_*.py    ← ③ 去重叠+标点
-.claude/skills/catwave/tools/stage_04_*.py    ← ④ 赞助检测
-.claude/skills/catwave/tools/stage_05_*.py    ← ⑤ 翻译
-.claude/skills/catwave/tools/stage_06_*.py    ← ⑥ 字宽检查
-.claude/skills/catwave/tools/stage_07_*.py    ← ⑦ ASS
-.claude/skills/catwave/tools/stage_08_*.py    ← ⑧ 渲染
-.claude/skills/catwave/tools/gen_cover.py     ← ⑩ 封面合成
+.claude/skills/video-catwave/SKILL.md              ← 本文档：唯一真相源
+.claude/skills/video-catwave/tools/_lib.py          ← 共享库
+.claude/skills/video-catwave/tools/stage_02_*.py    ← ② 下载
+.claude/skills/video-catwave/tools/stage_03_*.py    ← ③ 去重叠+标点
+.claude/skills/video-catwave/tools/stage_04_*.py    ← ④ 赞助检测
+.claude/skills/video-catwave/tools/stage_05_*.py    ← ⑤ 翻译
+.claude/skills/video-catwave/tools/stage_06_*.py    ← ⑥ 字宽检查
+.claude/skills/video-catwave/tools/stage_07_*.py    ← ⑦ ASS
+.claude/skills/video-catwave/tools/stage_08_*.py    ← ⑧ 渲染
+.claude/skills/video-catwave/tools/gen_cover.py     ← ⑩ 封面合成
 D:\workspace\_output\猫波信号站\选题库\飞书选题库.md  ← 选题库
 D:\workspace\lab\2026-06-16-猫波信号站\生产方法论.html ← 完整方法论
 ```

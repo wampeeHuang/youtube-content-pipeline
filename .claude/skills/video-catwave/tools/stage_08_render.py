@@ -12,10 +12,10 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from _lib import find_video, output_dir, srt_path
+from _lib import find_video, output_dir, slug_dir, srt_path
 
 
-def run(slug: str, *, title: str = "output", duration: int = 0):
+def run(slug: str, *, title: str = "output", duration: int = 0, output_subdir: str = ""):
     video_file = find_video(slug)
     if not video_file:
         print(f"ERROR: No video found. Run stage_02_download first.")
@@ -26,7 +26,12 @@ def run(slug: str, *, title: str = "output", duration: int = 0):
         print(f"ERROR: {ass_file} not found. Run stage_07_ass first.")
         sys.exit(1)
 
-    output_mp4 = output_dir(slug) / f"{title}.mp4"
+    if output_subdir:
+        out_dir = slug_dir(slug) / output_subdir
+        out_dir.mkdir(parents=True, exist_ok=True)
+    else:
+        out_dir = output_dir(slug)
+    output_mp4 = out_dir / f"{title}.mp4"
 
     # Read sponsor cuts
     cuts_path = srt_path(slug, "_sponsor_cuts.json")
@@ -49,16 +54,28 @@ def run(slug: str, *, title: str = "output", duration: int = 0):
 
 
 def _render_clip(video: Path, ass: Path, output: Path, duration: int, cuts: list[dict]):
+    """Render a clip of `duration` seconds.
+
+    If a sponsor cut starts within the clip, truncate at the cut start
+    to avoid timeline mismatch between concat'd video and ASS timecodes.
+    """
+    effective_duration = float(duration)
+    for c in cuts:
+        cs = _to_seconds(c["start"])
+        if 0 < cs < effective_duration:
+            effective_duration = cs
+            print(f"  Clip truncated to {effective_duration:.1f}s (sponsor cut at {c['start']})")
+            break
+
     _prev = os.getcwd()
     try:
         os.chdir(str(ass.parent))
-        ass_rel = ass.name
         cmd = [
             "ffmpeg", "-y",
             "-ss", "0",
             "-i", str(video),
-            "-t", str(duration),
-            "-vf", f"ass='{ass_rel}'",
+            "-t", str(effective_duration),
+            "-vf", f"ass='{ass.name}'",
             "-c:v", "libx264", "-crf", "23", "-threads", "4",
             "-c:a", "aac", "-b:a", "128k",
             str(output),
@@ -162,5 +179,7 @@ if __name__ == "__main__":
     p.add_argument("--slug", required=True)
     p.add_argument("--title", default="output")
     p.add_argument("--duration", type=int, default=0, help="Clip duration in seconds (0=full)")
+    p.add_argument("--output-subdir", default="",
+                   help="Output subdirectory under slug dir (default: 成片)")
     args = p.parse_args()
-    run(args.slug, title=args.title, duration=args.duration)
+    run(args.slug, title=args.title, duration=args.duration, output_subdir=args.output_subdir)

@@ -97,20 +97,28 @@ def _cn_pixel_width(text: str) -> int:
 # ── Punctuation-first splitting ──────────────────────────────────────────────
 
 
-def _split_at_punctuation(text: str, max_px: int) -> list[str]:
+def _split_at_punctuation(text: str, max_px: int, depth: int = 0) -> list[str]:
     """Split text at punctuation points, preferring the split closest to midpoint.
     Iterates: splits, checks each part, re-splits if any part still too wide.
     """
-    punct = "，。！？；、"
-    if _cn_pixel_width(text) <= max_px:
+    if depth > 50 or len(text) <= 1 or _cn_pixel_width(text) <= max_px:
         return [text]
 
+    punct = "，。！？；、"
     # Find all punctuation positions
     positions = [i for i, ch in enumerate(text) if ch in punct]
     if not positions:
-        # No punctuation — hard split at midpoint
+        # No punctuation — hard split at midpoint, then check each half
         mid = len(text) // 2
-        return [text[:mid], text[mid:]]
+        if mid == 0:
+            return [text]
+        result = []
+        for part in [text[:mid], text[mid:]]:
+            if _cn_pixel_width(part) > max_px:
+                result.extend(_split_at_punctuation(part, max_px, depth + 1))
+            elif part.strip():
+                result.append(part)
+        return result
 
     # Find the punctuation closest to half the pixel width
     target_w = _cn_pixel_width(text) / 2
@@ -130,7 +138,7 @@ def _split_at_punctuation(text: str, max_px: int) -> list[str]:
     result = []
     for part in [left, right]:
         if _cn_pixel_width(part) > max_px:
-            result.extend(_split_at_punctuation(part, max_px))
+            result.extend(_split_at_punctuation(part, max_px, depth + 1))
         else:
             if part.strip():
                 result.append(part)
