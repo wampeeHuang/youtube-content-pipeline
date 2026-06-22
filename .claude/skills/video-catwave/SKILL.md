@@ -39,8 +39,11 @@ Lab（管道代码）:  D:\workspace\lab\2026-06-16-猫波信号站\
 Output（产出物）: D:\workspace\_output\猫波信号站\视频\<YYYYMMDD_slug>\
   _runtime/字幕/                   ← 01_raw → 02_seg → 03_zh → 04_split → 05.ass
   _runtime/_sponsor_cuts.json     ← 赞助时间戳（给 ⑧ 裁视频用）
+  _runtime/测试片/                 ← 测试片
+  _runtime/发布面板过程/           ← 发布面板旧版归档
   成片/<标题>.mp4
-  cover.jpg / 发布面板.html / draft.md
+  电子书/<标题>.epub              ← 双语EPUB，GitHub Releases分发，B站私信拿链接
+  cover.jpg
 ```
 
 ## 全流程 14 站
