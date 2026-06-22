@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B站标准字幕 · 最终样式</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d1117; color: #c9d1d9; font-family: "Noto Sans SC", sans-serif; padding: 2rem; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden; max-width: 800px; margin: 0 auto; }
+  .card-header { padding: .6rem 1rem; border-bottom: 1px solid #30363d; font-weight: 600; font-size: .9rem; }
+
+  .frame { container-type: size; position: relative; width: 100%; aspect-ratio: 16/9;
+    background: radial-gradient(ellipse at 30% 40%, rgba(88,166,255,.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 60%, rgba(124,58,237,.08) 0%, transparent 60%), #0a0e14;
+    overflow: hidden; }
+  .frame-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+  .frame-slide { text-align: center; opacity: .45; }
+  .frame-slide .logo { font-size: 9cqw; font-weight: 700; letter-spacing: .05em; color: rgba(255,255,255,.7); }
+  .frame-slide .event { font-size: 3.7cqw; color: rgba(255,255,255,.35); margin-top: 1.5cqh; letter-spacing: .15em; }
+
+  /* 字幕：底部居中，左右各留10%边距，字号跟随容器高度 */
+  .sub { position: absolute; bottom: 5%; left: 10%; width: 80%;
+    text-align: center; line-height: 1.3; }
+
+  /* ZH: 3.9%容器高度 = 42px@1080p / 21px@540p */
+  .sub .zh { font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+    font-size: 3.9cqh; font-weight: 400; color: #fff;
+    text-shadow: -.09cqw -.09cqw 0 #000, .09cqw -.09cqw 0 #000, -.09cqw .09cqw 0 #000, .09cqw .09cqw 0 #000, 0 .07cqh .28cqh rgba(0,0,0,.5); }
+
+  /* EN: 2.8%容器高度 = 30px@1080p / 15px@540p */
+  .sub .en { font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+    font-size: 2.8cqh; font-weight: 400; color: #b0c4de;
+    text-shadow: -.07cqw -.07cqw 0 #000, .07cqw -.07cqw 0 #000, -.07cqw .07cqw 0 #000, .07cqw .07cqw 0 #000, 0 .06cqh .19cqh rgba(0,0,0,.4);
+    margin-top: .2cqh; }
+
+  .controls { margin: 1rem 0; display: flex; gap: .5rem; align-items: center; justify-content: center; }
+  .controls button { padding: 5px 14px; border: 1px solid #30363d; border-radius: 6px; background: #161b22; color: #c9d1d9; cursor: pointer; font-size: .82rem; }
+  .controls button:hover { border-color: #58a6ff; color: #fff; }
+  .controls button.active { background: #1f6feb33; border-color: #58a6ff; color: #58a6ff; }
+  .specs { margin: 1rem auto 0; max-width: 800px; font-size: .8rem; color: #8b949e; }
+  .specs td { padding: 3px 8px; border-bottom: 1px solid #21262d; }
+  .specs td:first-child { color: #c9d1d9; font-weight: 600; white-space: nowrap; }
+  .specs code { background: #21262d; padding: 1px 5px; border-radius: 3px; font-size: .76rem; }
+  h1 { font-size: 1.3rem; text-align:center; margin-bottom: .15rem; }
+  .subtitle { color: #8b949e; font-size: .85rem; text-align:center; margin-bottom: .5rem; }
+</style>
+</head>
+<body>
+<h1>B站科技区标准 — 最终字幕样式</h1>
+<p class="subtitle">思源黑体 · 中上英下 · 都不加粗 · 10%边距 · 全部相对单位(cqh/cqw)</p>
+
+<div class="controls">
+  <span style="color:#8b949e;">例句：</span>
+  <button onclick="setLine(0)" class="active" id="btn0">短句</button>
+  <button onclick="setLine(1)" id="btn1">中句</button>
+  <button onclick="setLine(2)" id="btn2">长句</button>
+</div>
+
+<div class="card">
+  <div class="card-header">字幕预览 — 响应式画布（16:9，自适应卡片宽度）</div>
+  <div class="frame">
+    <div class="frame-bg"><div class="frame-slide"><div class="logo">CODE WITH CLAUDE</div><div class="event">TOKYO 2026</div></div></div>
+    <div class="sub" id="sub"><div class="zh"></div><div class="en"></div></div>
+  </div>
+</div>
+
+<div class="specs">
+  <table>
+    <tr><td></td><td><strong>中文主字幕（上）</strong></td><td><strong>英文副字幕（下）</strong></td></tr>
+    <tr><td>字体</td><td><code>Noto Sans SC</code> 思源黑体</td><td><code>Noto Sans SC</code> 思源黑体</td></tr>
+    <tr><td>字号</td><td><code>3.9cqh</code> (42px@1080p)</td><td><code>2.8cqh</code> (30px@1080p)</td></tr>
+    <tr><td>字重</td><td><code>Regular</code> 不加粗</td><td><code>Regular</code> 不加粗</td></tr>
+    <tr><td>颜色</td><td><code>#FFFFFF</code> 纯白</td><td><code>#B0C4DE</code> 浅灰蓝</td></tr>
+    <tr><td>描边</td><td>0.09cqw 黑色</td><td>0.07cqw 黑色</td></tr>
+    <tr><td>边距</td><td>左右各 10% · 占宽 80%</td><td>同左</td></tr>
+    <tr><td>位置</td><td>底部 83%处（MarginV等效70）</td><td>底部 MarginV等效28</td></tr>
+  </table>
+</div>
+
+<script>
+const L = [
+  {zh:"Claude Code 的使命是弥合创意与交付产品之间的差距。", en:"The mission of Claude Code is to bridge the difference between an idea and a shipped product."},
+  {zh:"我们工程师的人均代码产出是去年的 8 倍，Merkari 团队产出飙升了 90%。", en:"We've seen 8x more code per capita among our engineers, and Merkari's output jumped 90%."},
+  {zh:"你可以让 Claude Code 在数十甚至数百个代理上并行运行。", en:"Launch Claude Code to run in parallel over tens or even hundreds of agents."},
+];
+function setLine(i){
+  document.querySelectorAll('.controls button').forEach((b,j)=>b.classList.toggle('active',j===i));
+  document.querySelector('#sub .zh').textContent=L[i].zh;
+  document.querySelector('#sub .en').textContent=L[i].en;
+}
+setLine(0);
+</script>
+</body>
+</html>

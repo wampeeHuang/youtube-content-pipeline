@@ -1,0 +1,918 @@
+1
+0:00:03.720 --> 0:00:07.550
+Okay, I'm excited to introduce our next speaker. Show of hands, who here uses Claude code?
+---
+好的，我很兴奋地介绍下一位演讲者。来，举手看看，这里谁在用Claude代码？
+
+2
+0:00:07.560 --> 0:00:11.430
+Okay, show of hands, who here has code psychosis?
+---
+行，举手看看，谁有代码狂热症？
+
+3
+0:00:11.440 --> 0:00:12.350
+Come on guys, [clears throat] it's okay.
+---
+来吧朋友们，[清嗓子] 这没什么大不了的。
+
+4
+0:00:12.360 --> 0:00:32.429
+Come on guys, [clears throat] it's okay. It's Um my team lovingly says I have Claude code psychosis, which may or not be true. we are delighted to Boris Cherny with us today. Uh is the creator, father of code. and uh in process doing that has just had a front row seat reinventing modern way software development.
+---
+来吧朋友们，[清嗓子] 这没什么大不了的。嗯……我的团队开玩笑说我有代码狂热症，这可能是真的也可能不是。今天我们有幸请到了Boris Cherny。呃，他是代码的创造者、奠基人。在这个过程中，他亲眼见证了现代软件开发方式的革新。
+
+5
+0:00:32.439 --> 0:00:45.870
+modern way of software development. Um and we're really grateful to you, Boris, for taking the time speak with us today. We know that um entirety development kind rests on your shoulders. So, thank it out be And interviewing is Lauren Reader from our team.
+---
+现代软件开发方式。嗯，我们真的很感激您Boris，今天能抽出时间与我们交流。我们知道整个开发领域的发展某种程度上都扛在您肩上。所以，感谢您前来。今天采访您的是我们团队的Lauren Reader。
+
+6
+0:00:57.320 --> 0:01:01.830
+Um you took my opening line, Asia. We asked who here uses Claude code. There's a lot of hands. That's awesome.
+---
+嗯，Aisa你抢了我的开场白。我们问谁在用Claude代码，举手的很多。太棒了。
+
+7
+0:01:01.840 --> 0:01:52.510
+Thank you for joining us, Boris. It's very special to have here. Um as a roomful of builders, I think are changing building entirely. And so, I'm curious explore how about the future software, coding, and what we should spend all our free time on. but I'll give me tiny bit more background on that everyone has little context. So, beyond creating Claude code, Boris is much an engineer's engineer. You were writing lot through your whole career, textbooks including programming in TypeScript. last chatted hadn't written single line year, or at least far 2026, which quite change. There's also known thing back middle school, wrote guide uh BASIC TI-83 Plus calculators.
+---
+感谢您光临Boris，能请到您非常荣幸。嗯，在座的都是开发者，我认为你们正在彻底改变构建这件事。所以，我很想探讨一下软件和编码的未来，以及我们应该把空闲时间都花在什么上面。我先简单补充点背景，让大家有点概念。除了创建Claude代码，Boris是一位真正的工程师中的工程师。你的整个职业生涯写了大量东西，包括《TypeScript编程》这类教科书。上次聊天时你说2026年之前几乎一行代码都没写过，或者说至少到2026年都没怎么写，这变化真不小。还有个趣事：中学时你为TI-83 Plus计算器写过一篇BASIC指南。
+
+8
+0:01:52.520 --> 0:02:15.270
+And I just searched for it, it's actually still on the internet. It's extremely embarrassing, so please don't search it. But [laughter] exists. We will definitely be finding that. Um we're going to do I'm start with a few questions here. Maybe we'll little bit of history Claude code, how you started and then have lot audience Q&A this one. thinking about your in back head, uh would love turn over all soon.
+---
+我刚刚搜了一下，它居然还挂在网上。这太尴尬了，所以请大家别去搜。[笑声] 但它确实存在。我们肯定会把它挖出来的。嗯，我先问几个问题。也许先聊聊Claude代码的历史，你是怎么开始的，然后留大量时间给观众问答。想着大家心里已经有疑问了，呃，很快就把时间交给你们。
+
+9
+0:02:15.280 --> 0:02:23.110
+turn it over to you all soon. Yeah. Um and also real quick, so for people that use Claude code, do the CLI mostly? Like okay, majority CLI?
+---
+很快就把时间交给你们。是的。嗯，另外快速问一下，用Claude代码的人，主要是用命令行界面吗？好，大部分是命令行？
+
+10
+0:02:23.120 --> 0:02:26.710
+Okay. That's a lot. Majority desktop?
+---
+好的。很多啊。大部分是桌面端？
+
+11
+0:02:26.720 --> 0:02:30.510
+VS code or JetBrains IDE?
+---
+VS代码还是JetBrains集成开发环境？
+
+12
+0:02:30.520 --> 0:02:32.590
+Okay. Majority VS code or JetBrains IDE? That's actually not a lot.
+---
+好的。大部分是VS代码或JetBrains IDE？其实没有那么多。
+
+13
+0:02:32.600 --> 0:02:34.350
+Okay. That's actually not a lot. Other?
+---
+好的。其实没有那么多。其他呢？
+
+14
+0:02:34.360 --> 0:02:37.191
+I'm like iOS mostly these days. Yeah.
+---
+我最近主要用iOS。是的。
+
+15
+0:02:37.201 --> 0:02:39.270
+I'm like iOS mostly these days. Yeah. >> [laughter] Okay. Cool.
+---
+我最近主要用iOS。是的。>> [笑声] 好。酷。
+
+16
+0:02:39.280 --> 0:02:44.270
+>> Okay. Cool. Um yeah, so I started Claude code kind of accidentally in a lot ways.
+---
+>> 好。酷。嗯，其实我创建Claude代码在很多方面是偶然的。
+
+17
+0:02:44.280 --> 0:02:47.470
+Um I joined this team back late 2024.
+---
+嗯，我在2024年底加入了这支团队。
+
+18
+0:02:47.480 --> 0:02:51.390
+Um I joined this team back in late 2024. It was a sort of incubator within Anthropic called Labs.
+---
+嗯，我在2024年底加入了这支团队。它当时是Anthropic内部一个叫Labs的孵化器。
+
+19
+0:02:51.400 --> 0:02:59.110
+And uh the team kind of served its purpose. Um we created Claude code, MCP, and desktop app. It was a it just few us.
+---
+而呃，这个团队也算是完成了使命。嗯，我们创建了Claude代码、MCP和桌面应用。当时就我们几个人。
+
+20
+0:02:59.120 --> 0:03:01.190
+it was just a few of us. So, very much like innovation team.
+---
+当时就我们几个人。所以，很像一个创新团队。
+
+21
+0:03:01.200 --> 0:03:14.910
+We built the thing that we wanted to build, disbanded Uh now team's actually back together for round two. Mike Krieger, who's you know, chief product officer at Anthropic and used be one of founders Instagram, so he's leading right now.
+---
+我们最终建成了想建的东西，团队解散了——呃，现在团队又重组了，准备第二轮。你应该知道，迈克·克雷格是Anthropic的首席产品官，也是Instagram的联合创始人之一，目前由他主导。
+
+22
+0:03:14.920 --> 0:03:30.950
+that right now. Um so the kind of reason I started to work on coding is we felt like there was this product overhang. And I'm guessing people here use word a lot. Uh but definitely lot in within lab.
+---
+目前由他主导。嗯，我开始从事编程工作的原因，是我们觉得存在产品积压。我猜在座很多人经常用"积压"这个词——在实验室内部肯定也常提。
+
+23
+0:03:30.960 --> 0:04:00.790
+of within the lab. Uh there's this idea that model can do all stuff no product has yet captured. And in late 2024, when we were looking at coding, way did state art time was type ahead. It you open your IDE and press tab like complete one line a time. thing Sonnet 3.5 enabled for first But feeling could actually go lot further than that. almost ready next big step. So, don't have to ahead anymore, just agent write code.
+---
+实验室内部。有个概念是模型能完成所有事，但还没有产品能实现这一点。2024年底，当我们审视编程领域时，当时的最高水平是"提前输入"。你打开IDE，按Tab键，一次只能补全一行代码。Sonnet 3.5首次实现了这一点，但我们感觉还能走得更远——几乎准备好迈出下一步了。所以，不用再提前输入了，直接用智能体写代码就行。
+
+24
+0:04:00.800 --> 0:04:16.150
+the code. And so, I built it, and just really didn't work for first 6 months. It was like not very good. barely usable. wrote from used maybe 10% of my code or something that. even after we released Claude initially, a hit.
+---
+写代码。于是我构建了它，但前六个月完全不行。效果很不好，几乎没法用。我自己写，大概只有10%的代码用它。即使我们最初发布了Claude，反响也并不热烈。
+
+25
+0:04:16.160 --> 0:04:21.349
+code initially, it was not a hit. There's lot of people that used but did have this exponential growth has today.
+---
+最初反响并不热烈。很多人用过，但并没有像今天这样的指数级增长。
+
+26
+0:04:21.359 --> 0:04:36.870
+growth that it has today. Um started with Opus 4 in May. And I remember very clearly. That's like when the exponential and then kind of inflected every model release. Uh 4.5, 4.6, now 4.7. It just keeps inflecting.
+---
+今天这样的指数级增长。嗯，从五月的Opus 4开始。我记得非常清楚。那时开始呈指数级增长，每次模型发布都拐点上扬。4.5、4.6，现在是4.7，一直在上扬。
+
+27
+0:04:36.880 --> 0:04:46.670
+But essentially, we were trying to build this thing that was like pre-PMF, and knew it wouldn't have PMF for 6 months because building the next model. And idea pretty much whole time.
+---
+但本质上，我们试图构建的产品处于产品市场契合前阶段，而且知道未来六个月都不会达到产品市场契合，因为还要构建下一个模型。这个想法几乎贯穿始终。
+
+28
+0:04:46.680 --> 0:04:50.270
+pretty much the whole time. And you know, for Anthropic in general, we've always just been very focused.
+---
+几乎贯穿始终。你知道，对Anthropic整体而言，我们一直非常专注。
+
+29
+0:04:50.280 --> 0:05:04.350
+We've cared about business and enterprise safety coding. That's kind of the way that we wanted to build. And so, at some point knew build a product. We didn't know exactly what wanted. So, this ended up being product bet.
+---
+我们关心商业和企业安全编程。这就是我们想走的路。所以，在某个节点我们知道要构建一个产品，但不确定具体要什么。于是这最终成了产品赌注。
+
+30
+0:05:04.360 --> 0:05:07.910
+being the product bet. It's an incredible story, especially that it was accident.
+---
+成了产品赌注。这是个不可思议的故事，尤其是它源于偶然。
+
+31
+0:05:07.920 --> 0:05:27.510
+that it was an accident. Um so, you've said on the record you think coding is solved. Uh if this one of three best from Anthropic, can tell us more about what mean by and might still not be solved, or second-order problems come? All right. I ask another question for room. Who writes 100% their code hand?
+---
+源于偶然。嗯，你公开说过你认为编程问题已解决。如果这是Anthropic最擅长的三件事之一，能否告诉我们更多含义，以及可能仍未解决的部分，或者会出现哪些二阶问题？好吧，我换个问题问大家：谁还在100%手写代码？
+
+32
+0:05:29.800 --> 0:05:32.310
+Who writes 100% of their code using a agent like Claude code?
+---
+谁在用像Claude Code这样的智能体写100%的代码？
+
+33
+0:05:32.320 --> 0:05:35.350
+Okay. Who's somewhere in between?
+---
+好。谁处于中间状态？
+
+34
+0:05:35.360 --> 0:05:38.628
+Okay. Who's like somewhere in between? So, 50% solved.
+---
+谁处于中间状态？所以，大概50%已解决。
+
+35
+0:05:38.638 --> 0:05:41.150
+Okay. So, like 50% solved. >> [laughter]
+---
+所以，大概50%已解决。>> [笑声]
+
+36
+0:05:42.520 --> 0:05:51.550
+>> I mean, for me it's like 100%. Like the Claude code base, um you know, it leaked, so people know. Uh pretty simple. It's just TypeScript and React. there's no big secret.
+---
+>> 对我来说，基本是100%。Claude的代码库，嗯，你知道，它泄露过，所以人们知道。相当简单，就是TypeScript和React。没什么大秘密。
+
+37
+0:05:51.560 --> 0:06:12.230
+it's React. Like there's no big secret. There's nothing really complicated. The the reason we picked TypeScript and React is very on distribution for model. So, when started, you know, building code base, model was not as intelligent it today, so language framework mattered a lot. Nowadays, can write whatever, pick up new languages, frameworks hasn't seen. But back then, wanted to use something pretty distribution.
+---
+就是React。没什么大秘密。没有什么真正复杂的。我们选择TypeScript和React的原因，是模型的分布性很好。所以，当我们开始构建代码库时，模型没有今天这么智能，所以语言和框架很重要。如今，你什么都能写，能掌握没见过的新语言和框架。但那时，我们想用分布性好的东西。
+
+38
+0:06:12.240 --> 0:06:21.550
+to use something pretty on distribution. Because of that, I think fairly early we got the point where model just wrote 100% code. And for us, this happened sometime in October, November last year.
+---
+用分布性好的东西。正因为如此，我觉得很早我们就达到了模型能写100%代码的程度。对我们来说，这发生在去年十月到十一月左右。
+
+39
+0:06:21.560 --> 0:06:28.550
+And so, for me today, you know, like the model writes 100% of my code. I write somewhere, usually a few dozen PRs every day.
+---
+所以今天对我来说，模型写了我100%的代码。我自己写，通常每天提交几十个拉取请求。
+
+40
+0:06:28.560 --> 0:06:35.110
+Uh there was a day last week I did like 150 in That that record. just trying to kind of push see how far can get it.
+---
+上周有一天我做了150个——破了纪录。我只是想试试看能推进到什么程度。
+
+41
+0:06:35.120 --> 0:06:50.070
+push to see how far I can get it. Um but yeah, it's like for me just solved. this is not the case everywhere. There's very big complicated code bases. kind of weird languages model's good at yet. and you know, as everyone here knows, getting there. Usually answer wait next model.
+---
+试试能推进多少吧。嗯，但对我来说，这问题已经解决了。不过并非所有地方都这样。有些非常大的复杂代码库，模型还不太擅长那些古怪的语言。而且，在座各位都知道，要达到那种程度，通常得等下一代模型。
+
+42
+0:06:50.080 --> 0:06:55.750
+Can you actually tell us about your personal setup? You walked through it the other day. It is pretty wild.
+---
+能跟我们聊聊你的个人工作配置吗？你那天简单提过，挺狂野的。
+
+43
+0:06:55.760 --> 0:07:07.709
+the other day. It is pretty wild. Yeah. Um so, I shared my personal setup like 6 months ago or something on Twitter. And it it's funny, actually didn't realize that would be surprising for anyone. That was just way coded.
+---
+那天提过，确实挺狂野。嗯，大概六个月前我在推特上分享过我的个人配置。有意思的是，我当时真没觉得这会让任何人惊讶。那就是我写代码的方式。
+
+44
+0:07:07.719 --> 0:07:14.710
+like the way that I coded. >> [laughter] And it's changed since then. It's changed. Um and so, now actually most of my work do from phone.
+---
+就像我平时写代码那样。 >> [笑声] 但之后又变了，一直在变。嗯，实际上现在我的大部分工作都是在手机上完成的。
+
+45
+0:07:14.720 --> 0:07:31.070
+my work I do from phone. Um and so, don't know if like you guys won't be able to see this, but have um the Claude app, open on left-hand side, there's little code tab, just a bunch of sessions going.
+---
+我的工作都在手机上做。嗯，不知道你们能不能看到这个，但左边开着Claude应用，有个小代码标签，里面有好几个会话在进行。
+
+46
+0:07:31.080 --> 0:07:33.190
+Um you probably can't see it.
+---
+嗯，你们可能看不清。
+
+47
+0:07:33.200 --> 0:07:34.750
+>> How many sessions?
+---
+>> 有多少个会话？
+
+48
+0:07:34.760 --> 0:07:43.310
+Uh usually have like maybe five to 10 sessions. and then the sessions a bunch of agents, so I think currently probably few hundred going.
+---
+通常大概五到十个会话。然后每个会话里有一堆代理，所以现在大概有好几百个在运行。
+
+49
+0:07:43.320 --> 0:07:48.910
+hundred agents going. Um usually every night I have like a few thousand that are doing kind of deeper work. There's ways to manage it.
+---
+好几百个代理在跑。通常每天晚上我会有几千个在做更深层的工作。有一些管理方法。
+
+50
+0:07:48.920 --> 0:07:52.510
+work. There's a few ways to manage it. One is that you ask Claude use bunch of sub-agents do
+---
+有一些管理方法。一个是让Claude用一堆子代理来处理
+
+51
+0:07:52.520 --> 0:08:09.470
+bunch of sub-agents to do work. Actually, the thing that I've been finding myself using more and is loop. So, this \{{}slash} loop, it's just like coolest thing. It's simplest works. All it you have Claude use cron schedule a job for some point in future, repeat job.
+---
+一堆子代理来做工作。实际上，我发现自己用得越来越多的是循环。就是这个\{\{slash}\}循环，真是太酷了。最简单却最有效。就是让Claude用cron定时任务在未来的某个时间点执行，然后重复执行。
+
+52
+0:08:09.480 --> 0:08:15.630
+future, and it's a repeat job. And it can run every minute, 5 minutes, day, kind of however often you want to schedule it.
+---
+未来的某个时间点，并且是可重复的任务。它可以每分钟、每五分钟、每天运行，你想怎么调度都行。
+
+53
+0:08:15.640 --> 0:08:24.790
+And at [snorts] this point, I have like dozens of loops that are running for stuff. So, one that's babysitting my PRs, fixing CI, auto-rebasing. another keeps healthy.
+---
+到了 [哼] 现在，我有好几十个循环在跑各种事情。有一个在盯着我的Pull Request，负责修复CI、自动变基。另一个在维护
+
+54
+0:08:24.800 --> 0:08:50.270
+have another one that keeps CI healthy. So, like if there's a flaky test or whatever, it'll go and fix it. Um I grabs uh feedback from Twitter kind of clusters it for me every 30 minutes. just bunch these loops running at any time. sort feel are the future this point. If you haven't experimented with highly recommend And we also launched routines, which is same thing but on server. even close your laptop, going.
+---
+另一个在维护CI的健康。比如如果有不稳定的测试之类的问题，它就会去修复。嗯，它还会从推特抓取反馈，每30分钟帮我分类整理一下。任何时候都有一堆这样的循环在运行。我觉得循环就是未来的方向。如果你还没试过，强烈推荐试试。我们还推出了例程，本质一样但跑在服务器上。就算你合上笔记本电脑，它也在跑。
+
+55
+0:08:50.280 --> 0:09:04.670
+keeps going. So, that's your personal setup. Tell us about what you think teams will look like in the future. How do extrapolate from all work you're doing to keep everyone on team moving forward, understanding context, or we need let go of a lot more agents make it work?
+---
+它会一直运行。以上就是你的个人配置。跟我们说说，你认为未来的团队会是什么样？你是如何从你做的这些工作中推断出，如何让团队中的每个人都保持前进、理解上下文，或者我们是不是需要放权给更多代理才能让它运转起来？
+
+56
+0:09:04.680 --> 0:09:12.350
+Um I think so you know, it's like hard to make predictions, but um I'm here I'll try some.
+---
+嗯，我觉得吧，做预测很难，但我在这儿，就试着说几个吧。
+
+57
+0:09:12.360 --> 0:09:19.390
+try to make some. I feel like the way that things are going is generally there's be a lot more generalists than there today.
+---
+试着说几个。我感觉未来的大趋势是，通才型人才会比现在多得多。
+
+58
+0:09:19.400 --> 0:09:35.270
+And today when we talk about generalists, I think largely we're talking people that are still engineers. So, they're writing code, but maybe kind of product say generalist, it's like a you know, they do iOS and web server, for example. That's in engineering.
+---
+现在我们聊通才，基本上指的还是工程师。他们写代码，但可能算是产品通才，比如既做iOS也做Web服务器。这都还在工程领域。
+
+59
+0:09:35.280 --> 0:09:40.710
+But I think the thing that we're going to start see a lot more of is generalists are cross-disciplinary.
+---
+但我认为，我们会开始越来越多地看到跨领域的通才。
+
+60
+0:09:40.720 --> 0:09:48.790
+generalists that are cross-disciplinary. So, this is engineers really good at product engineering, but also great design. Or and data science engineering.
+---
+跨领域的通才。就是那些既擅长产品工程、又擅长设计的工程师，或者既懂工程又懂数据科学的人。
+
+61
+0:09:48.800 --> 0:09:58.430
+Um I don't know. It's it's something that we're starting to see on our team. So, actually like a lot of people the Claude code team are generalists across disciplines.
+---
+嗯，我不太确定。这其实是我们团队正在出现的一种现象。实际上，Claude 代码团队里很多人都是跨学科的通才。
+
+62
+0:09:58.440 --> 0:10:10.790
+Everyone on our team codes. So, like engineering manager, product designers, data scientist, finance guy, user researcher, every single person writes code.
+---
+我们团队每个人都会写代码。比如工程经理、产品设计师、数据科学家、财务人员、用户研究员，每个人都在写代码。
+
+63
+0:10:10.800 --> 0:10:15.310
+team writes code. And so, you know, like they're specialist in something, but now also everyone's just coding.
+---
+整个团队都写代码。所以，你看，他们虽然各有专长，但现在每个人也都在写代码。
+
+64
+0:10:15.320 --> 0:10:23.830
+And you know, I'm seeing some nods, but I bet also it's actually not that surprising to people in this room cuz you're the same things.
+---
+我看到有人点头了，但我猜在座各位可能并不觉得这有多意外，因为你们的情况也差不多。
+
+65
+0:10:23.840 --> 0:10:34.030
+seeing the same things. Um [clears throat] I'll have one more favorite questions then we'll open up to audience. So, we talked a bit about what's changing with coding. I'm curious what you see in world of software or products.
+---
+大家都是类似的情况。嗯（清嗓子），我再问一个我最喜欢的问题，然后就开放给观众提问。我们刚才聊了编程正在发生的变化，我很好奇在软件或产品领域，你看到了什么趋势？
+
+66
+0:10:34.040 --> 0:10:48.510
+Um I think as we see AI making writing code 10 100x cheaper, what happens to the value products that are produced with software? Do have a SAS apocalypse on our hands? How do you this plays out? And again, you're going make another prediction.
+---
+嗯，我觉得随着 AI 让写代码的成本下降10倍甚至100倍，用软件生产出来的产品价值会发生什么变化？我们会不会面临一场SaaS末日？你觉得这会如何发展？再说一次，你要再做一个预测。
+
+67
+0:10:48.520 --> 0:10:51.950
+The SAS apocalypse question is my favorite then.
+---
+SaaS末日这个问题是我最喜欢的。
+
+68
+0:10:51.960 --> 0:10:55.110
+favorite question then. Um
+---
+最喜欢的提问。嗯。
+
+69
+0:10:56.360 --> 0:11:01.590
+I think there's two things that are going to happen and don't either of them is the thing people have been talking about.
+---
+我觉得会有两件事发生，而且都不是人们一直在讨论的那种。
+
+70
+0:11:01.600 --> 0:11:07.990
+I think one is Is anyone here an acquired listener? Like the podcast?
+---
+第一件事——在座有人听过《Acquired》这个播客吗？
+
+71
+0:11:08.000 --> 0:11:10.190
+Yeah, it's like the best podcast.
+---
+对，那是最好的播客。
+
+72
+0:11:10.200 --> 0:11:19.990
+Uh I actually got to do a unplugged with them other week and just felt meet my heroes cuz they're hosts are best.
+---
+嗯，我前几周还去录了一期《Unplugged》，感觉就像见到了我的偶像，因为那两位主持人是最棒的。
+
+73
+0:11:20.000 --> 0:11:41.790
+are the best. So, they have this idea of uh seven powers and is a like Hamilton. He kind wrote he book about modes in business. And I think what's going to happen because AI, some these get more important less important. so, for example, one that gets switching costs you can just use model port from thing different thing.
+---
+他们是最棒的。他们有个“七种力量”的概念，来自汉密尔顿写的那本关于商业模式的书。我认为随着AI的发展，其中一些力量会变得更重要，另一些则会弱化。比如，转换成本这种力量会减弱，因为你可以轻松地把模型从一个东西迁移到另一个东西。
+
+74
+0:11:41.800 --> 0:12:02.070
+from one thing to a different thing. Another that gets less important is process power because for companies whose mode like workflows and things this, Claude getting really good at figuring out process. And especially with 4.7, it can just hill climb anything. So, if you give target tell iterate until it's done, will do it. I think the first model that.
+---
+从一件事换到另一件事。另一种会弱化的是流程优势，因为对于那些商业模式依赖工作流之类的公司，Claude已经非常擅长梳理流程了。特别是4.7版本，它可以自动爬山优化任何目标。你只要给一个目标，说“迭代直到完成”，它就会照做。我认为这是第一个能做到这点的模型。
+
+75
+0:12:02.080 --> 0:12:13.430
+is the first model like that. So, I think these are going to get less important, but previous modes actually still matter. this network effects, uh scale economies, cornered resources, things These not really changing with AI.
+---
+是第一个这样的模型。所以我认为这些因素会变得不那么重要，但之前的商业模式其实仍然有效。像网络效应、规模经济、稀缺资源这些东西，并不会因为AI而改变。
+
+76
+0:12:13.440 --> 0:12:24.390
+I think the second thing is if you look at number of startups today or like maybe in next know, past 10 years, that are just going to disrupt everything increase 10x.
+---
+我认为第二件事是，看看今天或未来十年内的创业公司数量，那些能够颠覆一切的公司可能会增加10倍。
+
+77
+0:12:24.400 --> 0:12:40.750
+increase like 10x. Because right now you can be a tiny startup, could build thing that's as valuable large company and actually compete head-to-head because the has to evolve their business process, they have way work, retrain everyone use technology, they're going face lot of internal resistance that.
+---
+增加10倍。因为现在你可以是一个很小的创业公司，却能打造出和大公司一样有价值的产品，并且直接正面竞争。因为大公司必须调整业务流程、改变工作方式、重新培训所有人使用新技术，它们会面临大量内部阻力。
+
+78
+0:12:40.760 --> 0:12:44.030
+resistance to that. But you know, no one here has that problem.
+---
+但你们在座的人没有这种问题。
+
+79
+0:12:44.040 --> 0:12:48.950
+you know, no one here has that problem. If you're starting fresh, then can kind of build with AI natively from the ground up.
+---
+你们都没有这种问题。如果你是从零开始，你可以从一开始就以AI为核心来构建一切。
+
+80
+0:12:48.960 --> 0:12:55.030
+So, I don't know. think it's the best time to build. It's be a startup. there's so much disruption coming.
+---
+所以，我不确定。但我觉得这是最好的创业时代，也是创业的最好时机。将会有巨大的颠覆来临。
+
+81
+0:12:55.040 --> 0:12:56.710
+So, there is hope for us after all.
+---
+这么说来，我们还是有希望的。
+
+82
+0:12:56.720 --> 0:12:57.990
+So, there is hope for us after all. Thank you, Boris.
+---
+这么说来，我们还是有希望的。谢谢你，鲍里斯。
+
+83
+0:12:58.000 --> 0:13:03.190
+Um I would love to open up audience questions if anyone has anything they like ask.
+---
+嗯，我很乐意开放观众提问环节，如果有人想问问题的话。
+
+84
+0:13:03.200 --> 0:13:08.070
+would like to ask. Dan?
+---
+有人想问问题吗？丹？
+
+85
+0:13:09.880 --> 0:13:25.150
+I Yeah, I'm curious. Um you said that built uh 6 months before there was product market fit, but now given the models are good enough, how much do attribute success of Claude code to model versus like decisions in field product?
+---
+我，嗯，我很好奇。你说在产品市场匹配前六个月就搭建了产品，但现在模型已经足够好了，你觉得Claude Code的成功有多少归功于模型本身，又有多少归功于产品领域的决策？
+
+86
+0:13:25.160 --> 0:13:27.270
+field of product? Uh I think it's probably a mix.
+---
+产品领域？嗯，我觉得可能是两者相结合。
+
+87
+0:13:27.280 --> 0:13:32.230
+Uh I think it's probably a mix. Yeah, if you asked me maybe year ago, the ratio was something like 50/50.
+---
+嗯，我觉得可能是两者相结合。对，如果你一年前问我，比例大概是五五开。
+
+88
+0:13:32.240 --> 0:13:35.350
+Um maybe I don't know. If you asked me 6 months ago, the mix would be
+---
+嗯，我不知道。如果你六个月前问我，比例可能还是
+
+89
+0:13:35.360 --> 0:13:37.150
+50/50. >> What about in 2 years?
+---
+五五开。 >> 那两年后呢？
+
+90
+0:13:37.160 --> 0:13:40.070
+Oh, year I don't know, dude. We plan like we 1 week out.
+---
+哦，老兄，我不知道。我们只规划未来一周的事。
+
+91
+0:13:40.080 --> 0:13:41.369
+in like we plan 1 week out. >> months. Sometime the future.
+---
+我们只规划未来一周。 >> 几个月？未来的某个时候。
+
+92
+0:13:41.379 --> 0:13:53.710
+>> months. Sometime in the future. [laughter] And by way, I think reason it was 50/50 is um you know, like did YC back day. first hire at a company and bunch of startups.
+---
+>> 几个月？未来的某个时候。[笑声] 顺便说一句，我认为之所以是五五开，嗯，你知道，就像YC（创业孵化器）早期教的那样。作为一家公司的第一个员工，参与过很多初创公司。
+
+93
+0:13:53.720 --> 0:13:59.510
+And in startups like the thing that they drill into you and then especially YC over is build something people love.
+---
+在初创公司里，他们一直灌输的理念，尤其是YC，就是打造人们喜欢的东西。
+
+94
+0:13:59.520 --> 0:14:14.550
+And so, it doesn't matter what the product is, like model and all this stuff. You still in end have to build a thing that people I think that's why matters we pay much attention little details as you use day, it's really great experience.
+---
+所以，产品是什么、模型之类的都不重要。你最终还是要打造一个人们喜欢的东西。我觉得这就是为什么我们如此关注你日常使用时的小细节，这确实是一种很棒的体验。
+
+95
+0:14:14.560 --> 0:14:17.990
+I think as the model's gotten better, harness kind of gets less important.
+---
+我觉得随着模型变得更好，工具层的重要性会降低。
+
+96
+0:14:18.000 --> 0:14:30.390
+the harness kind of gets less important. And I think like that we're thinking about right now is how do we evolve harness? So, make loops more a first class thing? How it easier to run lot agents? Uh you know, beside sub agents one idea.
+---
+工具层的重要性会降低。我认为我们现在思考的是如何改进工具层？比如让循环操作成为更核心的功能？如何让运行多个智能体更简单？嗯，你知道，子智能体是个想法。
+
+97
+0:14:30.400 --> 0:14:32.790
+know, like sub agents is one idea. There's a bunch more stuff that we're cooking.
+---
+对，子智能体是一个想法。我们还在酝酿更多的东西。
+
+98
+0:14:32.800 --> 0:14:49.590
+But I think in a year, the model will be much better aligned. And so, all safety mechanisms that we have today around uh prompt injection and kind of static verification commands permission modes, human loop, this stuff is just going to less important cuz do right thing.
+---
+但我认为一年后，模型的对齐能力会好得多。所以我们今天所有的安全机制，比如提示注入防护、静态验证命令、权限模式、人工介入循环等等，都会变得不那么重要，因为模型会做正确的事。
+
+99
+0:14:49.600 --> 0:14:52.390
+do the right thing. Um So, yeah, that's my prediction.
+---
+会做正确的事。嗯，这就是我的预测。
+
+100
+0:14:57.360 --> 0:14:59.949
+You want to toss the box, Dan? >> [snorts]
+---
+你想扔一下盒子吗，丹？ >> [喷鼻声]
+
+101
+0:15:01.280 --> 0:15:10.190
+>> Great. Um To zoom to out a little bit from software, I think Claude code did cultural change few months ago where it democratized like building software.
+---
+>> 太好了。嗯，如果从软件层面稍微拉远一点来看，我觉得 Claude 代码在几个月前带来了一种文化变革，它让构建软件这件事变得大众化了。
+
+102
+0:15:10.200 --> 0:15:19.590
+You can see uh shop owners their own um software for themselves or even programming microcontrollers to control the light when someone opens door.
+---
+你可以看到店铺老板为自己编写软件，甚至用编程控制单片机，在有人开门时自动开关灯。
+
+103
+0:15:19.600 --> 0:15:40.590
+Um do you see in future um building software becoming a skill like uh I know Microsoft Office? so, it's thing that ev- everybody can not just people tech industry? Oh my god, yes. Yes. think going to be even more than that. don't know. It's yeah, how send text message.
+---
+嗯，你认为未来构建软件会不会成为像“我会用 Microsoft Office”这样的通用技能？变成每个人都能掌握的东西，而不仅仅是科技行业的人？哦天哪，当然会。我觉得甚至还不止于此。就像现在谁都会发短信一样。
+
+104
+0:15:42.240 --> 0:15:47.550
+I think um you know, like read a my two genres are essentially sci-fi and tech history. This is what lot of.
+---
+我觉得，嗯，你知道的，我阅读的两大主题基本就是科幻和技术史。这是我大量阅读的内容。
+
+105
+0:15:47.560 --> 0:15:57.910
+history. This is what I read a lot of. think in tech history, there's one thing which to me the clearest parallel for what's happening right now. And this 1400s, printing press Europe.
+---
+技术史。这是我最常读的东西。在技术史中，有一个在我看来与当下正在发生的事情最为清晰的类比。那就是15世纪欧洲的印刷术。
+
+106
+0:15:57.920 --> 0:16:05.230
+the printing press in Europe. And what happened was before essentially 10% of European population literate. They knew how to read and write.
+---
+欧洲的印刷术。在当时，大约只有10%的欧洲人口识字。他们懂得读写。
+
+107
+0:16:05.240 --> 0:16:09.630
+They were often employed by like kings lords that not literate.
+---
+这些人通常受雇于国王和不识字的领主。
+
+108
+0:16:09.640 --> 0:16:14.641
+and lords that were not literate. And their job was to you know, read write this is something everyone knew how do.
+---
+以及那些不识字的领主。他们的工作就是读写，而这是当时人尽皆知的事情。
+
+109
+0:16:14.720 --> 0:16:25.110
+>> [snorts] The printing press was invented, then there were two more presses and in the 50 years after first literature published Europe than thousand before.
+---
+>> [轻笑声] 印刷术被发明之后，又出现了两台印刷机。在第一部文学作品出版后的50年内，欧洲的文献数量比之前的一千年还要多。
+
+110
+0:16:25.120 --> 0:16:50.870
+And over the same period, cost of literature, a book went down like 100x. then, you know, it took couple hundred years cuz learning to read and write is hard. You need education systems government everyone can't be working on farms so on. But next few literacy globally up 70%. now we can all don't degree in reading writing how write. Although still there are professional writers that thing do.
+---
+而在同一时期，文献的成本——一本书的价格下降了大约100倍。然后，你知道的，这又花了几百年时间，因为学习读写本身很难。你需要建立教育体系、需要政府推动、不能让所有人都还在农场干活等等。但接下来的几个世纪里，全球识字率上升到了70%。现在我们所有人都能读写，不需要专门拿个读写学位。尽管仍然有专业的写作者在做这件事。
+
+111
+0:16:50.880 --> 0:16:59.949
+is a thing that you can do. So, I think the that's about to happen and it's going be much faster than 50 years software will fully democratized, anyone
+---
+这是每个人都能够做的事。所以，我认为同样的事情即将发生，而且会比50年快得多——软件将被彻底普及，任何人
+
+112
+0:16:59.959 --> 0:17:06.750
+can do. And you know, there's a lot of corollaries to this. So, for example, let's say you're writing accounting software.
+---
+都能做。而且，你知道的，这有很多推论。比如，假设你在编写会计软件。
+
+113
+0:17:06.760 --> 0:17:15.550
+The best person to write accounting software, I think maybe even today, is not an engineer, it's a really good accountant because they know the domain well and coding easy part.
+---
+我认为，编写会计软件的最佳人选，甚至可能到今天为止，都不是工程师，而是一位真正优秀的会计师，因为他们对领域非常熟悉，而编码反而是简单的部分。
+
+114
+0:17:15.560 --> 0:17:22.590
+really well and coding is the easy part. It's knowing domain that's hard And I think this just obviously future.
+---
+非常熟悉，编码反而是简单的部分。真正难的是了解这个领域。而我认为这显然就是未来。
+
+115
+0:17:24.679 --> 0:17:38.470
+So, uh one of the things Greg said was that you guys are living in future a little bit cuz get to have access models and agents. Claude code an internal tool before released it. Um is gap between where engineering rest world, month? Is it 3 months?
+---
+所以，嗯，Greg 说过的一点是，你们某种程度上已经生活在未来了，因为你们能够使用模型和智能体。Claude 代码在发布之前曾是一个内部工具。嗯，工程领域和外部世界之间的差距是一个月吗？还是三个月？
+
+116
+0:17:38.480 --> 0:17:44.030
+world, is that a month? Is it 3 months? 6 And gap getting bigger or smaller over time?
+---
+世界，是一个月吗？还是三个月？六个月？而这个差距是在变大还是在变小？
+
+117
+0:17:44.040 --> 0:17:47.510
+Yeah, so internally, we use the same models everyone else does.
+---
+是的，实际上在内部，我们使用的是和外部所有人一样的模型。
+
+118
+0:17:47.520 --> 0:17:59.870
+Um for us, the dog fooding is really important. So, we use thing that here you know, like a little bit of mythos to try it and then lot Opus 4.7 food write most our code.
+---
+嗯，对我们来说，内部试用（dog fooding）非常重要。所以我们用这些东西，你知道的，比如先小范围试用一下 mythos，然后大量用 Opus 4.7 来编写我们大部分的代码。
+
+119
+0:17:59.880 --> 0:18:10.350
+of our code. Um I think on the model side, there isn't really a gap. you know, it's like pretty much mythos and that will become some version descendant available at point to everyone.
+---
+我们的代码。嗯，我认为在模型层面，其实没有什么差距。你知道的，就像 mythos 一样，它最终会以某个版本的后代形式在某个时间点向所有人开放。
+
+120
+0:18:10.360 --> 0:18:30.870
+available at some point to everyone. I think on the product side, there's probably a far larger gap. And that's just related us changing all of our processes. Like if you talk people Anthropic, we use Claude for literally everything. Claudes are talking day like as I'm coding, my in loop, they will communicate over Slack other people's that also running kind figure out unknowns.
+---
+在某个时间点向所有人开放。我认为在产品层面，差距可能要大得多。而这只是因为我们在改变我们所有的流程。如果你和 Anthropic 的人聊天，你会发现我们实际上什么都用 Claude。Claude 们整天都在对话——就像我在编码时，我的内循环中，它们会通过 Slack 和其他人的 Claude 交流，而那些 Claude 也在运行，去弄清楚一些未知的东西。
+
+121
+0:18:30.880 --> 0:18:54.430
+We have no more manually written code anywhere at the company. All of SQL is by uh models. Everything just built So, I think actually place that we're ahead not technology cuz same available to us everyone here because fundamentally, we are building a platform. And so, for it's really important developers can use thing using and dog food everything put out there.
+---
+我们公司现在没有任何地方再手写代码了。所有SQL都由模型生成。所有东西都是自动构建的。所以我认为，实际上我们领先的地方并不是技术，因为同样的工具对所有人来说都是可用的，核心在于我们正在构建一个平台。因此，开发人员能够用上我们推出的所有东西，并且亲自试用，这一点非常重要。
+
+122
+0:18:54.440 --> 0:19:06.590
+everything that we put out there. But I think there's actually a far bigger weed in kind of the organizational structure and process. And this is place where you know, hopefully can talk about it places like uh everyone learn from also evolve.
+---
+我们推出的所有东西。但我认为，在组织结构和流程方面，其实有一个更大的问题。而这就是一个地方，希望大家可以在这里讨论，让每个人都能学习并共同进步。
+
+123
+0:19:06.600 --> 0:19:10.510
+and also evolve. Yeah, I think that's one of the advantages startups have. It's so much easier to start there.
+---
+并共同进步。是的，我认为这就是初创公司的一个优势。从零开始要容易得多。
+
+124
+0:19:12.159 --> 0:19:50.510
+Yeah, um last time we talked, I think you'd mentioned a little bit about multi-agent and it was very in code at the prior Sequoia event you that there were some things going down pipeline thing you're talking thinking about. Now obviously there's slash batch, loop, sub teams, teams. Can speak to either model level harness how injecting priors objective function is changing kind of make this experience around delegating work, spinning up agents better? Cuz so much parallelizable. You can do many faster feel like have overlay my own intuition for when parallelize rather than understanding spin 10 something.
+---
+是的，嗯，上次我们聊的时候，我记得你提到了一点关于多代理的内容，而且在之前红杉的活动上，你说有一些事情正在推进中，是你正在考虑的东西。现在显然有了/slash批处理、循环、子团队、团队。你能谈谈是在模型层面还是框架层面，如何通过注入先验知识和目标函数，来改善这种委派任务、启动代理的体验吗？因为很多事情是可以并行处理的。你可以做得更快，感觉我需要靠直觉来判断什么时候并行，而不是理解如何启动10个代理来处理某件事。
+
+125
+0:19:50.520 --> 0:19:53.550
+can spin up 10 sub agents for something. Yeah, I mean on the product side, it really just comes down to prompting.
+---
+可以为某件事启动10个子代理。是的，从产品角度来看，这其实归结为提示工程。
+
+126
+0:19:53.560 --> 0:19:59.390
+That's how it is. And so, you know, we tweak prompts kind of help the model do stuff in parallel more.
+---
+就是这样。所以，你知道，我们调整提示词，帮助模型更并行地处理事情。
+
+127
+0:19:59.400 --> 0:20:32.510
+But also, honestly, as the model gets better, it just naturally does this. And so, something like loop, I found actually 4.7, starts doing. Uh which is really cool. It's uh you know, I'll tell "Go pull this data query." it's "Hey, noticed that changing over time. start a and give report every 30 minutes." I'm "Great. Can send to me Slack?" then uses Slack MCP do that. So, think time, not on users figure out how hold tools better. if that's case, product design problem doing good job.
+---
+但说实话，随着模型变得更好，它自然会这样做。所以像循环这样的功能，我发现实际上4.7版本就开始做到了。这真的很酷。嗯，我会告诉它：“去拉取这个数据查询。”它就会说：“嘿，注意到这个数据随时间变化。开始一个循环，每30分钟给我一份报告。”我说：“太好了。能发到我的Slack上吗？”然后它就用Slack MCP做到了。所以我认为，未来用户不用再费心去想如何更好地使用工具了。如果是这样，那就是产品设计的问题，要做好。
+
+128
+0:20:32.520 --> 0:20:41.110
+and like I'm not doing a good job. It's really on the model to do this stuff better us kind of prompting it so naturally does this.
+---
+而且好像我做得并不好。实际上，这要依靠模型本身更好地处理这些事，我们只需要给它合适的提示，它自然就能做到。
+
+129
+0:20:43.320 --> 0:21:23.710
+Um so, right now it seems like a lot of us use um Claude or Codex these uh tools in the cloud to do our computing. But then, there are some very vocal advocates having your AI be local. And I could imagine over time as open way models and other things catch up that this more possibility for people get really high-quality coding assistance. So, I'm curious vision say next years something that. Do you see trajectory everyone still relying on centralized compute is pivot oh, we all just have local agents can rely they don't throttled benefits?
+---
+嗯，所以现在，我们很多人似乎都在用Claude或Codex这些云端工具来进行计算。但也有人非常强烈主张让AI本地化。我可以想象，随着时间的推移，随着开源模型和其他技术的发展，人们获得高质量编程辅助的可能性会更大。所以，我很好奇你未来几年的愿景是什么。你觉得整个趋势是大家仍然依赖集中式计算，还是会转向我们都有本地代理，不用担心被限速，还能享受其他好处？
+
+130
+0:21:23.720 --> 0:21:32.590
+and other benefits? Yeah, I think it um don't know. There's maybe a few ways to answer that. like kind of the most fundamental way that is doesn't matter.
+---
+以及其他好处？是的，我觉得这个……不知道。可能有几种回答方式。最基本的一种是，这根本不重要。
+
+131
+0:21:32.600 --> 0:21:42.150
+answer that is it doesn't matter. Cuz I think now we're getting to the point where model just able figure out. So, like by a couple years from going be doing all code. It's starting agents. building environments.
+---
+回答是，这根本不重要。因为我认为现在我们正到达一个点，模型能够自己搞定了。所以，再过几年，模型将包揽所有代码工作。它会启动代理，构建环境。
+
+132
+0:21:42.160 --> 0:21:46.630
+going to be building the environments. And so, like if it decides actually I'll use local models do this, then you know, that's what it'll do.
+---
+它会自己去构建环境。所以，如果它决定用本地模型来做，那它就会这么做。
+
+133
+0:21:46.640 --> 0:21:51.150
+then you know, that's what it'll do. These I don't think these will be decisions that we are making as engineers anymore.
+---
+那它就会这么做。我认为这些将不再是工程师需要做的决策了。
+
+134
+0:21:51.160 --> 0:21:55.430
+We have time for a couple more questions, so I can toss this out.
+---
+我们还有时间再问几个问题，所以我可以抛出这个问题。
+
+135
+0:21:55.440 --> 0:21:57.750
+questions, so I can toss this out. Jamie.
+---
+问题，所以我可以抛出这个问题。杰米。
+
+136
+0:21:57.760 --> 0:21:59.590
+Nester. Thank you.
+---
+内斯特。谢谢。
+
+137
+0:21:59.600 --> 0:22:07.270
+It feels like one of the great uh decisions with Claude Code was making use fact that a lot developers' tools and workflows are local.
+---
+感觉Claude Code一个很厉害的决定，是利用了许多开发者的工具和工作流都是本地化这一事实。
+
+138
+0:22:07.280 --> 0:22:22.630
+But um that isn't necessarily always the case for sort of general knowledge work with, you know, cloud tools. I'm curious how you're thinking about this Co-work do give enough access to tools we use be powerful same way Claude Code is developers?
+---
+但对于一般的知识工作来说，情况不一定是这样，很多人用的是云端工具。我很好奇，你们是如何思考Co-work这个产品的，它能否像Claude Code对开发者那样，为我们使用的工具提供足够的访问权限，让它同样强大？
+
+139
+0:22:22.640 --> 0:22:33.669
+Code is for developers? Yeah, it's That's a really great question. Um I know when was uh at big company, we took like 5 years moving all the environments to remote. It's just so much work, especially scale.
+---
+就像Code对开发者那样吗？是的，这是个非常好的问题。嗯，我知道当我在大公司的时候，我们花了大概5年时间把所有环境迁移到远端。这工作量太大了，尤其是在大规模下。
+
+140
+0:22:33.679 --> 0:22:39.190
+especially at a big scale. Um but for knowledge work, largely, it's there already with like Salesforce and Docs things that.
+---
+尤其是在大规模下。嗯，但对于知识工作来说，它其实已经存在了，比如Salesforce和文档这类工具。
+
+141
+0:22:39.200 --> 0:22:42.870
+Docs and things like that. Um for us, it's always just the simplest answer. It's MCP.
+---
+文档之类的。呃，对我们来说，答案往往最简单——就是 MCP。
+
+142
+0:22:42.880 --> 0:22:55.070
+answer. It's just MCP. So, the same MCP connector that you have in Claude AI, hook up like, know, Salesforce, Google Docs, Calendar. Uh and then Co-work can use that. CLI it. Code everywhere
+---
+答案就是 MCP。所以，你在 Claude AI 里用的那个 MCP 连接器，接上 Salesforce、Google 文档、日历什么的，然后 Co-work 就能用上它。命令行操作，随处编码。
+
+143
+0:22:56.480 --> 0:23:02.150
+And for the systems that don't have MCPs, like do you think that's where computer use is going to be a big opportunity?
+---
+对于那些没有 MCP 的系统，你觉得这是不是意味着“计算机使用”会成为一个大机会？
+
+144
+0:23:02.160 --> 0:23:20.750
+Yeah, I think computer use is kind of a catchall. Um so, currently, for as far know, Anthropic like pretty ahead on computers. And if you it through Co-work, it's quite good. able to much any piece software that have your computer. It's very slow, but does well now, especially with 4.7.
+---
+没错，我觉得“计算机使用”算是一个万能方案。呃，目前据我所知，Anthropic 在这方面挺领先的。如果你通过 Co-work 来运行，效果相当不错。基本上能操控你电脑上的任何软件。虽然现在速度还挺慢，但表现已经很好，尤其是搭配 4.7 版本。
+
+145
+0:23:20.760 --> 0:23:35.470
+Um Yeah, but I think otherwise like MCP is kind of the answer. It's And you know, all this stuff just doesn't matter that much. It could be MCPs, APIs, some sort programmatic access cuz model care. to mo- To it's tokens.
+---
+嗯，但除此之外，我觉得 MCP 基本上就是答案了。你看，这些杂七杂八的东西其实没那么重要。可以是 MCP、API，或者某种程序化访问方式，因为模型只关心这个——它只认 Token。
+
+146
+0:23:35.480 --> 0:23:38.190
+it's just tokens. All right, we have time for one more question.
+---
+说到底就是 Token。好了，我们还能再问一个问题。
+
+147
+0:23:41.200 --> 0:23:45.270
+Sean, do you want to toss the Thank you.
+---
+Sean，你要不要抛个——谢谢。
+
+148
+0:23:45.280 --> 0:24:03.230
+Sean, do you want to toss the Thank you. Um you've kind of alluded this, but if like sometime ago saw probabil- product overhang and thought build a that would then become more interesting once models got better, could just talk even in vague terms about shape you'd today think becomes much as get 6 months year?
+---
+Sean，你要不要抛个——谢谢。呃，你刚才已经暗示过这一点，但如果早些时候看到“概率性产品遗留问题”，想着先搭个东西，等模型变强之后它会变得更有意思——你能不能大概聊聊，你觉得从现在起半年到一年后，什么样的东西会变得特别有价值？
+
+149
+0:24:03.240 --> 0:24:08.950
+better in 6 months to a year? Yeah, Claude design I think is really good example. It's uh it's pretty today. going get lot better.
+---
+半年到一年后会变得更好？嗯，Claude 设计就是个很好的例子。它现在已经挺不错了，但还会变得更好。
+
+150
+0:24:08.960 --> 0:24:15.150
+Um there's also a few things that we're cooking up for Claude Code uh are going to be landing over the coming weeks. So, you'll see those.
+---
+呃，还有一些我们正在为 Claude Code 开发的东西，未来几周就会上线。到时候你们就能看到了。
+
+151
+0:24:15.160 --> 0:24:22.950
+Um and then I think uh loop batch things like this around massively parallelizing agents, that's going to get better.
+---
+然后，我觉得像这种循环批处理、大规模并行化智能体的事情，也会变得越来越好。
+
+152
+0:24:22.960 --> 0:24:25.910
+And computer use is another good one.
+---
+“计算机使用”也是一个很好的例子。
+
+153
+0:24:25.920 --> 0:24:30.481
+And computer use is another good one. All right, Boris. Thank you so much for joining us. I think we'll be here a little longer if anyone has questions.
+---
+“计算机使用”也是一个很好的例子。好了，Boris，非常感谢你来做客。我们还会在这儿待一会儿，如果大家还有问题的话。
+

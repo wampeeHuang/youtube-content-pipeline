@@ -1,0 +1,153 @@
+Okay, I'm excited to introduce our next speaker. Show of hands, who here uses Claude code?
+Okay, show of hands, who here has code psychosis?
+Come on guys, [clears throat] it's okay.
+Come on guys, [clears throat] it's okay. It's Um my team lovingly says I have Claude code psychosis, which may or not be true. we are delighted to Boris Cherny with us today. Uh is the creator, father of code. and uh in process doing that has just had a front row seat reinventing modern way software development.
+modern way of software development. Um and we're really grateful to you, Boris, for taking the time speak with us today. We know that um entirety development kind rests on your shoulders. So, thank it out be And interviewing is Lauren Reader from our team.
+Um you took my opening line, Asia. We asked who here uses Claude code. There's a lot of hands. That's awesome.
+Thank you for joining us, Boris. It's very special to have here. Um as a roomful of builders, I think are changing building entirely. And so, I'm curious explore how about the future software, coding, and what we should spend all our free time on. but I'll give me tiny bit more background on that everyone has little context. So, beyond creating Claude code, Boris is much an engineer's engineer. You were writing lot through your whole career, textbooks including programming in TypeScript. last chatted hadn't written single line year, or at least far 2026, which quite change. There's also known thing back middle school, wrote guide uh BASIC TI-83 Plus calculators.
+And I just searched for it, it's actually still on the internet. It's extremely embarrassing, so please don't search it. But [laughter] exists. We will definitely be finding that. Um we're going to do I'm start with a few questions here. Maybe we'll little bit of history Claude code, how you started and then have lot audience Q&A this one. thinking about your in back head, uh would love turn over all soon.
+turn it over to you all soon. Yeah. Um and also real quick, so for people that use Claude code, do the CLI mostly? Like okay, majority CLI?
+Okay. That's a lot. Majority desktop?
+VS code or JetBrains IDE?
+Okay. Majority VS code or JetBrains IDE? That's actually not a lot.
+Okay. That's actually not a lot. Other?
+I'm like iOS mostly these days. Yeah.
+I'm like iOS mostly these days. Yeah. >> [laughter] Okay. Cool.
+>> Okay. Cool. Um yeah, so I started Claude code kind of accidentally in a lot ways.
+Um I joined this team back late 2024.
+Um I joined this team back in late 2024. It was a sort of incubator within Anthropic called Labs.
+And uh the team kind of served its purpose. Um we created Claude code, MCP, and desktop app. It was a it just few us.
+it was just a few of us. So, very much like innovation team.
+We built the thing that we wanted to build, disbanded Uh now team's actually back together for round two. Mike Krieger, who's you know, chief product officer at Anthropic and used be one of founders Instagram, so he's leading right now.
+that right now. Um so the kind of reason I started to work on coding is we felt like there was this product overhang. And I'm guessing people here use word a lot. Uh but definitely lot in within lab.
+of within the lab. Uh there's this idea that model can do all stuff no product has yet captured. And in late 2024, when we were looking at coding, way did state art time was type ahead. It you open your IDE and press tab like complete one line a time. thing Sonnet 3.5 enabled for first But feeling could actually go lot further than that. almost ready next big step. So, don't have to ahead anymore, just agent write code.
+the code. And so, I built it, and just really didn't work for first 6 months. It was like not very good. barely usable. wrote from used maybe 10% of my code or something that. even after we released Claude initially, a hit.
+code initially, it was not a hit. There's lot of people that used but did have this exponential growth has today.
+growth that it has today. Um started with Opus 4 in May. And I remember very clearly. That's like when the exponential and then kind of inflected every model release. Uh 4.5, 4.6, now 4.7. It just keeps inflecting.
+But essentially, we were trying to build this thing that was like pre-PMF, and knew it wouldn't have PMF for 6 months because building the next model. And idea pretty much whole time.
+pretty much the whole time. And you know, for Anthropic in general, we've always just been very focused.
+We've cared about business and enterprise safety coding. That's kind of the way that we wanted to build. And so, at some point knew build a product. We didn't know exactly what wanted. So, this ended up being product bet.
+being the product bet. It's an incredible story, especially that it was accident.
+that it was an accident. Um so, you've said on the record you think coding is solved. Uh if this one of three best from Anthropic, can tell us more about what mean by and might still not be solved, or second-order problems come? All right. I ask another question for room. Who writes 100% their code hand?
+Who writes 100% of their code using a agent like Claude code?
+Okay. Who's somewhere in between?
+Okay. Who's like somewhere in between? So, 50% solved.
+Okay. So, like 50% solved. >> [laughter]
+>> I mean, for me it's like 100%. Like the Claude code base, um you know, it leaked, so people know. Uh pretty simple. It's just TypeScript and React. there's no big secret.
+it's React. Like there's no big secret. There's nothing really complicated. The the reason we picked TypeScript and React is very on distribution for model. So, when started, you know, building code base, model was not as intelligent it today, so language framework mattered a lot. Nowadays, can write whatever, pick up new languages, frameworks hasn't seen. But back then, wanted to use something pretty distribution.
+to use something pretty on distribution. Because of that, I think fairly early we got the point where model just wrote 100% code. And for us, this happened sometime in October, November last year.
+And so, for me today, you know, like the model writes 100% of my code. I write somewhere, usually a few dozen PRs every day.
+Uh there was a day last week I did like 150 in That that record. just trying to kind of push see how far can get it.
+push to see how far I can get it. Um but yeah, it's like for me just solved. this is not the case everywhere. There's very big complicated code bases. kind of weird languages model's good at yet. and you know, as everyone here knows, getting there. Usually answer wait next model.
+Can you actually tell us about your personal setup? You walked through it the other day. It is pretty wild.
+the other day. It is pretty wild. Yeah. Um so, I shared my personal setup like 6 months ago or something on Twitter. And it it's funny, actually didn't realize that would be surprising for anyone. That was just way coded.
+like the way that I coded. >> [laughter] And it's changed since then. It's changed. Um and so, now actually most of my work do from phone.
+my work I do from phone. Um and so, don't know if like you guys won't be able to see this, but have um the Claude app, open on left-hand side, there's little code tab, just a bunch of sessions going.
+Um you probably can't see it.
+>> How many sessions?
+Uh usually have like maybe five to 10 sessions. and then the sessions a bunch of agents, so I think currently probably few hundred going.
+hundred agents going. Um usually every night I have like a few thousand that are doing kind of deeper work. There's ways to manage it.
+work. There's a few ways to manage it. One is that you ask Claude use bunch of sub-agents do
+bunch of sub-agents to do work. Actually, the thing that I've been finding myself using more and is loop. So, this \{{}slash} loop, it's just like coolest thing. It's simplest works. All it you have Claude use cron schedule a job for some point in future, repeat job.
+future, and it's a repeat job. And it can run every minute, 5 minutes, day, kind of however often you want to schedule it.
+And at [snorts] this point, I have like dozens of loops that are running for stuff. So, one that's babysitting my PRs, fixing CI, auto-rebasing. another keeps healthy.
+have another one that keeps CI healthy. So, like if there's a flaky test or whatever, it'll go and fix it. Um I grabs uh feedback from Twitter kind of clusters it for me every 30 minutes. just bunch these loops running at any time. sort feel are the future this point. If you haven't experimented with highly recommend And we also launched routines, which is same thing but on server. even close your laptop, going.
+keeps going. So, that's your personal setup. Tell us about what you think teams will look like in the future. How do extrapolate from all work you're doing to keep everyone on team moving forward, understanding context, or we need let go of a lot more agents make it work?
+Um I think so you know, it's like hard to make predictions, but um I'm here I'll try some.
+try to make some. I feel like the way that things are going is generally there's be a lot more generalists than there today.
+And today when we talk about generalists, I think largely we're talking people that are still engineers. So, they're writing code, but maybe kind of product say generalist, it's like a you know, they do iOS and web server, for example. That's in engineering.
+But I think the thing that we're going to start see a lot more of is generalists are cross-disciplinary.
+generalists that are cross-disciplinary. So, this is engineers really good at product engineering, but also great design. Or and data science engineering.
+Um I don't know. It's it's something that we're starting to see on our team. So, actually like a lot of people the Claude code team are generalists across disciplines.
+Everyone on our team codes. So, like engineering manager, product designers, data scientist, finance guy, user researcher, every single person writes code.
+team writes code. And so, you know, like they're specialist in something, but now also everyone's just coding.
+And you know, I'm seeing some nods, but I bet also it's actually not that surprising to people in this room cuz you're the same things.
+seeing the same things. Um [clears throat] I'll have one more favorite questions then we'll open up to audience. So, we talked a bit about what's changing with coding. I'm curious what you see in world of software or products.
+Um I think as we see AI making writing code 10 100x cheaper, what happens to the value products that are produced with software? Do have a SAS apocalypse on our hands? How do you this plays out? And again, you're going make another prediction.
+The SAS apocalypse question is my favorite then.
+favorite question then. Um
+I think there's two things that are going to happen and don't either of them is the thing people have been talking about.
+I think one is Is anyone here an acquired listener? Like the podcast?
+Yeah, it's like the best podcast.
+Uh I actually got to do a unplugged with them other week and just felt meet my heroes cuz they're hosts are best.
+are the best. So, they have this idea of uh seven powers and is a like Hamilton. He kind wrote he book about modes in business. And I think what's going to happen because AI, some these get more important less important. so, for example, one that gets switching costs you can just use model port from thing different thing.
+from one thing to a different thing. Another that gets less important is process power because for companies whose mode like workflows and things this, Claude getting really good at figuring out process. And especially with 4.7, it can just hill climb anything. So, if you give target tell iterate until it's done, will do it. I think the first model that.
+is the first model like that. So, I think these are going to get less important, but previous modes actually still matter. this network effects, uh scale economies, cornered resources, things These not really changing with AI.
+I think the second thing is if you look at number of startups today or like maybe in next know, past 10 years, that are just going to disrupt everything increase 10x.
+increase like 10x. Because right now you can be a tiny startup, could build thing that's as valuable large company and actually compete head-to-head because the has to evolve their business process, they have way work, retrain everyone use technology, they're going face lot of internal resistance that.
+resistance to that. But you know, no one here has that problem.
+you know, no one here has that problem. If you're starting fresh, then can kind of build with AI natively from the ground up.
+So, I don't know. think it's the best time to build. It's be a startup. there's so much disruption coming.
+So, there is hope for us after all.
+So, there is hope for us after all. Thank you, Boris.
+Um I would love to open up audience questions if anyone has anything they like ask.
+would like to ask. Dan?
+I Yeah, I'm curious. Um you said that built uh 6 months before there was product market fit, but now given the models are good enough, how much do attribute success of Claude code to model versus like decisions in field product?
+field of product? Uh I think it's probably a mix.
+Uh I think it's probably a mix. Yeah, if you asked me maybe year ago, the ratio was something like 50/50.
+Um maybe I don't know. If you asked me 6 months ago, the mix would be
+50/50. >> What about in 2 years?
+Oh, year I don't know, dude. We plan like we 1 week out.
+in like we plan 1 week out. >> months. Sometime the future.
+>> months. Sometime in the future. [laughter] And by way, I think reason it was 50/50 is um you know, like did YC back day. first hire at a company and bunch of startups.
+And in startups like the thing that they drill into you and then especially YC over is build something people love.
+And so, it doesn't matter what the product is, like model and all this stuff. You still in end have to build a thing that people I think that's why matters we pay much attention little details as you use day, it's really great experience.
+I think as the model's gotten better, harness kind of gets less important.
+the harness kind of gets less important. And I think like that we're thinking about right now is how do we evolve harness? So, make loops more a first class thing? How it easier to run lot agents? Uh you know, beside sub agents one idea.
+know, like sub agents is one idea. There's a bunch more stuff that we're cooking.
+But I think in a year, the model will be much better aligned. And so, all safety mechanisms that we have today around uh prompt injection and kind of static verification commands permission modes, human loop, this stuff is just going to less important cuz do right thing.
+do the right thing. Um So, yeah, that's my prediction.
+You want to toss the box, Dan? >> [snorts]
+>> Great. Um To zoom to out a little bit from software, I think Claude code did cultural change few months ago where it democratized like building software.
+You can see uh shop owners their own um software for themselves or even programming microcontrollers to control the light when someone opens door.
+Um do you see in future um building software becoming a skill like uh I know Microsoft Office? so, it's thing that ev- everybody can not just people tech industry? Oh my god, yes. Yes. think going to be even more than that. don't know. It's yeah, how send text message.
+I think um you know, like read a my two genres are essentially sci-fi and tech history. This is what lot of.
+history. This is what I read a lot of. think in tech history, there's one thing which to me the clearest parallel for what's happening right now. And this 1400s, printing press Europe.
+the printing press in Europe. And what happened was before essentially 10% of European population literate. They knew how to read and write.
+They were often employed by like kings lords that not literate.
+and lords that were not literate. And their job was to you know, read write this is something everyone knew how do.
+>> [snorts] The printing press was invented, then there were two more presses and in the 50 years after first literature published Europe than thousand before.
+And over the same period, cost of literature, a book went down like 100x. then, you know, it took couple hundred years cuz learning to read and write is hard. You need education systems government everyone can't be working on farms so on. But next few literacy globally up 70%. now we can all don't degree in reading writing how write. Although still there are professional writers that thing do.
+is a thing that you can do. So, I think the that's about to happen and it's going be much faster than 50 years software will fully democratized, anyone
+can do. And you know, there's a lot of corollaries to this. So, for example, let's say you're writing accounting software.
+The best person to write accounting software, I think maybe even today, is not an engineer, it's a really good accountant because they know the domain well and coding easy part.
+really well and coding is the easy part. It's knowing domain that's hard And I think this just obviously future.
+So, uh one of the things Greg said was that you guys are living in future a little bit cuz get to have access models and agents. Claude code an internal tool before released it. Um is gap between where engineering rest world, month? Is it 3 months?
+world, is that a month? Is it 3 months? 6 And gap getting bigger or smaller over time?
+Yeah, so internally, we use the same models everyone else does.
+Um for us, the dog fooding is really important. So, we use thing that here you know, like a little bit of mythos to try it and then lot Opus 4.7 food write most our code.
+of our code. Um I think on the model side, there isn't really a gap. you know, it's like pretty much mythos and that will become some version descendant available at point to everyone.
+available at some point to everyone. I think on the product side, there's probably a far larger gap. And that's just related us changing all of our processes. Like if you talk people Anthropic, we use Claude for literally everything. Claudes are talking day like as I'm coding, my in loop, they will communicate over Slack other people's that also running kind figure out unknowns.
+We have no more manually written code anywhere at the company. All of SQL is by uh models. Everything just built So, I think actually place that we're ahead not technology cuz same available to us everyone here because fundamentally, we are building a platform. And so, for it's really important developers can use thing using and dog food everything put out there.
+everything that we put out there. But I think there's actually a far bigger weed in kind of the organizational structure and process. And this is place where you know, hopefully can talk about it places like uh everyone learn from also evolve.
+and also evolve. Yeah, I think that's one of the advantages startups have. It's so much easier to start there.
+Yeah, um last time we talked, I think you'd mentioned a little bit about multi-agent and it was very in code at the prior Sequoia event you that there were some things going down pipeline thing you're talking thinking about. Now obviously there's slash batch, loop, sub teams, teams. Can speak to either model level harness how injecting priors objective function is changing kind of make this experience around delegating work, spinning up agents better? Cuz so much parallelizable. You can do many faster feel like have overlay my own intuition for when parallelize rather than understanding spin 10 something.
+can spin up 10 sub agents for something. Yeah, I mean on the product side, it really just comes down to prompting.
+That's how it is. And so, you know, we tweak prompts kind of help the model do stuff in parallel more.
+But also, honestly, as the model gets better, it just naturally does this. And so, something like loop, I found actually 4.7, starts doing. Uh which is really cool. It's uh you know, I'll tell "Go pull this data query." it's "Hey, noticed that changing over time. start a and give report every 30 minutes." I'm "Great. Can send to me Slack?" then uses Slack MCP do that. So, think time, not on users figure out how hold tools better. if that's case, product design problem doing good job.
+and like I'm not doing a good job. It's really on the model to do this stuff better us kind of prompting it so naturally does this.
+Um so, right now it seems like a lot of us use um Claude or Codex these uh tools in the cloud to do our computing. But then, there are some very vocal advocates having your AI be local. And I could imagine over time as open way models and other things catch up that this more possibility for people get really high-quality coding assistance. So, I'm curious vision say next years something that. Do you see trajectory everyone still relying on centralized compute is pivot oh, we all just have local agents can rely they don't throttled benefits?
+and other benefits? Yeah, I think it um don't know. There's maybe a few ways to answer that. like kind of the most fundamental way that is doesn't matter.
+answer that is it doesn't matter. Cuz I think now we're getting to the point where model just able figure out. So, like by a couple years from going be doing all code. It's starting agents. building environments.
+going to be building the environments. And so, like if it decides actually I'll use local models do this, then you know, that's what it'll do.
+then you know, that's what it'll do. These I don't think these will be decisions that we are making as engineers anymore.
+We have time for a couple more questions, so I can toss this out.
+questions, so I can toss this out. Jamie.
+Nester. Thank you.
+It feels like one of the great uh decisions with Claude Code was making use fact that a lot developers' tools and workflows are local.
+But um that isn't necessarily always the case for sort of general knowledge work with, you know, cloud tools. I'm curious how you're thinking about this Co-work do give enough access to tools we use be powerful same way Claude Code is developers?
+Code is for developers? Yeah, it's That's a really great question. Um I know when was uh at big company, we took like 5 years moving all the environments to remote. It's just so much work, especially scale.
+especially at a big scale. Um but for knowledge work, largely, it's there already with like Salesforce and Docs things that.
+Docs and things like that. Um for us, it's always just the simplest answer. It's MCP.
+answer. It's just MCP. So, the same MCP connector that you have in Claude AI, hook up like, know, Salesforce, Google Docs, Calendar. Uh and then Co-work can use that. CLI it. Code everywhere
+And for the systems that don't have MCPs, like do you think that's where computer use is going to be a big opportunity?
+Yeah, I think computer use is kind of a catchall. Um so, currently, for as far know, Anthropic like pretty ahead on computers. And if you it through Co-work, it's quite good. able to much any piece software that have your computer. It's very slow, but does well now, especially with 4.7.
+Um Yeah, but I think otherwise like MCP is kind of the answer. It's And you know, all this stuff just doesn't matter that much. It could be MCPs, APIs, some sort programmatic access cuz model care. to mo- To it's tokens.
+it's just tokens. All right, we have time for one more question.
+Sean, do you want to toss the Thank you.
+Sean, do you want to toss the Thank you. Um you've kind of alluded this, but if like sometime ago saw probabil- product overhang and thought build a that would then become more interesting once models got better, could just talk even in vague terms about shape you'd today think becomes much as get 6 months year?
+better in 6 months to a year? Yeah, Claude design I think is really good example. It's uh it's pretty today. going get lot better.
+Um there's also a few things that we're cooking up for Claude Code uh are going to be landing over the coming weeks. So, you'll see those.
+Um and then I think uh loop batch things like this around massively parallelizing agents, that's going to get better.
+And computer use is another good one.
+And computer use is another good one. All right, Boris. Thank you so much for joining us. I think we'll be here a little longer if anyone has questions.

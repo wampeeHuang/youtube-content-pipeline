@@ -1,0 +1,443 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,SimHei,42,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,192,192,45,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:03.72,0:00:06.14,Default,,0,0,45,,{\fnSimHei\fs42}好的，我很兴奋地介绍下一位演讲者。来，举手看看，\N{\fnSegoe UI\fs32\b1}Okay, I'm excited to introduce our next speaker. Show of
+Dialogue: 0,0:00:06.14,0:00:07.55,Default,,0,0,45,,{\fnSimHei\fs42}这里谁在用Claude代码？\N{\fnSegoe UI\fs32\b1}hands, who here uses Claude code?
+Dialogue: 0,0:00:07.56,0:00:11.43,Default,,0,0,45,,{\fnSimHei\fs42}行，举手看看，谁有代码狂热症？\N{\fnSegoe UI\fs32\b1}Okay, show of hands, who here has code psychosis?
+Dialogue: 0,0:00:11.44,0:00:12.35,Default,,0,0,45,,{\fnSimHei\fs42}来吧朋友们，[清嗓子] 这没什么大不了的。\N{\fnSegoe UI\fs32\b1}Come on guys, [clears throat] it's okay.
+Dialogue: 0,0:00:12.36,0:00:16.06,Default,,0,0,45,,{\fnSimHei\fs42}来吧朋友们，[清嗓子] 这没什么大不了的。\N{\fnSegoe UI\fs32\b1}Come on guys, [clears throat] it's okay. It's Um my
+Dialogue: 0,0:00:16.06,0:00:19.40,Default,,0,0,45,,{\fnSimHei\fs42}嗯……我的团队开玩笑说我有代码狂热症，\N{\fnSegoe UI\fs32\b1}team lovingly says I have Claude code psychosis, which
+Dialogue: 0,0:00:19.40,0:00:21.51,Default,,0,0,45,,{\fnSimHei\fs42}这可能是真的也可能不是。\N{\fnSegoe UI\fs32\b1}may or not be true. we
+Dialogue: 0,0:00:21.51,0:00:25.74,Default,,0,0,45,,{\fnSimHei\fs42}今天我们有幸请到了Boris Cherny。呃，\N{\fnSegoe UI\fs32\b1}are delighted to Boris Cherny with us today. Uh is the creator,
+Dialogue: 0,0:00:25.74,0:00:29.26,Default,,0,0,45,,{\fnSimHei\fs42}他是代码的创造者、奠基人。在这个过程中，\N{\fnSegoe UI\fs32\b1}father of code. and uh in process doing that has just
+Dialogue: 0,0:00:29.26,0:00:32.43,Default,,0,0,45,,{\fnSimHei\fs42}他亲眼见证了现代软件开发方式的革新。\N{\fnSegoe UI\fs32\b1}had a front row seat reinventing modern way software development.
+Dialogue: 0,0:00:32.44,0:00:35.87,Default,,0,0,45,,{\fnSimHei\fs42}现代软件开发方式。嗯，我们真的很感激您Boris，\N{\fnSegoe UI\fs32\b1}modern way of software development. Um and we're really grateful to
+Dialogue: 0,0:00:35.87,0:00:37.65,Default,,0,0,45,,{\fnSimHei\fs42}今天能抽出时间与我们交流。\N{\fnSegoe UI\fs32\b1}you, Boris, for taking the time
+Dialogue: 0,0:00:37.65,0:00:41.48,Default,,0,0,45,,{\fnSimHei\fs42}我们知道整个开发领域的发展某种程度上都扛在您肩上。所以，\N{\fnSegoe UI\fs32\b1}speak with us today. We know that um entirety development kind rests on
+Dialogue: 0,0:00:41.48,0:00:42.30,Default,,0,0,45,,{\fnSimHei\fs42}感谢您前来。\N{\fnSegoe UI\fs32\b1}your shoulders.
+Dialogue: 0,0:00:42.30,0:00:45.87,Default,,0,0,45,,{\fnSimHei\fs42}今天采访您的是我们团队的Lauren Reader。\N{\fnSegoe UI\fs32\b1}So, thank it out be And interviewing is Lauren Reader from our team.
+Dialogue: 0,0:00:57.32,0:00:59.01,Default,,0,0,45,,{\fnSimHei\fs42}嗯，Aisa你抢了我的开场白。\N{\fnSegoe UI\fs32\b1}Um you took my opening line, Asia.
+Dialogue: 0,0:00:59.01,0:01:01.83,Default,,0,0,45,,{\fnSimHei\fs42}我们问谁在用Claude代码，举手的很多。太棒了。\N{\fnSegoe UI\fs32\b1}We asked who here uses Claude code. There's a lot of hands. That's awesome.
+Dialogue: 0,0:01:01.84,0:01:06.14,Default,,0,0,45,,{\fnSimHei\fs42}感谢您光临Boris，能请到您非常荣幸。嗯，\N{\fnSegoe UI\fs32\b1}Thank you for joining us, Boris. It's very special
+Dialogue: 0,0:01:06.14,0:01:11.23,Default,,0,0,45,,{\fnSimHei\fs42}在座的都是开发者，我认为你们正在彻底改变构建这件事。\N{\fnSegoe UI\fs32\b1}to have here. Um as a roomful of builders, I think
+Dialogue: 0,0:01:11.23,0:01:14.95,Default,,0,0,45,,{\fnSimHei\fs42}所以，我很想探讨一下软件和编码的未来，\N{\fnSegoe UI\fs32\b1}are changing building entirely. And so, I'm curious
+Dialogue: 0,0:01:14.95,0:01:18.66,Default,,0,0,45,,{\fnSimHei\fs42}以及我们应该把空闲时间都花在什么上面。\N{\fnSegoe UI\fs32\b1}explore how about the future software, coding, and
+Dialogue: 0,0:01:18.66,0:01:22.18,Default,,0,0,45,,{\fnSimHei\fs42}我先简单补充点背景，让大家有点概念。\N{\fnSegoe UI\fs32\b1}what we should spend all our free
+Dialogue: 0,0:01:22.18,0:01:24.73,Default,,0,0,45,,{\fnSimHei\fs42}除了创建Claude代码，\N{\fnSegoe UI\fs32\b1}time on. but I'll give
+Dialogue: 0,0:01:24.73,0:01:28.64,Default,,0,0,45,,{\fnSimHei\fs42}Boris是一位真正的工程师中的工程师。\N{\fnSegoe UI\fs32\b1}me tiny bit more background on that everyone has
+Dialogue: 0,0:01:28.64,0:01:31.57,Default,,0,0,45,,{\fnSimHei\fs42}你的整个职业生涯写了大量东西，\N{\fnSegoe UI\fs32\b1}little context. So, beyond creating Claude
+Dialogue: 0,0:01:31.57,0:01:35.88,Default,,0,0,45,,{\fnSimHei\fs42}包括《TypeScript编程》这类教科书。\N{\fnSegoe UI\fs32\b1}code, Boris is much an engineer's engineer. You were writing
+Dialogue: 0,0:01:35.88,0:01:40.77,Default,,0,0,45,,{\fnSimHei\fs42}上次聊天时你说2026年之前几乎一行代码都没写过，\N{\fnSegoe UI\fs32\b1}lot through your whole career, textbooks including programming in TypeScript. last
+Dialogue: 0,0:01:40.77,0:01:45.47,Default,,0,0,45,,{\fnSimHei\fs42}或者说至少到2026年都没怎么写，这变化真不小。\N{\fnSegoe UI\fs32\b1}chatted hadn't written single line year, or at least far 2026,
+Dialogue: 0,0:01:45.47,0:01:50.94,Default,,0,0,45,,{\fnSimHei\fs42}还有个趣事：中学时你为TI-83 Plus计算器写过一篇\N{\fnSegoe UI\fs32\b1}which quite change. There's also known thing back middle school, wrote guide uh
+Dialogue: 0,0:01:50.94,0:01:52.51,Default,,0,0,45,,{\fnSimHei\fs42}BASIC指南。\N{\fnSegoe UI\fs32\b1}BASIC TI-83 Plus calculators.
+Dialogue: 0,0:01:52.52,0:01:56.55,Default,,0,0,45,,{\fnSimHei\fs42}我刚刚搜了一下，它居然还挂在网上。这太尴尬了，\N{\fnSegoe UI\fs32\b1}And I just searched for it, it's actually still on the internet.
+Dialogue: 0,0:01:56.55,0:02:00.22,Default,,0,0,45,,{\fnSimHei\fs42}所以请大家别去搜。[笑声] 但它确实存在。\N{\fnSegoe UI\fs32\b1}It's extremely embarrassing, so please don't search it. But [laughter] exists.
+Dialogue: 0,0:02:00.22,0:02:04.07,Default,,0,0,45,,{\fnSimHei\fs42}我们肯定会把它挖出来的。嗯，我先问几个问题。\N{\fnSegoe UI\fs32\b1}We will definitely be finding that. Um we're going to do I'm
+Dialogue: 0,0:02:04.07,0:02:08.45,Default,,0,0,45,,{\fnSimHei\fs42}也许先聊聊Claude代码的历史，你是怎么开始的，\N{\fnSegoe UI\fs32\b1}start with a few questions here. Maybe we'll little bit of history Claude code,
+Dialogue: 0,0:02:08.45,0:02:13.35,Default,,0,0,45,,{\fnSimHei\fs42}然后留大量时间给观众问答。想着大家心里已经有疑问了，呃，\N{\fnSegoe UI\fs32\b1}how you started and then have lot audience Q&A this one. thinking about your in back head,
+Dialogue: 0,0:02:13.35,0:02:15.27,Default,,0,0,45,,{\fnSimHei\fs42}很快就把时间交给你们。\N{\fnSegoe UI\fs32\b1}uh would love turn over all soon.
+Dialogue: 0,0:02:15.28,0:02:18.58,Default,,0,0,45,,{\fnSimHei\fs42}很快就把时间交给你们。是的。嗯，另外快速问一下，\N{\fnSegoe UI\fs32\b1}turn it over to you all soon. Yeah. Um and also
+Dialogue: 0,0:02:18.58,0:02:22.01,Default,,0,0,45,,{\fnSimHei\fs42}用Claude代码的人，主要是用命令行界面吗？好，\N{\fnSegoe UI\fs32\b1}real quick, so for people that use Claude code, do the CLI
+Dialogue: 0,0:02:22.01,0:02:23.11,Default,,0,0,45,,{\fnSimHei\fs42}大部分是命令行？\N{\fnSegoe UI\fs32\b1}mostly? Like okay, majority CLI?
+Dialogue: 0,0:02:23.12,0:02:26.71,Default,,0,0,45,,{\fnSimHei\fs42}好的。很多啊。大部分是桌面端？\N{\fnSegoe UI\fs32\b1}Okay. That's a lot. Majority desktop?
+Dialogue: 0,0:02:26.72,0:02:30.51,Default,,0,0,45,,{\fnSimHei\fs42}VS代码还是JetBrains集成开发环境？\N{\fnSegoe UI\fs32\b1}VS code or JetBrains IDE?
+Dialogue: 0,0:02:30.52,0:02:32.10,Default,,0,0,45,,{\fnSimHei\fs42}好的。大部分是VS代码或JetBrains IDE？\N{\fnSegoe UI\fs32\b1}Okay. Majority VS code or JetBrains IDE? That's actually
+Dialogue: 0,0:02:32.10,0:02:32.59,Default,,0,0,45,,{\fnSimHei\fs42}其实没有那么多。\N{\fnSegoe UI\fs32\b1}not a lot.
+Dialogue: 0,0:02:32.60,0:02:34.35,Default,,0,0,45,,{\fnSimHei\fs42}好的。其实没有那么多。其他呢？\N{\fnSegoe UI\fs32\b1}Okay. That's actually not a lot. Other?
+Dialogue: 0,0:02:34.36,0:02:37.19,Default,,0,0,45,,{\fnSimHei\fs42}我最近主要用iOS。是的。\N{\fnSegoe UI\fs32\b1}I'm like iOS mostly these days. Yeah.
+Dialogue: 0,0:02:37.20,0:02:39.27,Default,,0,0,45,,{\fnSimHei\fs42}我最近主要用iOS。是的。>> [笑声] 好。酷。\N{\fnSegoe UI\fs32\b1}I'm like iOS mostly these days. Yeah. >> [laughter] Okay. Cool.
+Dialogue: 0,0:02:39.28,0:02:40.68,Default,,0,0,45,,{\fnSimHei\fs42}>> 好。酷。嗯，\N{\fnSegoe UI\fs32\b1}>> Okay. Cool. Um
+Dialogue: 0,0:02:40.68,0:02:44.27,Default,,0,0,45,,{\fnSimHei\fs42}其实我创建Claude代码在很多方面是偶然的。\N{\fnSegoe UI\fs32\b1}yeah, so I started Claude code kind of accidentally in a lot ways.
+Dialogue: 0,0:02:44.28,0:02:47.47,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我在2024年底加入了这支团队。\N{\fnSegoe UI\fs32\b1}Um I joined this team back late 2024.
+Dialogue: 0,0:02:47.48,0:02:49.04,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我在2024年底加入了这支团队。\N{\fnSegoe UI\fs32\b1}Um I joined this team back in
+Dialogue: 0,0:02:49.04,0:02:51.39,Default,,0,0,45,,{\fnSimHei\fs42}它当时是Anthropic内部一个叫Labs的孵化器。\N{\fnSegoe UI\fs32\b1}late 2024. It was a sort of incubator within Anthropic called Labs.
+Dialogue: 0,0:02:51.40,0:02:54.17,Default,,0,0,45,,{\fnSimHei\fs42}而呃，这个团队也算是完成了使命。嗯，\N{\fnSegoe UI\fs32\b1}And uh the team kind of served its purpose.
+Dialogue: 0,0:02:54.17,0:02:57.72,Default,,0,0,45,,{\fnSimHei\fs42}我们创建了Claude代码、MCP和桌面应用。\N{\fnSegoe UI\fs32\b1}Um we created Claude code, MCP, and desktop app. It was
+Dialogue: 0,0:02:57.72,0:02:59.11,Default,,0,0,45,,{\fnSimHei\fs42}当时就我们几个人。\N{\fnSegoe UI\fs32\b1}a it just few us.
+Dialogue: 0,0:02:59.12,0:03:01.19,Default,,0,0,45,,{\fnSimHei\fs42}当时就我们几个人。所以，很像一个创新团队。\N{\fnSegoe UI\fs32\b1}it was just a few of us. So, very much like innovation team.
+Dialogue: 0,0:03:01.20,0:03:04.44,Default,,0,0,45,,{\fnSimHei\fs42}我们最终建成了想建的东西，团队解散了——呃，\N{\fnSegoe UI\fs32\b1}We built the thing that we wanted to build,
+Dialogue: 0,0:03:04.44,0:03:07.54,Default,,0,0,45,,{\fnSimHei\fs42}现在团队又重组了，准备第二轮。你应该知道，\N{\fnSegoe UI\fs32\b1}disbanded Uh now team's actually back together for round
+Dialogue: 0,0:03:07.54,0:03:10.93,Default,,0,0,45,,{\fnSimHei\fs42}迈克·克雷格是Anthropic的首席产品官，\N{\fnSegoe UI\fs32\b1}two. Mike Krieger, who's you know, chief product officer at
+Dialogue: 0,0:03:10.93,0:03:14.91,Default,,0,0,45,,{\fnSimHei\fs42}也是Instagram的联合创始人之一，目前由他主导。\N{\fnSegoe UI\fs32\b1}Anthropic and used be one of founders Instagram, so he's leading right now.
+Dialogue: 0,0:03:14.92,0:03:20.34,Default,,0,0,45,,{\fnSimHei\fs42}目前由他主导。嗯，我开始从事编程工作的原因，\N{\fnSegoe UI\fs32\b1}that right now. Um so the kind of reason I started to work
+Dialogue: 0,0:03:20.34,0:03:23.30,Default,,0,0,45,,{\fnSimHei\fs42}是我们觉得存在产品积压。\N{\fnSegoe UI\fs32\b1}on coding is we felt like there
+Dialogue: 0,0:03:23.30,0:03:30.21,Default,,0,0,45,,{\fnSimHei\fs42}我猜在座很多人经常用"积压"这个词——在实验室内部肯定也\N{\fnSegoe UI\fs32\b1}was this product overhang. And I'm guessing people here use word a lot. Uh but definitely lot in
+Dialogue: 0,0:03:30.21,0:03:30.95,Default,,0,0,45,,{\fnSimHei\fs42}常提。\N{\fnSegoe UI\fs32\b1}within lab.
+Dialogue: 0,0:03:30.96,0:03:34.73,Default,,0,0,45,,{\fnSimHei\fs42}实验室内部。有个概念是模型能完成所有事，\N{\fnSegoe UI\fs32\b1}of within the lab. Uh there's this idea that model
+Dialogue: 0,0:03:34.73,0:03:38.51,Default,,0,0,45,,{\fnSimHei\fs42}但还没有产品能实现这一点。2024年底，\N{\fnSegoe UI\fs32\b1}can do all stuff no product has yet captured. And
+Dialogue: 0,0:03:38.51,0:03:43.42,Default,,0,0,45,,{\fnSimHei\fs42}当我们审视编程领域时，当时的最高水平是"提前输入"。\N{\fnSegoe UI\fs32\b1}in late 2024, when we were looking at coding, way did state art
+Dialogue: 0,0:03:43.42,0:03:47.95,Default,,0,0,45,,{\fnSimHei\fs42}你打开IDE，按Tab键，一次只能补全一行代码。\N{\fnSegoe UI\fs32\b1}time was type ahead. It you open your IDE and press tab
+Dialogue: 0,0:03:47.95,0:03:51.54,Default,,0,0,45,,{\fnSimHei\fs42}Sonnet 3.5首次实现了这一点，\N{\fnSegoe UI\fs32\b1}like complete one line a time. thing Sonnet 3.5 enabled
+Dialogue: 0,0:03:51.54,0:03:56.82,Default,,0,0,45,,{\fnSimHei\fs42}但我们感觉还能走得更远——几乎准备好迈出下一步了。所以，\N{\fnSegoe UI\fs32\b1}for first But feeling could actually go lot further than that. almost ready next
+Dialogue: 0,0:03:56.82,0:04:00.79,Default,,0,0,45,,{\fnSimHei\fs42}不用再提前输入了，直接用智能体写代码就行。\N{\fnSegoe UI\fs32\b1}big step. So, don't have to ahead anymore, just agent write code.
+Dialogue: 0,0:04:00.80,0:04:06.46,Default,,0,0,45,,{\fnSimHei\fs42}写代码。于是我构建了它，但前六个月完全不行。效果很不好，\N{\fnSegoe UI\fs32\b1}the code. And so, I built it, and just really didn't work for first 6
+Dialogue: 0,0:04:06.46,0:04:11.30,Default,,0,0,45,,{\fnSimHei\fs42}几乎没法用。我自己写，大概只有10%的代码用它。\N{\fnSegoe UI\fs32\b1}months. It was like not very good. barely usable. wrote from used maybe 10%
+Dialogue: 0,0:04:11.30,0:04:16.15,Default,,0,0,45,,{\fnSimHei\fs42}即使我们最初发布了Claude，反响也并不热烈。\N{\fnSegoe UI\fs32\b1}of my code or something that. even after we released Claude initially, a hit.
+Dialogue: 0,0:04:16.16,0:04:18.67,Default,,0,0,45,,{\fnSimHei\fs42}最初反响并不热烈。很多人用过，\N{\fnSegoe UI\fs32\b1}code initially, it was not a hit. There's lot of
+Dialogue: 0,0:04:18.67,0:04:21.35,Default,,0,0,45,,{\fnSimHei\fs42}但并没有像今天这样的指数级增长。\N{\fnSegoe UI\fs32\b1}people that used but did have this exponential growth has today.
+Dialogue: 0,0:04:21.36,0:04:26.53,Default,,0,0,45,,{\fnSimHei\fs42}今天这样的指数级增长。嗯，从五月的Opus 4开始。\N{\fnSegoe UI\fs32\b1}growth that it has today. Um started with Opus 4 in May. And
+Dialogue: 0,0:04:26.53,0:04:30.31,Default,,0,0,45,,{\fnSimHei\fs42}我记得非常清楚。那时开始呈指数级增长，\N{\fnSegoe UI\fs32\b1}I remember very clearly. That's like when the exponential
+Dialogue: 0,0:04:30.31,0:04:35.68,Default,,0,0,45,,{\fnSimHei\fs42}每次模型发布都拐点上扬。4.5、4.6，现在是4.7，\N{\fnSegoe UI\fs32\b1}and then kind of inflected every model release. Uh 4.5, 4.6, now 4.7.
+Dialogue: 0,0:04:35.68,0:04:36.87,Default,,0,0,45,,{\fnSimHei\fs42}一直在上扬。\N{\fnSegoe UI\fs32\b1}It just keeps inflecting.
+Dialogue: 0,0:04:36.88,0:04:40.52,Default,,0,0,45,,{\fnSimHei\fs42}但本质上，我们试图构建的产品处于产品市场契合前阶段，\N{\fnSegoe UI\fs32\b1}But essentially, we were trying to build this thing that was like
+Dialogue: 0,0:04:40.52,0:04:43.45,Default,,0,0,45,,{\fnSimHei\fs42}而且知道未来六个月都不会达到产品市场契合，\N{\fnSegoe UI\fs32\b1}pre-PMF, and knew it wouldn't have PMF for 6 months
+Dialogue: 0,0:04:43.45,0:04:46.67,Default,,0,0,45,,{\fnSimHei\fs42}因为还要构建下一个模型。这个想法几乎贯穿始终。\N{\fnSegoe UI\fs32\b1}because building the next model. And idea pretty much whole time.
+Dialogue: 0,0:04:46.68,0:04:49.35,Default,,0,0,45,,{\fnSimHei\fs42}几乎贯穿始终。你知道，对Anthropic整体而言，\N{\fnSegoe UI\fs32\b1}pretty much the whole time. And you know, for Anthropic in general, we've
+Dialogue: 0,0:04:49.35,0:04:50.27,Default,,0,0,45,,{\fnSimHei\fs42}我们一直非常专注。\N{\fnSegoe UI\fs32\b1}always just been very focused.
+Dialogue: 0,0:04:50.28,0:04:56.03,Default,,0,0,45,,{\fnSimHei\fs42}我们关心商业和企业安全编程。这就是我们想走的路。所以，\N{\fnSegoe UI\fs32\b1}We've cared about business and enterprise safety coding. That's kind of the way that we wanted
+Dialogue: 0,0:04:56.03,0:05:01.79,Default,,0,0,45,,{\fnSimHei\fs42}在某个节点我们知道要构建一个产品，但不确定具体要什么。\N{\fnSegoe UI\fs32\b1}to build. And so, at some point knew build a product. We didn't know exactly what
+Dialogue: 0,0:05:01.79,0:05:04.35,Default,,0,0,45,,{\fnSimHei\fs42}于是这最终成了产品赌注。\N{\fnSegoe UI\fs32\b1}wanted. So, this ended up being product bet.
+Dialogue: 0,0:05:04.36,0:05:07.91,Default,,0,0,45,,{\fnSimHei\fs42}成了产品赌注。这是个不可思议的故事，尤其是它源于偶然。\N{\fnSegoe UI\fs32\b1}being the product bet. It's an incredible story, especially that it was accident.
+Dialogue: 0,0:05:07.92,0:05:12.21,Default,,0,0,45,,{\fnSimHei\fs42}源于偶然。嗯，你公开说过你认为编程问题已解决。\N{\fnSegoe UI\fs32\b1}that it was an accident. Um so, you've said on the record
+Dialogue: 0,0:05:12.21,0:05:16.50,Default,,0,0,45,,{\fnSimHei\fs42}如果这是Anthropic最擅长的三件事之一，\N{\fnSegoe UI\fs32\b1}you think coding is solved. Uh if this one of three best
+Dialogue: 0,0:05:16.50,0:05:20.79,Default,,0,0,45,,{\fnSimHei\fs42}能否告诉我们更多含义，以及可能仍未解决的部分，\N{\fnSegoe UI\fs32\b1}from Anthropic, can tell us more about what mean by and might still
+Dialogue: 0,0:05:20.79,0:05:23.59,Default,,0,0,45,,{\fnSimHei\fs42}或者会出现哪些二阶问题？好吧，\N{\fnSegoe UI\fs32\b1}not be solved, or second-order problems come? All
+Dialogue: 0,0:05:23.59,0:05:27.51,Default,,0,0,45,,{\fnSimHei\fs42}我换个问题问大家：谁还在100%手写代码？\N{\fnSegoe UI\fs32\b1}right. I ask another question for room. Who writes 100% their code hand?
+Dialogue: 0,0:05:29.80,0:05:32.14,Default,,0,0,45,,{\fnSimHei\fs42}谁在用像Claude Code这样的智能体写100%的代\N{\fnSegoe UI\fs32\b1}Who writes 100% of their code using a agent like Claude
+Dialogue: 0,0:05:32.14,0:05:32.31,Default,,0,0,45,,{\fnSimHei\fs42}码？\N{\fnSegoe UI\fs32\b1}code?
+Dialogue: 0,0:05:32.32,0:05:35.35,Default,,0,0,45,,{\fnSimHei\fs42}好。谁处于中间状态？\N{\fnSegoe UI\fs32\b1}Okay. Who's somewhere in between?
+Dialogue: 0,0:05:35.36,0:05:38.63,Default,,0,0,45,,{\fnSimHei\fs42}谁处于中间状态？所以，大概50%已解决。\N{\fnSegoe UI\fs32\b1}Okay. Who's like somewhere in between? So, 50% solved.
+Dialogue: 0,0:05:38.64,0:05:41.15,Default,,0,0,45,,{\fnSimHei\fs42}所以，大概50%已解决。>> [笑声]\N{\fnSegoe UI\fs32\b1}Okay. So, like 50% solved. >> [laughter]
+Dialogue: 0,0:05:42.52,0:05:45.73,Default,,0,0,45,,{\fnSimHei\fs42}>> 对我来说，基本是100%。Claude的代码库，\N{\fnSegoe UI\fs32\b1}>> I mean, for me it's like 100%. Like the Claude
+Dialogue: 0,0:05:45.73,0:05:48.46,Default,,0,0,45,,{\fnSimHei\fs42}嗯，你知道，它泄露过，所以人们知道。相当简单，\N{\fnSegoe UI\fs32\b1}code base, um you know, it leaked, so people know.
+Dialogue: 0,0:05:48.46,0:05:51.55,Default,,0,0,45,,{\fnSimHei\fs42}就是TypeScript和React。没什么大秘密。\N{\fnSegoe UI\fs32\b1}Uh pretty simple. It's just TypeScript and React. there's no big secret.
+Dialogue: 0,0:05:51.56,0:05:55.36,Default,,0,0,45,,{\fnSimHei\fs42}就是React。没什么大秘密。没有什么真正复杂的。\N{\fnSegoe UI\fs32\b1}it's React. Like there's no big secret. There's nothing really complicated. The
+Dialogue: 0,0:05:55.36,0:05:59.01,Default,,0,0,45,,{\fnSimHei\fs42}我们选择TypeScript和React的原因，\N{\fnSegoe UI\fs32\b1}the reason we picked TypeScript and React is very on distribution
+Dialogue: 0,0:05:59.01,0:06:02.81,Default,,0,0,45,,{\fnSimHei\fs42}是模型的分布性很好。所以，当我们开始构建代码库时，\N{\fnSegoe UI\fs32\b1}for model. So, when started, you know, building code base, model was
+Dialogue: 0,0:06:02.81,0:06:06.61,Default,,0,0,45,,{\fnSimHei\fs42}模型没有今天这么智能，所以语言和框架很重要。如今，\N{\fnSegoe UI\fs32\b1}not as intelligent it today, so language framework mattered a lot. Nowadays,
+Dialogue: 0,0:06:06.61,0:06:10.40,Default,,0,0,45,,{\fnSimHei\fs42}你什么都能写，能掌握没见过的新语言和框架。但那时，\N{\fnSegoe UI\fs32\b1}can write whatever, pick up new languages, frameworks hasn't seen. But back
+Dialogue: 0,0:06:10.40,0:06:12.23,Default,,0,0,45,,{\fnSimHei\fs42}我们想用分布性好的东西。\N{\fnSegoe UI\fs32\b1}then, wanted to use something pretty distribution.
+Dialogue: 0,0:06:12.24,0:06:14.53,Default,,0,0,45,,{\fnSimHei\fs42}用分布性好的东西。正因为如此，\N{\fnSegoe UI\fs32\b1}to use something pretty on distribution. Because of
+Dialogue: 0,0:06:14.53,0:06:18.34,Default,,0,0,45,,{\fnSimHei\fs42}我觉得很早我们就达到了模型能写100%代码的程度。\N{\fnSegoe UI\fs32\b1}that, I think fairly early we got the point where model just wrote 100%
+Dialogue: 0,0:06:18.34,0:06:21.55,Default,,0,0,45,,{\fnSimHei\fs42}对我们来说，这发生在去年十月到十一月左右。\N{\fnSegoe UI\fs32\b1}code. And for us, this happened sometime in October, November last year.
+Dialogue: 0,0:06:21.56,0:06:26.16,Default,,0,0,45,,{\fnSimHei\fs42}所以今天对我来说，模型写了我100%的代码。我自己写，\N{\fnSegoe UI\fs32\b1}And so, for me today, you know, like the model writes 100% of my code. I
+Dialogue: 0,0:06:26.16,0:06:28.55,Default,,0,0,45,,{\fnSimHei\fs42}通常每天提交几十个拉取请求。\N{\fnSegoe UI\fs32\b1}write somewhere, usually a few dozen PRs every day.
+Dialogue: 0,0:06:28.56,0:06:32.12,Default,,0,0,45,,{\fnSimHei\fs42}上周有一天我做了150个——破了纪录。\N{\fnSegoe UI\fs32\b1}Uh there was a day last week I did like 150 in That that
+Dialogue: 0,0:06:32.12,0:06:35.11,Default,,0,0,45,,{\fnSimHei\fs42}我只是想试试看能推进到什么程度。\N{\fnSegoe UI\fs32\b1}record. just trying to kind of push see how far can get it.
+Dialogue: 0,0:06:35.12,0:06:39.26,Default,,0,0,45,,{\fnSimHei\fs42}试试能推进多少吧。嗯，但对我来说，这问题已经解决了。\N{\fnSegoe UI\fs32\b1}push to see how far I can get it. Um but yeah, it's like
+Dialogue: 0,0:06:39.26,0:06:43.07,Default,,0,0,45,,{\fnSimHei\fs42}不过并非所有地方都这样。有些非常大的复杂代码库，\N{\fnSegoe UI\fs32\b1}for me just solved. this is not the case everywhere. There's very big
+Dialogue: 0,0:06:43.07,0:06:47.21,Default,,0,0,45,,{\fnSimHei\fs42}模型还不太擅长那些古怪的语言。而且，在座各位都知道，\N{\fnSegoe UI\fs32\b1}complicated code bases. kind of weird languages model's good at yet. and you know,
+Dialogue: 0,0:06:47.21,0:06:50.07,Default,,0,0,45,,{\fnSimHei\fs42}要达到那种程度，通常得等下一代模型。\N{\fnSegoe UI\fs32\b1}as everyone here knows, getting there. Usually answer wait next model.
+Dialogue: 0,0:06:50.08,0:06:54.77,Default,,0,0,45,,{\fnSimHei\fs42}能跟我们聊聊你的个人工作配置吗？你那天简单提过，\N{\fnSegoe UI\fs32\b1}Can you actually tell us about your personal setup? You walked through it the other day.
+Dialogue: 0,0:06:54.77,0:06:55.75,Default,,0,0,45,,{\fnSimHei\fs42}挺狂野的。\N{\fnSegoe UI\fs32\b1}It is pretty wild.
+Dialogue: 0,0:06:55.76,0:06:58.08,Default,,0,0,45,,{\fnSimHei\fs42}那天提过，确实挺狂野。嗯，\N{\fnSegoe UI\fs32\b1}the other day. It is pretty wild.
+Dialogue: 0,0:06:58.08,0:07:02.89,Default,,0,0,45,,{\fnSimHei\fs42}大概六个月前我在推特上分享过我的个人配置。有意思的是，\N{\fnSegoe UI\fs32\b1}Yeah. Um so, I shared my personal setup like 6 months ago or something on Twitter. And
+Dialogue: 0,0:07:02.89,0:07:07.71,Default,,0,0,45,,{\fnSimHei\fs42}我当时真没觉得这会让任何人惊讶。那就是我写代码的方式。\N{\fnSegoe UI\fs32\b1}it it's funny, actually didn't realize that would be surprising for anyone. That was just way coded.
+Dialogue: 0,0:07:07.72,0:07:11.09,Default,,0,0,45,,{\fnSimHei\fs42}就像我平时写代码那样。 >> [笑声] 但之后又变了，\N{\fnSegoe UI\fs32\b1}like the way that I coded. >> [laughter] And it's changed since then.
+Dialogue: 0,0:07:11.09,0:07:11.96,Default,,0,0,45,,{\fnSimHei\fs42}一直在变。嗯，\N{\fnSegoe UI\fs32\b1}It's changed. Um
+Dialogue: 0,0:07:11.96,0:07:14.71,Default,,0,0,45,,{\fnSimHei\fs42}实际上现在我的大部分工作都是在手机上完成的。\N{\fnSegoe UI\fs32\b1}and so, now actually most of my work do from phone.
+Dialogue: 0,0:07:14.72,0:07:21.80,Default,,0,0,45,,{\fnSimHei\fs42}我的工作都在手机上做。嗯，不知道你们能不能看到这个，\N{\fnSegoe UI\fs32\b1}my work I do from phone. Um and so, don't know if like you guys won't be
+Dialogue: 0,0:07:21.80,0:07:27.80,Default,,0,0,45,,{\fnSimHei\fs42}但左边开着Claude应用，有个小代码标签，\N{\fnSegoe UI\fs32\b1}able to see this, but have um the Claude app, open on left-hand side, there's
+Dialogue: 0,0:07:27.80,0:07:31.07,Default,,0,0,45,,{\fnSimHei\fs42}里面有好几个会话在进行。\N{\fnSegoe UI\fs32\b1}little code tab, just a bunch of sessions going.
+Dialogue: 0,0:07:31.08,0:07:33.19,Default,,0,0,45,,{\fnSimHei\fs42}嗯，你们可能看不清。\N{\fnSegoe UI\fs32\b1}Um you probably can't see it.
+Dialogue: 0,0:07:33.20,0:07:34.75,Default,,0,0,45,,{\fnSimHei\fs42}>> 有多少个会话？\N{\fnSegoe UI\fs32\b1}>> How many sessions?
+Dialogue: 0,0:07:34.76,0:07:40.02,Default,,0,0,45,,{\fnSimHei\fs42}通常大概五到十个会话。然后每个会话里有一堆代理，\N{\fnSegoe UI\fs32\b1}Uh usually have like maybe five to 10 sessions. and then the sessions a bunch
+Dialogue: 0,0:07:40.02,0:07:43.31,Default,,0,0,45,,{\fnSimHei\fs42}所以现在大概有好几百个在运行。\N{\fnSegoe UI\fs32\b1}of agents, so I think currently probably few hundred going.
+Dialogue: 0,0:07:43.32,0:07:44.64,Default,,0,0,45,,{\fnSimHei\fs42}好几百个代理在跑。\N{\fnSegoe UI\fs32\b1}hundred agents going. Um usually
+Dialogue: 0,0:07:44.64,0:07:47.73,Default,,0,0,45,,{\fnSimHei\fs42}通常每天晚上我会有几千个在做更深层的工作。\N{\fnSegoe UI\fs32\b1}every night I have like a few thousand that are doing kind of deeper
+Dialogue: 0,0:07:47.73,0:07:48.91,Default,,0,0,45,,{\fnSimHei\fs42}有一些管理方法。\N{\fnSegoe UI\fs32\b1}work. There's ways to manage it.
+Dialogue: 0,0:07:48.92,0:07:52.51,Default,,0,0,45,,{\fnSimHei\fs42}有一些管理方法。一个是让Claude用一堆子代理来处理\N{\fnSegoe UI\fs32\b1}work. There's a few ways to manage it. One is that you ask Claude use bunch of sub-agents do
+Dialogue: 0,0:07:52.52,0:07:54.89,Default,,0,0,45,,{\fnSimHei\fs42}一堆子代理来做工作。实际上，\N{\fnSegoe UI\fs32\b1}bunch of sub-agents to do work.
+Dialogue: 0,0:07:54.89,0:07:57.60,Default,,0,0,45,,{\fnSimHei\fs42}我发现自己用得越来越多的是循环。\N{\fnSegoe UI\fs32\b1}Actually, the thing that I've been finding
+Dialogue: 0,0:07:57.60,0:08:01.84,Default,,0,0,45,,{\fnSimHei\fs42}就是这个\{\{slash}\}循环，真是太酷了。\N{\fnSegoe UI\fs32\b1}myself using more and is loop. So, this \{{}slash} loop, it's just
+Dialogue: 0,0:08:01.84,0:08:03.20,Default,,0,0,45,,{\fnSimHei\fs42}最简单却最有效。\N{\fnSegoe UI\fs32\b1}like coolest thing. It's
+Dialogue: 0,0:08:03.20,0:08:07.94,Default,,0,0,45,,{\fnSimHei\fs42}就是让Claude用cron定时任务在未来的某个时间点执\N{\fnSegoe UI\fs32\b1}simplest works. All it you have Claude use cron schedule a job for some
+Dialogue: 0,0:08:07.94,0:08:09.47,Default,,0,0,45,,{\fnSimHei\fs42}行，然后重复执行。\N{\fnSegoe UI\fs32\b1}point in future, repeat job.
+Dialogue: 0,0:08:09.48,0:08:13.03,Default,,0,0,45,,{\fnSimHei\fs42}未来的某个时间点，并且是可重复的任务。它可以每分钟、\N{\fnSegoe UI\fs32\b1}future, and it's a repeat job. And it can run every minute, 5
+Dialogue: 0,0:08:13.03,0:08:15.63,Default,,0,0,45,,{\fnSimHei\fs42}每五分钟、每天运行，你想怎么调度都行。\N{\fnSegoe UI\fs32\b1}minutes, day, kind of however often you want to schedule it.
+Dialogue: 0,0:08:15.64,0:08:19.21,Default,,0,0,45,,{\fnSimHei\fs42}到了 [哼] 现在，我有好几十个循环在跑各种事情。\N{\fnSegoe UI\fs32\b1}And at [snorts] this point, I have like dozens of
+Dialogue: 0,0:08:19.21,0:08:23.22,Default,,0,0,45,,{\fnSimHei\fs42}有一个在盯着我的Pull Request，负责修复CI、\N{\fnSegoe UI\fs32\b1}loops that are running for stuff. So, one that's babysitting my PRs,
+Dialogue: 0,0:08:23.22,0:08:24.79,Default,,0,0,45,,{\fnSimHei\fs42}自动变基。另一个在维护\N{\fnSegoe UI\fs32\b1}fixing CI, auto-rebasing. another keeps healthy.
+Dialogue: 0,0:08:24.80,0:08:26.91,Default,,0,0,45,,{\fnSimHei\fs42}另一个在维护CI的健康。\N{\fnSegoe UI\fs32\b1}have another one that keeps CI
+Dialogue: 0,0:08:26.91,0:08:31.47,Default,,0,0,45,,{\fnSimHei\fs42}比如如果有不稳定的测试之类的问题，它就会去修复。嗯，\N{\fnSegoe UI\fs32\b1}healthy. So, like if there's a flaky test or whatever, it'll go and
+Dialogue: 0,0:08:31.47,0:08:35.87,Default,,0,0,45,,{\fnSimHei\fs42}它还会从推特抓取反馈，每30分钟帮我分类整理一下。\N{\fnSegoe UI\fs32\b1}fix it. Um I grabs uh feedback from Twitter kind of clusters it
+Dialogue: 0,0:08:35.87,0:08:38.85,Default,,0,0,45,,{\fnSimHei\fs42}任何时候都有一堆这样的循环在运行。\N{\fnSegoe UI\fs32\b1}for me every 30 minutes. just bunch these loops
+Dialogue: 0,0:08:38.85,0:08:43.77,Default,,0,0,45,,{\fnSimHei\fs42}我觉得循环就是未来的方向。如果你还没试过，强烈推荐试试。\N{\fnSegoe UI\fs32\b1}running at any time. sort feel are the future this point. If you haven't experimented
+Dialogue: 0,0:08:43.77,0:08:47.46,Default,,0,0,45,,{\fnSimHei\fs42}我们还推出了例程，本质一样但跑在服务器上。\N{\fnSegoe UI\fs32\b1}with highly recommend And we also launched routines, which is same
+Dialogue: 0,0:08:47.46,0:08:50.27,Default,,0,0,45,,{\fnSimHei\fs42}就算你合上笔记本电脑，它也在跑。\N{\fnSegoe UI\fs32\b1}thing but on server. even close your laptop, going.
+Dialogue: 0,0:08:50.28,0:08:53.66,Default,,0,0,45,,{\fnSimHei\fs42}它会一直运行。以上就是你的个人配置。跟我们说说，\N{\fnSegoe UI\fs32\b1}keeps going. So, that's your personal setup. Tell us about what
+Dialogue: 0,0:08:53.66,0:08:55.64,Default,,0,0,45,,{\fnSimHei\fs42}你认为未来的团队会是什么样？\N{\fnSegoe UI\fs32\b1}you think teams will look like in
+Dialogue: 0,0:08:55.64,0:08:58.04,Default,,0,0,45,,{\fnSimHei\fs42}你是如何从你做的这些工作中推断出，\N{\fnSegoe UI\fs32\b1}the future. How do extrapolate from all work
+Dialogue: 0,0:08:58.04,0:09:01.14,Default,,0,0,45,,{\fnSimHei\fs42}如何让团队中的每个人都保持前进、理解上下文，\N{\fnSegoe UI\fs32\b1}you're doing to keep everyone on team moving forward, understanding context,
+Dialogue: 0,0:09:01.14,0:09:04.67,Default,,0,0,45,,{\fnSimHei\fs42}或者我们是不是需要放权给更多代理才能让它运转起来？\N{\fnSegoe UI\fs32\b1}or we need let go of a lot more agents make it work?
+Dialogue: 0,0:09:04.68,0:09:12.35,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我觉得吧，做预测很难，但我在这儿，就试着说几个吧。\N{\fnSegoe UI\fs32\b1}Um I think so you know, it's like hard to make predictions, but um I'm here I'll try some.
+Dialogue: 0,0:09:12.36,0:09:16.34,Default,,0,0,45,,{\fnSimHei\fs42}试着说几个。我感觉未来的大趋势是，\N{\fnSegoe UI\fs32\b1}try to make some. I feel like the way that things are going
+Dialogue: 0,0:09:16.34,0:09:19.39,Default,,0,0,45,,{\fnSimHei\fs42}通才型人才会比现在多得多。\N{\fnSegoe UI\fs32\b1}is generally there's be a lot more generalists than there today.
+Dialogue: 0,0:09:19.40,0:09:26.01,Default,,0,0,45,,{\fnSimHei\fs42}现在我们聊通才，基本上指的还是工程师。他们写代码，\N{\fnSegoe UI\fs32\b1}And today when we talk about generalists, I think largely we're talking people that are still engineers. So,
+Dialogue: 0,0:09:26.01,0:09:32.89,Default,,0,0,45,,{\fnSimHei\fs42}但可能算是产品通才，比如既做iOS也做Web服务器。\N{\fnSegoe UI\fs32\b1}they're writing code, but maybe kind of product say generalist, it's like a you know, they do iOS and
+Dialogue: 0,0:09:32.89,0:09:35.27,Default,,0,0,45,,{\fnSimHei\fs42}这都还在工程领域。\N{\fnSegoe UI\fs32\b1}web server, for example. That's in engineering.
+Dialogue: 0,0:09:35.28,0:09:40.71,Default,,0,0,45,,{\fnSimHei\fs42}但我认为，我们会开始越来越多地看到跨领域的通才。\N{\fnSegoe UI\fs32\b1}But I think the thing that we're going to start see a lot more of is generalists are cross-disciplinary.
+Dialogue: 0,0:09:40.72,0:09:44.20,Default,,0,0,45,,{\fnSimHei\fs42}跨领域的通才。就是那些既擅长产品工程、\N{\fnSegoe UI\fs32\b1}generalists that are cross-disciplinary. So, this is engineers really
+Dialogue: 0,0:09:44.20,0:09:48.79,Default,,0,0,45,,{\fnSimHei\fs42}又擅长设计的工程师，或者既懂工程又懂数据科学的人。\N{\fnSegoe UI\fs32\b1}good at product engineering, but also great design. Or and data science engineering.
+Dialogue: 0,0:09:48.80,0:09:53.44,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我不太确定。这其实是我们团队正在出现的一种现象。\N{\fnSegoe UI\fs32\b1}Um I don't know. It's it's something that we're starting to see on our
+Dialogue: 0,0:09:53.44,0:09:58.43,Default,,0,0,45,,{\fnSimHei\fs42}实际上，Claude 代码团队里很多人都是跨学科的通才。\N{\fnSegoe UI\fs32\b1}team. So, actually like a lot of people the Claude code team are generalists across disciplines.
+Dialogue: 0,0:09:58.44,0:10:04.62,Default,,0,0,45,,{\fnSimHei\fs42}我们团队每个人都会写代码。比如工程经理、产品设计师、\N{\fnSegoe UI\fs32\b1}Everyone on our team codes. So, like engineering manager, product designers,
+Dialogue: 0,0:10:04.62,0:10:10.79,Default,,0,0,45,,{\fnSimHei\fs42}数据科学家、财务人员、用户研究员，每个人都在写代码。\N{\fnSegoe UI\fs32\b1}data scientist, finance guy, user researcher, every single person writes code.
+Dialogue: 0,0:10:10.80,0:10:13.72,Default,,0,0,45,,{\fnSimHei\fs42}整个团队都写代码。所以，你看，他们虽然各有专长，\N{\fnSegoe UI\fs32\b1}team writes code. And so, you know, like they're specialist in
+Dialogue: 0,0:10:13.72,0:10:15.31,Default,,0,0,45,,{\fnSimHei\fs42}但现在每个人也都在写代码。\N{\fnSegoe UI\fs32\b1}something, but now also everyone's just coding.
+Dialogue: 0,0:10:15.32,0:10:21.28,Default,,0,0,45,,{\fnSimHei\fs42}我看到有人点头了，但我猜在座各位可能并不觉得这有多意外，\N{\fnSegoe UI\fs32\b1}And you know, I'm seeing some nods, but I bet also it's actually not that surprising to people
+Dialogue: 0,0:10:21.28,0:10:23.83,Default,,0,0,45,,{\fnSimHei\fs42}因为你们的情况也差不多。\N{\fnSegoe UI\fs32\b1}in this room cuz you're the same things.
+Dialogue: 0,0:10:23.84,0:10:26.03,Default,,0,0,45,,{\fnSimHei\fs42}大家都是类似的情况。嗯（清嗓子），\N{\fnSegoe UI\fs32\b1}seeing the same things. Um [clears throat] I'll
+Dialogue: 0,0:10:26.03,0:10:29.13,Default,,0,0,45,,{\fnSimHei\fs42}我再问一个我最喜欢的问题，然后就开放给观众提问。\N{\fnSegoe UI\fs32\b1}have one more favorite questions then we'll open up to audience. So,
+Dialogue: 0,0:10:29.13,0:10:31.19,Default,,0,0,45,,{\fnSimHei\fs42}我们刚才聊了编程正在发生的变化，\N{\fnSegoe UI\fs32\b1}we talked a bit about what's changing with
+Dialogue: 0,0:10:31.19,0:10:34.03,Default,,0,0,45,,{\fnSimHei\fs42}我很好奇在软件或产品领域，你看到了什么趋势？\N{\fnSegoe UI\fs32\b1}coding. I'm curious what you see in world of software or products.
+Dialogue: 0,0:10:34.04,0:10:38.54,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我觉得随着 AI 让写代码的成本下降10倍甚至100\N{\fnSegoe UI\fs32\b1}Um I think as we see AI making writing code 10 100x cheaper, what
+Dialogue: 0,0:10:38.54,0:10:42.08,Default,,0,0,45,,{\fnSimHei\fs42}倍，用软件生产出来的产品价值会发生什么变化？\N{\fnSegoe UI\fs32\b1}happens to the value products that are produced with software? Do
+Dialogue: 0,0:10:42.08,0:10:46.26,Default,,0,0,45,,{\fnSimHei\fs42}我们会不会面临一场SaaS末日？你觉得这会如何发展？\N{\fnSegoe UI\fs32\b1}have a SAS apocalypse on our hands? How do you this plays out?
+Dialogue: 0,0:10:46.26,0:10:48.51,Default,,0,0,45,,{\fnSimHei\fs42}再说一次，你要再做一个预测。\N{\fnSegoe UI\fs32\b1}And again, you're going make another prediction.
+Dialogue: 0,0:10:48.52,0:10:51.95,Default,,0,0,45,,{\fnSimHei\fs42}SaaS末日这个问题是我最喜欢的。\N{\fnSegoe UI\fs32\b1}The SAS apocalypse question is my favorite then.
+Dialogue: 0,0:10:51.96,0:10:55.11,Default,,0,0,45,,{\fnSimHei\fs42}最喜欢的提问。嗯。\N{\fnSegoe UI\fs32\b1}favorite question then. Um
+Dialogue: 0,0:10:56.36,0:11:01.59,Default,,0,0,45,,{\fnSimHei\fs42}我觉得会有两件事发生，而且都不是人们一直在讨论的那种。\N{\fnSegoe UI\fs32\b1}I think there's two things that are going to happen and don't either of them is the thing people have been talking about.
+Dialogue: 0,0:11:01.60,0:11:07.99,Default,,0,0,45,,{\fnSimHei\fs42}第一件事——在座有人听过《Acquired》这个播客吗？\N{\fnSegoe UI\fs32\b1}I think one is Is anyone here an acquired listener? Like the podcast?
+Dialogue: 0,0:11:08.00,0:11:10.19,Default,,0,0,45,,{\fnSimHei\fs42}对，那是最好的播客。\N{\fnSegoe UI\fs32\b1}Yeah, it's like the best podcast.
+Dialogue: 0,0:11:10.20,0:11:14.99,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我前几周还去录了一期《Unplugged》，\N{\fnSegoe UI\fs32\b1}Uh I actually got to do a unplugged with them other
+Dialogue: 0,0:11:14.99,0:11:19.99,Default,,0,0,45,,{\fnSimHei\fs42}感觉就像见到了我的偶像，因为那两位主持人是最棒的。\N{\fnSegoe UI\fs32\b1}week and just felt meet my heroes cuz they're hosts are best.
+Dialogue: 0,0:11:20.00,0:11:24.09,Default,,0,0,45,,{\fnSimHei\fs42}他们是最棒的。他们有个“七种力量”的概念，\N{\fnSegoe UI\fs32\b1}are the best. So, they have this idea of uh seven
+Dialogue: 0,0:11:24.09,0:11:27.78,Default,,0,0,45,,{\fnSimHei\fs42}来自汉密尔顿写的那本关于商业模式的书。\N{\fnSegoe UI\fs32\b1}powers and is a like Hamilton. He kind wrote he
+Dialogue: 0,0:11:27.78,0:11:32.45,Default,,0,0,45,,{\fnSimHei\fs42}我认为随着AI的发展，其中一些力量会变得更重要，\N{\fnSegoe UI\fs32\b1}book about modes in business. And I think what's going to happen because
+Dialogue: 0,0:11:32.45,0:11:36.92,Default,,0,0,45,,{\fnSimHei\fs42}另一些则会弱化。比如，转换成本这种力量会减弱，\N{\fnSegoe UI\fs32\b1}AI, some these get more important less important. so, for example, one
+Dialogue: 0,0:11:36.92,0:11:41.79,Default,,0,0,45,,{\fnSimHei\fs42}因为你可以轻松地把模型从一个东西迁移到另一个东西。\N{\fnSegoe UI\fs32\b1}that gets switching costs you can just use model port from thing different thing.
+Dialogue: 0,0:11:41.80,0:11:45.60,Default,,0,0,45,,{\fnSimHei\fs42}从一件事换到另一件事。另一种会弱化的是流程优势，\N{\fnSegoe UI\fs32\b1}from one thing to a different thing. Another that gets less
+Dialogue: 0,0:11:45.60,0:11:48.92,Default,,0,0,45,,{\fnSimHei\fs42}因为对于那些商业模式依赖工作流之类的公司，\N{\fnSegoe UI\fs32\b1}important is process power because for companies whose mode like
+Dialogue: 0,0:11:48.92,0:11:53.20,Default,,0,0,45,,{\fnSimHei\fs42}Claude已经非常擅长梳理流程了。特别是4.7版本，\N{\fnSegoe UI\fs32\b1}workflows and things this, Claude getting really good at figuring out process. And
+Dialogue: 0,0:11:53.20,0:11:56.84,Default,,0,0,45,,{\fnSimHei\fs42}它可以自动爬山优化任何目标。你只要给一个目标，\N{\fnSegoe UI\fs32\b1}especially with 4.7, it can just hill climb anything. So, if
+Dialogue: 0,0:11:56.84,0:11:59.38,Default,,0,0,45,,{\fnSimHei\fs42}说“迭代直到完成”，它就会照做。\N{\fnSegoe UI\fs32\b1}you give target tell iterate until it's done,
+Dialogue: 0,0:11:59.38,0:12:02.07,Default,,0,0,45,,{\fnSimHei\fs42}我认为这是第一个能做到这点的模型。\N{\fnSegoe UI\fs32\b1}will do it. I think the first model that.
+Dialogue: 0,0:12:02.08,0:12:06.37,Default,,0,0,45,,{\fnSimHei\fs42}是第一个这样的模型。所以我认为这些因素会变得不那么重要，\N{\fnSegoe UI\fs32\b1}is the first model like that. So, I think these are going to get
+Dialogue: 0,0:12:06.37,0:12:10.36,Default,,0,0,45,,{\fnSimHei\fs42}但之前的商业模式其实仍然有效。像网络效应、规模经济、\N{\fnSegoe UI\fs32\b1}less important, but previous modes actually still matter. this network effects, uh
+Dialogue: 0,0:12:10.36,0:12:13.43,Default,,0,0,45,,{\fnSimHei\fs42}稀缺资源这些东西，并不会因为AI而改变。\N{\fnSegoe UI\fs32\b1}scale economies, cornered resources, things These not really changing with AI.
+Dialogue: 0,0:12:13.44,0:12:19.73,Default,,0,0,45,,{\fnSimHei\fs42}我认为第二件事是，看看今天或未来十年内的创业公司数量，\N{\fnSegoe UI\fs32\b1}I think the second thing is if you look at number of startups today or like maybe in
+Dialogue: 0,0:12:19.73,0:12:24.39,Default,,0,0,45,,{\fnSimHei\fs42}那些能够颠覆一切的公司可能会增加10倍。\N{\fnSegoe UI\fs32\b1}next know, past 10 years, that are just going to disrupt everything increase 10x.
+Dialogue: 0,0:12:24.40,0:12:28.45,Default,,0,0,45,,{\fnSimHei\fs42}增加10倍。因为现在你可以是一个很小的创业公司，\N{\fnSegoe UI\fs32\b1}increase like 10x. Because right now you can be a tiny
+Dialogue: 0,0:12:28.45,0:12:33.00,Default,,0,0,45,,{\fnSimHei\fs42}却能打造出和大公司一样有价值的产品，并且直接正面竞争。\N{\fnSegoe UI\fs32\b1}startup, could build thing that's as valuable large company and actually compete head-to-head
+Dialogue: 0,0:12:33.00,0:12:36.53,Default,,0,0,45,,{\fnSimHei\fs42}因为大公司必须调整业务流程、改变工作方式、\N{\fnSegoe UI\fs32\b1}because the has to evolve their business process, they have
+Dialogue: 0,0:12:36.53,0:12:40.75,Default,,0,0,45,,{\fnSimHei\fs42}重新培训所有人使用新技术，它们会面临大量内部阻力。\N{\fnSegoe UI\fs32\b1}way work, retrain everyone use technology, they're going face lot of internal resistance that.
+Dialogue: 0,0:12:40.76,0:12:44.03,Default,,0,0,45,,{\fnSimHei\fs42}但你们在座的人没有这种问题。\N{\fnSegoe UI\fs32\b1}resistance to that. But you know, no one here has that problem.
+Dialogue: 0,0:12:44.04,0:12:46.43,Default,,0,0,45,,{\fnSimHei\fs42}你们都没有这种问题。如果你是从零开始，\N{\fnSegoe UI\fs32\b1}you know, no one here has that problem. If you're starting
+Dialogue: 0,0:12:46.43,0:12:48.95,Default,,0,0,45,,{\fnSimHei\fs42}你可以从一开始就以AI为核心来构建一切。\N{\fnSegoe UI\fs32\b1}fresh, then can kind of build with AI natively from the ground up.
+Dialogue: 0,0:12:48.96,0:12:52.06,Default,,0,0,45,,{\fnSimHei\fs42}所以，我不确定。但我觉得这是最好的创业时代，\N{\fnSegoe UI\fs32\b1}So, I don't know. think it's the best time to
+Dialogue: 0,0:12:52.06,0:12:55.03,Default,,0,0,45,,{\fnSimHei\fs42}也是创业的最好时机。将会有巨大的颠覆来临。\N{\fnSegoe UI\fs32\b1}build. It's be a startup. there's so much disruption coming.
+Dialogue: 0,0:12:55.04,0:12:56.71,Default,,0,0,45,,{\fnSimHei\fs42}这么说来，我们还是有希望的。\N{\fnSegoe UI\fs32\b1}So, there is hope for us after all.
+Dialogue: 0,0:12:56.72,0:12:57.99,Default,,0,0,45,,{\fnSimHei\fs42}这么说来，我们还是有希望的。谢谢你，鲍里斯。\N{\fnSegoe UI\fs32\b1}So, there is hope for us after all. Thank you, Boris.
+Dialogue: 0,0:12:58.00,0:13:03.19,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我很乐意开放观众提问环节，如果有人想问问题的话。\N{\fnSegoe UI\fs32\b1}Um I would love to open up audience questions if anyone has anything they like ask.
+Dialogue: 0,0:13:03.20,0:13:08.07,Default,,0,0,45,,{\fnSimHei\fs42}有人想问问题吗？丹？\N{\fnSegoe UI\fs32\b1}would like to ask. Dan?
+Dialogue: 0,0:13:09.88,0:13:11.52,Default,,0,0,45,,{\fnSimHei\fs42}我，嗯，我很好奇。\N{\fnSegoe UI\fs32\b1}I Yeah, I'm curious.
+Dialogue: 0,0:13:11.52,0:13:15.15,Default,,0,0,45,,{\fnSimHei\fs42}你说在产品市场匹配前六个月就搭建了产品，\N{\fnSegoe UI\fs32\b1}Um you said that built uh 6 months before there
+Dialogue: 0,0:13:15.15,0:13:17.33,Default,,0,0,45,,{\fnSimHei\fs42}但现在模型已经足够好了，\N{\fnSegoe UI\fs32\b1}was product market fit, but now
+Dialogue: 0,0:13:17.33,0:13:22.42,Default,,0,0,45,,{\fnSimHei\fs42}你觉得Claude Code的成功有多少归功于模型本身，\N{\fnSegoe UI\fs32\b1}given the models are good enough, how much do attribute success of Claude code
+Dialogue: 0,0:13:22.42,0:13:25.15,Default,,0,0,45,,{\fnSimHei\fs42}又有多少归功于产品领域的决策？\N{\fnSegoe UI\fs32\b1}to model versus like decisions in field product?
+Dialogue: 0,0:13:25.16,0:13:27.27,Default,,0,0,45,,{\fnSimHei\fs42}产品领域？嗯，我觉得可能是两者相结合。\N{\fnSegoe UI\fs32\b1}field of product? Uh I think it's probably a mix.
+Dialogue: 0,0:13:27.28,0:13:30.92,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我觉得可能是两者相结合。对，如果你一年前问我，\N{\fnSegoe UI\fs32\b1}Uh I think it's probably a mix. Yeah, if you asked me maybe year ago,
+Dialogue: 0,0:13:30.92,0:13:32.23,Default,,0,0,45,,{\fnSimHei\fs42}比例大概是五五开。\N{\fnSegoe UI\fs32\b1}the ratio was something like 50/50.
+Dialogue: 0,0:13:32.24,0:13:35.35,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我不知道。如果你六个月前问我，比例可能还是\N{\fnSegoe UI\fs32\b1}Um maybe I don't know. If you asked me 6 months ago, the mix would be
+Dialogue: 0,0:13:35.36,0:13:37.15,Default,,0,0,45,,{\fnSimHei\fs42}五五开。 >> 那两年后呢？\N{\fnSegoe UI\fs32\b1}50/50. >> What about in 2 years?
+Dialogue: 0,0:13:37.16,0:13:40.07,Default,,0,0,45,,{\fnSimHei\fs42}哦，老兄，我不知道。我们只规划未来一周的事。\N{\fnSegoe UI\fs32\b1}Oh, year I don't know, dude. We plan like we 1 week out.
+Dialogue: 0,0:13:40.08,0:13:41.37,Default,,0,0,45,,{\fnSimHei\fs42}我们只规划未来一周。 >> 几个月？未来的某个时候。\N{\fnSegoe UI\fs32\b1}in like we plan 1 week out. >> months. Sometime the future.
+Dialogue: 0,0:13:41.38,0:13:45.20,Default,,0,0,45,,{\fnSimHei\fs42}>> 几个月？未来的某个时候。[笑声] 顺便说一句，\N{\fnSegoe UI\fs32\b1}>> months. Sometime in the future. [laughter] And by way,
+Dialogue: 0,0:13:45.20,0:13:47.69,Default,,0,0,45,,{\fnSimHei\fs42}我认为之所以是五五开，嗯，你知道，\N{\fnSegoe UI\fs32\b1}I think reason it was 50/50 is
+Dialogue: 0,0:13:47.69,0:13:50.33,Default,,0,0,45,,{\fnSimHei\fs42}就像YC（创业孵化器）早期教的那样。\N{\fnSegoe UI\fs32\b1}um you know, like did YC back
+Dialogue: 0,0:13:50.33,0:13:53.71,Default,,0,0,45,,{\fnSimHei\fs42}作为一家公司的第一个员工，参与过很多初创公司。\N{\fnSegoe UI\fs32\b1}day. first hire at a company and bunch of startups.
+Dialogue: 0,0:13:53.72,0:13:57.52,Default,,0,0,45,,{\fnSimHei\fs42}在初创公司里，他们一直灌输的理念，尤其是YC，\N{\fnSegoe UI\fs32\b1}And in startups like the thing that they drill into you and then
+Dialogue: 0,0:13:57.52,0:13:59.51,Default,,0,0,45,,{\fnSimHei\fs42}就是打造人们喜欢的东西。\N{\fnSegoe UI\fs32\b1}especially YC over is build something people love.
+Dialogue: 0,0:13:59.52,0:14:03.33,Default,,0,0,45,,{\fnSimHei\fs42}所以，产品是什么、模型之类的都不重要。\N{\fnSegoe UI\fs32\b1}And so, it doesn't matter what the product is, like model
+Dialogue: 0,0:14:03.33,0:14:06.93,Default,,0,0,45,,{\fnSimHei\fs42}你最终还是要打造一个人们喜欢的东西。\N{\fnSegoe UI\fs32\b1}and all this stuff. You still in end have to
+Dialogue: 0,0:14:06.93,0:14:12.14,Default,,0,0,45,,{\fnSimHei\fs42}我觉得这就是为什么我们如此关注你日常使用时的小细节，\N{\fnSegoe UI\fs32\b1}build a thing that people I think that's why matters we pay much attention little details
+Dialogue: 0,0:14:12.14,0:14:14.55,Default,,0,0,45,,{\fnSimHei\fs42}这确实是一种很棒的体验。\N{\fnSegoe UI\fs32\b1}as you use day, it's really great experience.
+Dialogue: 0,0:14:14.56,0:14:17.99,Default,,0,0,45,,{\fnSimHei\fs42}我觉得随着模型变得更好，工具层的重要性会降低。\N{\fnSegoe UI\fs32\b1}I think as the model's gotten better, harness kind of gets less important.
+Dialogue: 0,0:14:18.00,0:14:19.82,Default,,0,0,45,,{\fnSimHei\fs42}工具层的重要性会降低。\N{\fnSegoe UI\fs32\b1}the harness kind of gets less
+Dialogue: 0,0:14:19.82,0:14:22.95,Default,,0,0,45,,{\fnSimHei\fs42}我认为我们现在思考的是如何改进工具层？\N{\fnSegoe UI\fs32\b1}important. And I think like that we're thinking about right now
+Dialogue: 0,0:14:22.95,0:14:25.60,Default,,0,0,45,,{\fnSimHei\fs42}比如让循环操作成为更核心的功能？\N{\fnSegoe UI\fs32\b1}is how do we evolve harness? So, make loops more
+Dialogue: 0,0:14:25.60,0:14:28.90,Default,,0,0,45,,{\fnSimHei\fs42}如何让运行多个智能体更简单？嗯，你知道，\N{\fnSegoe UI\fs32\b1}a first class thing? How it easier to run lot agents? Uh you
+Dialogue: 0,0:14:28.90,0:14:30.39,Default,,0,0,45,,{\fnSimHei\fs42}子智能体是个想法。\N{\fnSegoe UI\fs32\b1}know, beside sub agents one idea.
+Dialogue: 0,0:14:30.40,0:14:32.79,Default,,0,0,45,,{\fnSimHei\fs42}对，子智能体是一个想法。我们还在酝酿更多的东西。\N{\fnSegoe UI\fs32\b1}know, like sub agents is one idea. There's a bunch more stuff that we're cooking.
+Dialogue: 0,0:14:32.80,0:14:36.75,Default,,0,0,45,,{\fnSimHei\fs42}但我认为一年后，模型的对齐能力会好得多。\N{\fnSegoe UI\fs32\b1}But I think in a year, the model will be much
+Dialogue: 0,0:14:36.75,0:14:41.29,Default,,0,0,45,,{\fnSimHei\fs42}所以我们今天所有的安全机制，比如提示注入防护、\N{\fnSegoe UI\fs32\b1}better aligned. And so, all safety mechanisms that we have today around uh
+Dialogue: 0,0:14:41.29,0:14:45.44,Default,,0,0,45,,{\fnSimHei\fs42}静态验证命令、权限模式、人工介入循环等等，\N{\fnSegoe UI\fs32\b1}prompt injection and kind of static verification commands permission modes, human loop,
+Dialogue: 0,0:14:45.44,0:14:49.59,Default,,0,0,45,,{\fnSimHei\fs42}都会变得不那么重要，因为模型会做正确的事。\N{\fnSegoe UI\fs32\b1}this stuff is just going to less important cuz do right thing.
+Dialogue: 0,0:14:49.60,0:14:52.39,Default,,0,0,45,,{\fnSimHei\fs42}会做正确的事。嗯，这就是我的预测。\N{\fnSegoe UI\fs32\b1}do the right thing. Um So, yeah, that's my prediction.
+Dialogue: 0,0:14:57.36,0:14:59.95,Default,,0,0,45,,{\fnSimHei\fs42}你想扔一下盒子吗，丹？ >> [喷鼻声]\N{\fnSegoe UI\fs32\b1}You want to toss the box, Dan? >> [snorts]
+Dialogue: 0,0:15:01.28,0:15:04.51,Default,,0,0,45,,{\fnSimHei\fs42}>> 太好了。嗯，如果从软件层面稍微拉远一点来看，\N{\fnSegoe UI\fs32\b1}>> Great. Um To zoom to out a little bit
+Dialogue: 0,0:15:04.51,0:15:08.12,Default,,0,0,45,,{\fnSimHei\fs42}我觉得 Claude 代码在几个月前带来了一种文化变革，\N{\fnSegoe UI\fs32\b1}from software, I think Claude code did cultural change few months
+Dialogue: 0,0:15:08.12,0:15:10.19,Default,,0,0,45,,{\fnSimHei\fs42}它让构建软件这件事变得大众化了。\N{\fnSegoe UI\fs32\b1}ago where it democratized like building software.
+Dialogue: 0,0:15:10.20,0:15:16.77,Default,,0,0,45,,{\fnSimHei\fs42}你可以看到店铺老板为自己编写软件，甚至用编程控制单片机，\N{\fnSegoe UI\fs32\b1}You can see uh shop owners their own um software for themselves or even programming microcontrollers
+Dialogue: 0,0:15:16.77,0:15:19.59,Default,,0,0,45,,{\fnSimHei\fs42}在有人开门时自动开关灯。\N{\fnSegoe UI\fs32\b1}to control the light when someone opens door.
+Dialogue: 0,0:15:19.60,0:15:25.25,Default,,0,0,45,,{\fnSimHei\fs42}嗯，你认为未来构建软件会不会成为像“我会用 Micros\N{\fnSegoe UI\fs32\b1}Um do you see in future um building software becoming a skill like
+Dialogue: 0,0:15:25.25,0:15:29.09,Default,,0,0,45,,{\fnSimHei\fs42}oft Office”这样的通用技能？\N{\fnSegoe UI\fs32\b1}uh I know Microsoft Office? so, it's thing that
+Dialogue: 0,0:15:29.09,0:15:34.13,Default,,0,0,45,,{\fnSimHei\fs42}变成每个人都能掌握的东西，而不仅仅是科技行业的人？\N{\fnSegoe UI\fs32\b1}ev- everybody can not just people tech industry? Oh my god, yes.
+Dialogue: 0,0:15:34.13,0:15:37.97,Default,,0,0,45,,{\fnSimHei\fs42}哦天哪，当然会。我觉得甚至还不止于此。\N{\fnSegoe UI\fs32\b1}Yes. think going to be even more than that. don't
+Dialogue: 0,0:15:37.97,0:15:40.59,Default,,0,0,45,,{\fnSimHei\fs42}就像现在谁都会发短信一样。\N{\fnSegoe UI\fs32\b1}know. It's yeah, how send text message.
+Dialogue: 0,0:15:42.24,0:15:43.66,Default,,0,0,45,,{\fnSimHei\fs42}我觉得，嗯，你知道的，\N{\fnSegoe UI\fs32\b1}I think um you know,
+Dialogue: 0,0:15:43.66,0:15:46.12,Default,,0,0,45,,{\fnSimHei\fs42}我阅读的两大主题基本就是科幻和技术史。\N{\fnSegoe UI\fs32\b1}like read a my two genres are essentially sci-fi and
+Dialogue: 0,0:15:46.12,0:15:47.55,Default,,0,0,45,,{\fnSimHei\fs42}这是我大量阅读的内容。\N{\fnSegoe UI\fs32\b1}tech history. This is what lot of.
+Dialogue: 0,0:15:47.56,0:15:51.07,Default,,0,0,45,,{\fnSimHei\fs42}技术史。这是我最常读的东西。在技术史中，\N{\fnSegoe UI\fs32\b1}history. This is what I read a lot of. think in
+Dialogue: 0,0:15:51.07,0:15:55.45,Default,,0,0,45,,{\fnSimHei\fs42}有一个在我看来与当下正在发生的事情最为清晰的类比。\N{\fnSegoe UI\fs32\b1}tech history, there's one thing which to me the clearest parallel for what's happening
+Dialogue: 0,0:15:55.45,0:15:57.91,Default,,0,0,45,,{\fnSimHei\fs42}那就是15世纪欧洲的印刷术。\N{\fnSegoe UI\fs32\b1}right now. And this 1400s, printing press Europe.
+Dialogue: 0,0:15:57.92,0:16:03.68,Default,,0,0,45,,{\fnSimHei\fs42}欧洲的印刷术。在当时，大约只有10%的欧洲人口识字。\N{\fnSegoe UI\fs32\b1}the printing press in Europe. And what happened was before essentially 10% of European population literate. They knew
+Dialogue: 0,0:16:03.68,0:16:05.23,Default,,0,0,45,,{\fnSimHei\fs42}他们懂得读写。\N{\fnSegoe UI\fs32\b1}how to read and write.
+Dialogue: 0,0:16:05.24,0:16:09.63,Default,,0,0,45,,{\fnSimHei\fs42}这些人通常受雇于国王和不识字的领主。\N{\fnSegoe UI\fs32\b1}They were often employed by like kings lords that not literate.
+Dialogue: 0,0:16:09.64,0:16:12.73,Default,,0,0,45,,{\fnSimHei\fs42}以及那些不识字的领主。他们的工作就是读写，\N{\fnSegoe UI\fs32\b1}and lords that were not literate. And their job was to you know,
+Dialogue: 0,0:16:12.73,0:16:14.64,Default,,0,0,45,,{\fnSimHei\fs42}而这是当时人尽皆知的事情。\N{\fnSegoe UI\fs32\b1}read write this is something everyone knew how do.
+Dialogue: 0,0:16:14.72,0:16:19.34,Default,,0,0,45,,{\fnSimHei\fs42}>> [轻笑声] 印刷术被发明之后，又出现了两台印刷机。\N{\fnSegoe UI\fs32\b1}>> [snorts] The printing press was invented, then there were two
+Dialogue: 0,0:16:19.34,0:16:22.14,Default,,0,0,45,,{\fnSimHei\fs42}在第一部文学作品出版后的50年内，\N{\fnSegoe UI\fs32\b1}more presses and in the 50 years
+Dialogue: 0,0:16:22.14,0:16:25.11,Default,,0,0,45,,{\fnSimHei\fs42}欧洲的文献数量比之前的一千年还要多。\N{\fnSegoe UI\fs32\b1}after first literature published Europe than thousand before.
+Dialogue: 0,0:16:25.12,0:16:26.27,Default,,0,0,45,,{\fnSimHei\fs42}而在同一时期，\N{\fnSegoe UI\fs32\b1}And over the
+Dialogue: 0,0:16:26.27,0:16:30.53,Default,,0,0,45,,{\fnSimHei\fs42}文献的成本——一本书的价格下降了大约100倍。然后，\N{\fnSegoe UI\fs32\b1}same period, cost of literature, a book went down like 100x.
+Dialogue: 0,0:16:30.53,0:16:34.80,Default,,0,0,45,,{\fnSimHei\fs42}你知道的，这又花了几百年时间，因为学习读写本身很难。\N{\fnSegoe UI\fs32\b1}then, you know, it took couple hundred years cuz learning to
+Dialogue: 0,0:16:34.80,0:16:37.58,Default,,0,0,45,,{\fnSimHei\fs42}你需要建立教育体系、需要政府推动、\N{\fnSegoe UI\fs32\b1}read and write is hard. You need
+Dialogue: 0,0:16:37.58,0:16:42.01,Default,,0,0,45,,{\fnSimHei\fs42}不能让所有人都还在农场干活等等。但接下来的几个世纪里，\N{\fnSegoe UI\fs32\b1}education systems government everyone can't be working on farms so on. But
+Dialogue: 0,0:16:42.01,0:16:46.11,Default,,0,0,45,,{\fnSimHei\fs42}全球识字率上升到了70%。现在我们所有人都能读写，\N{\fnSegoe UI\fs32\b1}next few literacy globally up 70%. now we can all don't degree
+Dialogue: 0,0:16:46.11,0:16:48.08,Default,,0,0,45,,{\fnSimHei\fs42}不需要专门拿个读写学位。\N{\fnSegoe UI\fs32\b1}in reading writing how write.
+Dialogue: 0,0:16:48.08,0:16:50.87,Default,,0,0,45,,{\fnSimHei\fs42}尽管仍然有专业的写作者在做这件事。\N{\fnSegoe UI\fs32\b1}Although still there are professional writers that thing do.
+Dialogue: 0,0:16:50.88,0:16:55.76,Default,,0,0,45,,{\fnSimHei\fs42}这是每个人都能够做的事。所以，我认为同样的事情即将发生，\N{\fnSegoe UI\fs32\b1}is a thing that you can do. So, I think the that's about to happen
+Dialogue: 0,0:16:55.76,0:16:59.95,Default,,0,0,45,,{\fnSimHei\fs42}而且会比50年快得多——软件将被彻底普及，任何人\N{\fnSegoe UI\fs32\b1}and it's going be much faster than 50 years software will fully democratized, anyone
+Dialogue: 0,0:16:59.96,0:17:04.49,Default,,0,0,45,,{\fnSimHei\fs42}都能做。而且，你知道的，这有很多推论。比如，\N{\fnSegoe UI\fs32\b1}can do. And you know, there's a lot of corollaries to this. So, for
+Dialogue: 0,0:17:04.49,0:17:06.75,Default,,0,0,45,,{\fnSimHei\fs42}假设你在编写会计软件。\N{\fnSegoe UI\fs32\b1}example, let's say you're writing accounting software.
+Dialogue: 0,0:17:06.76,0:17:10.02,Default,,0,0,45,,{\fnSimHei\fs42}我认为，编写会计软件的最佳人选，甚至可能到今天为止，\N{\fnSegoe UI\fs32\b1}The best person to write accounting software, I think maybe even
+Dialogue: 0,0:17:10.02,0:17:12.54,Default,,0,0,45,,{\fnSimHei\fs42}都不是工程师，而是一位真正优秀的会计师，\N{\fnSegoe UI\fs32\b1}today, is not an engineer, it's a really good
+Dialogue: 0,0:17:12.54,0:17:15.55,Default,,0,0,45,,{\fnSimHei\fs42}因为他们对领域非常熟悉，而编码反而是简单的部分。\N{\fnSegoe UI\fs32\b1}accountant because they know the domain well and coding easy part.
+Dialogue: 0,0:17:15.56,0:17:20.48,Default,,0,0,45,,{\fnSimHei\fs42}非常熟悉，编码反而是简单的部分。真正难的是了解这个领域。\N{\fnSegoe UI\fs32\b1}really well and coding is the easy part. It's knowing domain that's hard And
+Dialogue: 0,0:17:20.48,0:17:22.59,Default,,0,0,45,,{\fnSimHei\fs42}而我认为这显然就是未来。\N{\fnSegoe UI\fs32\b1}I think this just obviously future.
+Dialogue: 0,0:17:24.68,0:17:27.05,Default,,0,0,45,,{\fnSimHei\fs42}所以，嗯，Greg 说过的一点是，\N{\fnSegoe UI\fs32\b1}So, uh one of the things Greg said
+Dialogue: 0,0:17:27.05,0:17:29.27,Default,,0,0,45,,{\fnSimHei\fs42}你们某种程度上已经生活在未来了，\N{\fnSegoe UI\fs32\b1}was that you guys are living in
+Dialogue: 0,0:17:29.27,0:17:31.36,Default,,0,0,45,,{\fnSimHei\fs42}因为你们能够使用模型和智能体。\N{\fnSegoe UI\fs32\b1}future a little bit cuz get to
+Dialogue: 0,0:17:31.36,0:17:34.85,Default,,0,0,45,,{\fnSimHei\fs42}Claude 代码在发布之前曾是一个内部工具。嗯，\N{\fnSegoe UI\fs32\b1}have access models and agents. Claude code an internal tool before released
+Dialogue: 0,0:17:34.85,0:17:38.47,Default,,0,0,45,,{\fnSimHei\fs42}工程领域和外部世界之间的差距是一个月吗？还是三个月？\N{\fnSegoe UI\fs32\b1}it. Um is gap between where engineering rest world, month? Is it 3 months?
+Dialogue: 0,0:17:38.48,0:17:41.58,Default,,0,0,45,,{\fnSimHei\fs42}世界，是一个月吗？还是三个月？六个月？\N{\fnSegoe UI\fs32\b1}world, is that a month? Is it 3 months? 6
+Dialogue: 0,0:17:41.58,0:17:44.03,Default,,0,0,45,,{\fnSimHei\fs42}而这个差距是在变大还是在变小？\N{\fnSegoe UI\fs32\b1}And gap getting bigger or smaller over time?
+Dialogue: 0,0:17:44.04,0:17:47.51,Default,,0,0,45,,{\fnSimHei\fs42}是的，实际上在内部，我们使用的是和外部所有人一样的模型。\N{\fnSegoe UI\fs32\b1}Yeah, so internally, we use the same models everyone else does.
+Dialogue: 0,0:17:47.52,0:17:48.62,Default,,0,0,45,,{\fnSimHei\fs42}嗯，对我们来说，\N{\fnSegoe UI\fs32\b1}Um for us,
+Dialogue: 0,0:17:48.62,0:17:51.64,Default,,0,0,45,,{\fnSimHei\fs42}内部试用（dog fooding）非常重要。\N{\fnSegoe UI\fs32\b1}the dog fooding is really important. So, we
+Dialogue: 0,0:17:51.64,0:17:53.69,Default,,0,0,45,,{\fnSimHei\fs42}所以我们用这些东西，你知道的，\N{\fnSegoe UI\fs32\b1}use thing that here you know,
+Dialogue: 0,0:17:53.69,0:17:56.16,Default,,0,0,45,,{\fnSimHei\fs42}比如先小范围试用一下 mythos，\N{\fnSegoe UI\fs32\b1}like a little bit of mythos to
+Dialogue: 0,0:17:56.16,0:17:59.87,Default,,0,0,45,,{\fnSimHei\fs42}然后大量用 Opus 4.7 来编写我们大部分的代码。\N{\fnSegoe UI\fs32\b1}try it and then lot Opus 4.7 food write most our code.
+Dialogue: 0,0:17:59.88,0:18:03.71,Default,,0,0,45,,{\fnSimHei\fs42}我们的代码。嗯，我认为在模型层面，其实没有什么差距。\N{\fnSegoe UI\fs32\b1}of our code. Um I think on the model side, there isn't
+Dialogue: 0,0:18:03.71,0:18:06.37,Default,,0,0,45,,{\fnSimHei\fs42}你知道的，就像 mythos 一样，\N{\fnSegoe UI\fs32\b1}really a gap. you know, it's like pretty
+Dialogue: 0,0:18:06.37,0:18:10.35,Default,,0,0,45,,{\fnSimHei\fs42}它最终会以某个版本的后代形式在某个时间点向所有人开放。\N{\fnSegoe UI\fs32\b1}much mythos and that will become some version descendant available at point to everyone.
+Dialogue: 0,0:18:10.36,0:18:12.89,Default,,0,0,45,,{\fnSimHei\fs42}在某个时间点向所有人开放。我认为在产品层面，\N{\fnSegoe UI\fs32\b1}available at some point to everyone. I think
+Dialogue: 0,0:18:12.89,0:18:16.12,Default,,0,0,45,,{\fnSimHei\fs42}差距可能要大得多。而这只是因为我们在改变我们所有的流程。\N{\fnSegoe UI\fs32\b1}on the product side, there's probably a far larger gap.
+Dialogue: 0,0:18:16.12,0:18:18.42,Default,,0,0,45,,{\fnSimHei\fs42}如果你和 Anthropic 的人聊天，\N{\fnSegoe UI\fs32\b1}And that's just related us changing all
+Dialogue: 0,0:18:18.42,0:18:20.84,Default,,0,0,45,,{\fnSimHei\fs42}你会发现我们实际上什么都用 Claude。\N{\fnSegoe UI\fs32\b1}of our processes. Like if you talk
+Dialogue: 0,0:18:20.84,0:18:23.61,Default,,0,0,45,,{\fnSimHei\fs42}Claude 们整天都在对话——就像我在编码时，\N{\fnSegoe UI\fs32\b1}people Anthropic, we use Claude for literally everything. Claudes
+Dialogue: 0,0:18:23.61,0:18:24.41,Default,,0,0,45,,{\fnSimHei\fs42}我的内循环中，\N{\fnSegoe UI\fs32\b1}are talking
+Dialogue: 0,0:18:24.41,0:18:27.64,Default,,0,0,45,,{\fnSimHei\fs42}它们会通过 Slack 和其他人的 Claude 交流，\N{\fnSegoe UI\fs32\b1}day like as I'm coding, my in loop, they will communicate
+Dialogue: 0,0:18:27.64,0:18:30.87,Default,,0,0,45,,{\fnSimHei\fs42}而那些 Claude 也在运行，去弄清楚一些未知的东西。\N{\fnSegoe UI\fs32\b1}over Slack other people's that also running kind figure out unknowns.
+Dialogue: 0,0:18:30.88,0:18:34.19,Default,,0,0,45,,{\fnSimHei\fs42}我们公司现在没有任何地方再手写代码了。\N{\fnSegoe UI\fs32\b1}We have no more manually written code anywhere
+Dialogue: 0,0:18:34.19,0:18:38.38,Default,,0,0,45,,{\fnSimHei\fs42}所有SQL都由模型生成。所有东西都是自动构建的。\N{\fnSegoe UI\fs32\b1}at the company. All of SQL is by uh models. Everything
+Dialogue: 0,0:18:38.38,0:18:42.22,Default,,0,0,45,,{\fnSimHei\fs42}所以我认为，实际上我们领先的地方并不是技术，\N{\fnSegoe UI\fs32\b1}just built So, I think actually place that we're ahead
+Dialogue: 0,0:18:42.22,0:18:45.53,Default,,0,0,45,,{\fnSimHei\fs42}因为同样的工具对所有人来说都是可用的，\N{\fnSegoe UI\fs32\b1}not technology cuz same available to us everyone here
+Dialogue: 0,0:18:45.53,0:18:48.67,Default,,0,0,45,,{\fnSimHei\fs42}核心在于我们正在构建一个平台。因此，\N{\fnSegoe UI\fs32\b1}because fundamentally, we are building a platform. And
+Dialogue: 0,0:18:48.67,0:18:53.03,Default,,0,0,45,,{\fnSimHei\fs42}开发人员能够用上我们推出的所有东西，并且亲自试用，\N{\fnSegoe UI\fs32\b1}so, for it's really important developers can use thing using and dog
+Dialogue: 0,0:18:53.03,0:18:54.43,Default,,0,0,45,,{\fnSimHei\fs42}这一点非常重要。\N{\fnSegoe UI\fs32\b1}food everything put out there.
+Dialogue: 0,0:18:54.44,0:18:58.83,Default,,0,0,45,,{\fnSimHei\fs42}我们推出的所有东西。但我认为，在组织结构和流程方面，\N{\fnSegoe UI\fs32\b1}everything that we put out there. But I think there's actually a far bigger weed
+Dialogue: 0,0:18:58.83,0:19:02.20,Default,,0,0,45,,{\fnSimHei\fs42}其实有一个更大的问题。而这就是一个地方，\N{\fnSegoe UI\fs32\b1}in kind of the organizational structure and process. And this is place
+Dialogue: 0,0:19:02.20,0:19:06.59,Default,,0,0,45,,{\fnSimHei\fs42}希望大家可以在这里讨论，让每个人都能学习并共同进步。\N{\fnSegoe UI\fs32\b1}where you know, hopefully can talk about it places like uh everyone learn from also evolve.
+Dialogue: 0,0:19:06.60,0:19:09.39,Default,,0,0,45,,{\fnSimHei\fs42}并共同进步。是的，我认为这就是初创公司的一个优势。\N{\fnSegoe UI\fs32\b1}and also evolve. Yeah, I think that's one of the advantages startups have. It's
+Dialogue: 0,0:19:09.39,0:19:10.51,Default,,0,0,45,,{\fnSimHei\fs42}从零开始要容易得多。\N{\fnSegoe UI\fs32\b1}so much easier to start there.
+Dialogue: 0,0:19:12.16,0:19:14.75,Default,,0,0,45,,{\fnSimHei\fs42}是的，嗯，上次我们聊的时候，\N{\fnSegoe UI\fs32\b1}Yeah, um last time we talked,
+Dialogue: 0,0:19:14.75,0:19:18.09,Default,,0,0,45,,{\fnSimHei\fs42}我记得你提到了一点关于多代理的内容，\N{\fnSegoe UI\fs32\b1}I think you'd mentioned a little bit about
+Dialogue: 0,0:19:18.09,0:19:22.72,Default,,0,0,45,,{\fnSimHei\fs42}而且在之前红杉的活动上，你说有一些事情正在推进中，\N{\fnSegoe UI\fs32\b1}multi-agent and it was very in code at the prior Sequoia event
+Dialogue: 0,0:19:22.72,0:19:27.54,Default,,0,0,45,,{\fnSimHei\fs42}是你正在考虑的东西。现在显然有了/slash批处理、\N{\fnSegoe UI\fs32\b1}you that there were some things going down pipeline thing you're talking
+Dialogue: 0,0:19:27.54,0:19:32.54,Default,,0,0,45,,{\fnSimHei\fs42}循环、子团队、团队。你能谈谈是在模型层面还是框架层面，\N{\fnSegoe UI\fs32\b1}thinking about. Now obviously there's slash batch, loop, sub teams, teams. Can speak
+Dialogue: 0,0:19:32.54,0:19:37.35,Default,,0,0,45,,{\fnSimHei\fs42}如何通过注入先验知识和目标函数，来改善这种委派任务、\N{\fnSegoe UI\fs32\b1}to either model level harness how injecting priors objective function is changing kind
+Dialogue: 0,0:19:37.35,0:19:41.80,Default,,0,0,45,,{\fnSimHei\fs42}启动代理的体验吗？因为很多事情是可以并行处理的。\N{\fnSegoe UI\fs32\b1}of make this experience around delegating work, spinning up agents better? Cuz
+Dialogue: 0,0:19:41.80,0:19:46.62,Default,,0,0,45,,{\fnSimHei\fs42}你可以做得更快，感觉我需要靠直觉来判断什么时候并行，\N{\fnSegoe UI\fs32\b1}so much parallelizable. You can do many faster feel like have overlay my
+Dialogue: 0,0:19:46.62,0:19:50.51,Default,,0,0,45,,{\fnSimHei\fs42}而不是理解如何启动10个代理来处理某件事。\N{\fnSegoe UI\fs32\b1}own intuition for when parallelize rather than understanding spin 10 something.
+Dialogue: 0,0:19:50.52,0:19:52.65,Default,,0,0,45,,{\fnSimHei\fs42}可以为某件事启动10个子代理。是的，从产品角度来看，\N{\fnSegoe UI\fs32\b1}can spin up 10 sub agents for something. Yeah, I mean on the product side,
+Dialogue: 0,0:19:52.65,0:19:53.55,Default,,0,0,45,,{\fnSimHei\fs42}这其实归结为提示工程。\N{\fnSegoe UI\fs32\b1}it really just comes down to prompting.
+Dialogue: 0,0:19:53.56,0:19:57.09,Default,,0,0,45,,{\fnSimHei\fs42}就是这样。所以，你知道，我们调整提示词，\N{\fnSegoe UI\fs32\b1}That's how it is. And so, you know, we tweak prompts kind
+Dialogue: 0,0:19:57.09,0:19:59.39,Default,,0,0,45,,{\fnSimHei\fs42}帮助模型更并行地处理事情。\N{\fnSegoe UI\fs32\b1}of help the model do stuff in parallel more.
+Dialogue: 0,0:19:59.40,0:20:02.92,Default,,0,0,45,,{\fnSimHei\fs42}但说实话，随着模型变得更好，它自然会这样做。\N{\fnSegoe UI\fs32\b1}But also, honestly, as the model gets better, it
+Dialogue: 0,0:20:02.92,0:20:04.68,Default,,0,0,45,,{\fnSimHei\fs42}所以像循环这样的功能，\N{\fnSegoe UI\fs32\b1}just naturally does this.
+Dialogue: 0,0:20:04.68,0:20:08.84,Default,,0,0,45,,{\fnSimHei\fs42}我发现实际上4.7版本就开始做到了。这真的很酷。嗯，\N{\fnSegoe UI\fs32\b1}And so, something like loop, I found actually 4.7, starts doing.
+Dialogue: 0,0:20:08.84,0:20:12.99,Default,,0,0,45,,{\fnSimHei\fs42}我会告诉它：“去拉取这个数据查询。”它就会说：“嘿，\N{\fnSegoe UI\fs32\b1}Uh which is really cool. It's uh you know, I'll tell
+Dialogue: 0,0:20:12.99,0:20:16.19,Default,,0,0,45,,{\fnSimHei\fs42}注意到这个数据随时间变化。开始一个循环，\N{\fnSegoe UI\fs32\b1}"Go pull this data query." it's "Hey, noticed
+Dialogue: 0,0:20:16.19,0:20:19.55,Default,,0,0,45,,{\fnSimHei\fs42}每30分钟给我一份报告。”我说：“太好了。\N{\fnSegoe UI\fs32\b1}that changing over time. start a and give report
+Dialogue: 0,0:20:19.55,0:20:21.63,Default,,0,0,45,,{\fnSimHei\fs42}能发到我的Slack上吗？\N{\fnSegoe UI\fs32\b1}every 30 minutes." I'm "Great.
+Dialogue: 0,0:20:21.63,0:20:25.63,Default,,0,0,45,,{\fnSimHei\fs42}”然后它就用Slack MCP做到了。所以我认为，\N{\fnSegoe UI\fs32\b1}Can send to me Slack?" then uses Slack MCP do that.
+Dialogue: 0,0:20:25.63,0:20:30.11,Default,,0,0,45,,{\fnSimHei\fs42}未来用户不用再费心去想如何更好地使用工具了。如果是这样，\N{\fnSegoe UI\fs32\b1}So, think time, not on users figure out how hold tools better. if
+Dialogue: 0,0:20:30.11,0:20:32.51,Default,,0,0,45,,{\fnSimHei\fs42}那就是产品设计的问题，要做好。\N{\fnSegoe UI\fs32\b1}that's case, product design problem doing good job.
+Dialogue: 0,0:20:32.52,0:20:34.95,Default,,0,0,45,,{\fnSimHei\fs42}而且好像我做得并不好。实际上，\N{\fnSegoe UI\fs32\b1}and like I'm not doing a good
+Dialogue: 0,0:20:34.95,0:20:37.71,Default,,0,0,45,,{\fnSimHei\fs42}这要依靠模型本身更好地处理这些事，\N{\fnSegoe UI\fs32\b1}job. It's really on the model to do
+Dialogue: 0,0:20:37.71,0:20:41.11,Default,,0,0,45,,{\fnSimHei\fs42}我们只需要给它合适的提示，它自然就能做到。\N{\fnSegoe UI\fs32\b1}this stuff better us kind of prompting it so naturally does this.
+Dialogue: 0,0:20:43.32,0:20:44.93,Default,,0,0,45,,{\fnSimHei\fs42}嗯，所以现在，\N{\fnSegoe UI\fs32\b1}Um so, right
+Dialogue: 0,0:20:44.93,0:20:51.35,Default,,0,0,45,,{\fnSimHei\fs42}我们很多人似乎都在用Claude或Codex这些云端工具\N{\fnSegoe UI\fs32\b1}now it seems like a lot of us use um Claude or Codex these uh
+Dialogue: 0,0:20:51.35,0:20:56.63,Default,,0,0,45,,{\fnSimHei\fs42}来进行计算。但也有人非常强烈主张让AI本地化。\N{\fnSegoe UI\fs32\b1}tools in the cloud to do our computing. But then, there are some
+Dialogue: 0,0:20:56.63,0:20:59.84,Default,,0,0,45,,{\fnSimHei\fs42}我可以想象，随着时间的推移，\N{\fnSegoe UI\fs32\b1}very vocal advocates having your AI be local.
+Dialogue: 0,0:20:59.84,0:21:03.28,Default,,0,0,45,,{\fnSimHei\fs42}随着开源模型和其他技术的发展，\N{\fnSegoe UI\fs32\b1}And I could imagine over time as open
+Dialogue: 0,0:21:03.28,0:21:08.33,Default,,0,0,45,,{\fnSimHei\fs42}人们获得高质量编程辅助的可能性会更大。所以，\N{\fnSegoe UI\fs32\b1}way models and other things catch up that this more possibility for
+Dialogue: 0,0:21:08.33,0:21:12.01,Default,,0,0,45,,{\fnSimHei\fs42}我很好奇你未来几年的愿景是什么。\N{\fnSegoe UI\fs32\b1}people get really high-quality coding assistance. So, I'm curious
+Dialogue: 0,0:21:12.01,0:21:16.59,Default,,0,0,45,,{\fnSimHei\fs42}你觉得整个趋势是大家仍然依赖集中式计算，\N{\fnSegoe UI\fs32\b1}vision say next years something that. Do you see trajectory everyone still
+Dialogue: 0,0:21:16.59,0:21:21.64,Default,,0,0,45,,{\fnSimHei\fs42}还是会转向我们都有本地代理，不用担心被限速，\N{\fnSegoe UI\fs32\b1}relying on centralized compute is pivot oh, we all just have local agents
+Dialogue: 0,0:21:21.64,0:21:23.71,Default,,0,0,45,,{\fnSimHei\fs42}还能享受其他好处？\N{\fnSegoe UI\fs32\b1}can rely they don't throttled benefits?
+Dialogue: 0,0:21:23.72,0:21:27.77,Default,,0,0,45,,{\fnSimHei\fs42}以及其他好处？是的，我觉得这个……不知道。\N{\fnSegoe UI\fs32\b1}and other benefits? Yeah, I think it um don't know. There's maybe a
+Dialogue: 0,0:21:27.77,0:21:32.59,Default,,0,0,45,,{\fnSimHei\fs42}可能有几种回答方式。最基本的一种是，这根本不重要。\N{\fnSegoe UI\fs32\b1}few ways to answer that. like kind of the most fundamental way that is doesn't matter.
+Dialogue: 0,0:21:32.60,0:21:36.34,Default,,0,0,45,,{\fnSimHei\fs42}回答是，这根本不重要。因为我认为现在我们正到达一个点，\N{\fnSegoe UI\fs32\b1}answer that is it doesn't matter. Cuz I think now we're getting to the
+Dialogue: 0,0:21:36.34,0:21:38.83,Default,,0,0,45,,{\fnSimHei\fs42}模型能够自己搞定了。所以，再过几年，\N{\fnSegoe UI\fs32\b1}point where model just able figure out. So, like by
+Dialogue: 0,0:21:38.83,0:21:42.15,Default,,0,0,45,,{\fnSimHei\fs42}模型将包揽所有代码工作。它会启动代理，构建环境。\N{\fnSegoe UI\fs32\b1}a couple years from going be doing all code. It's starting agents. building environments.
+Dialogue: 0,0:21:42.16,0:21:45.58,Default,,0,0,45,,{\fnSimHei\fs42}它会自己去构建环境。所以，如果它决定用本地模型来做，\N{\fnSegoe UI\fs32\b1}going to be building the environments. And so, like if it decides actually I'll use local models do this,
+Dialogue: 0,0:21:45.58,0:21:46.63,Default,,0,0,45,,{\fnSimHei\fs42}那它就会这么做。\N{\fnSegoe UI\fs32\b1}then you know, that's what it'll do.
+Dialogue: 0,0:21:46.64,0:21:51.15,Default,,0,0,45,,{\fnSimHei\fs42}那它就会这么做。我认为这些将不再是工程师需要做的决策了。\N{\fnSegoe UI\fs32\b1}then you know, that's what it'll do. These I don't think these will be decisions that we are making as engineers anymore.
+Dialogue: 0,0:21:51.16,0:21:55.43,Default,,0,0,45,,{\fnSimHei\fs42}我们还有时间再问几个问题，所以我可以抛出这个问题。\N{\fnSegoe UI\fs32\b1}We have time for a couple more questions, so I can toss this out.
+Dialogue: 0,0:21:55.44,0:21:57.75,Default,,0,0,45,,{\fnSimHei\fs42}问题，所以我可以抛出这个问题。杰米。\N{\fnSegoe UI\fs32\b1}questions, so I can toss this out. Jamie.
+Dialogue: 0,0:21:57.76,0:21:59.59,Default,,0,0,45,,{\fnSimHei\fs42}内斯特。谢谢。\N{\fnSegoe UI\fs32\b1}Nester. Thank you.
+Dialogue: 0,0:21:59.60,0:22:03.12,Default,,0,0,45,,{\fnSimHei\fs42}感觉Claude Code一个很厉害的决定，\N{\fnSegoe UI\fs32\b1}It feels like one of the great uh decisions with Claude
+Dialogue: 0,0:22:03.12,0:22:07.27,Default,,0,0,45,,{\fnSimHei\fs42}是利用了许多开发者的工具和工作流都是本地化这一事实。\N{\fnSegoe UI\fs32\b1}Code was making use fact that a lot developers' tools and workflows are local.
+Dialogue: 0,0:22:07.28,0:22:10.50,Default,,0,0,45,,{\fnSimHei\fs42}但对于一般的知识工作来说，情况不一定是这样，\N{\fnSegoe UI\fs32\b1}But um that isn't necessarily always the case for
+Dialogue: 0,0:22:10.50,0:22:12.84,Default,,0,0,45,,{\fnSimHei\fs42}很多人用的是云端工具。我很好奇，\N{\fnSegoe UI\fs32\b1}sort of general knowledge work with,
+Dialogue: 0,0:22:12.84,0:22:15.76,Default,,0,0,45,,{\fnSimHei\fs42}你们是如何思考Co-work这个产品的，\N{\fnSegoe UI\fs32\b1}you know, cloud tools. I'm curious how you're
+Dialogue: 0,0:22:15.76,0:22:18.97,Default,,0,0,45,,{\fnSimHei\fs42}它能否像Claude Code对开发者那样，\N{\fnSegoe UI\fs32\b1}thinking about this Co-work do give enough access to
+Dialogue: 0,0:22:18.97,0:22:22.63,Default,,0,0,45,,{\fnSimHei\fs42}为我们使用的工具提供足够的访问权限，让它同样强大？\N{\fnSegoe UI\fs32\b1}tools we use be powerful same way Claude Code is developers?
+Dialogue: 0,0:22:22.64,0:22:26.36,Default,,0,0,45,,{\fnSimHei\fs42}就像Code对开发者那样吗？是的，这是个非常好的问题。\N{\fnSegoe UI\fs32\b1}Code is for developers? Yeah, it's That's a really great question. Um
+Dialogue: 0,0:22:26.36,0:22:28.43,Default,,0,0,45,,{\fnSimHei\fs42}嗯，我知道当我在大公司的时候，\N{\fnSegoe UI\fs32\b1}I know when was uh at big
+Dialogue: 0,0:22:28.43,0:22:31.32,Default,,0,0,45,,{\fnSimHei\fs42}我们花了大概5年时间把所有环境迁移到远端。\N{\fnSegoe UI\fs32\b1}company, we took like 5 years moving all the environments
+Dialogue: 0,0:22:31.32,0:22:33.67,Default,,0,0,45,,{\fnSimHei\fs42}这工作量太大了，尤其是在大规模下。\N{\fnSegoe UI\fs32\b1}to remote. It's just so much work, especially scale.
+Dialogue: 0,0:22:33.68,0:22:35.99,Default,,0,0,45,,{\fnSimHei\fs42}尤其是在大规模下。嗯，但对于知识工作来说，\N{\fnSegoe UI\fs32\b1}especially at a big scale. Um but for
+Dialogue: 0,0:22:35.99,0:22:36.98,Default,,0,0,45,,{\fnSimHei\fs42}它其实已经存在了，\N{\fnSegoe UI\fs32\b1}knowledge work, largely, it's
+Dialogue: 0,0:22:36.98,0:22:39.19,Default,,0,0,45,,{\fnSimHei\fs42}比如Salesforce和文档这类工具。\N{\fnSegoe UI\fs32\b1}there already with like Salesforce and Docs things that.
+Dialogue: 0,0:22:39.20,0:22:40.91,Default,,0,0,45,,{\fnSimHei\fs42}文档之类的。呃，对我们来说，\N{\fnSegoe UI\fs32\b1}Docs and things like that. Um for
+Dialogue: 0,0:22:40.91,0:22:42.87,Default,,0,0,45,,{\fnSimHei\fs42}答案往往最简单——就是 MCP。\N{\fnSegoe UI\fs32\b1}us, it's always just the simplest answer. It's MCP.
+Dialogue: 0,0:22:42.88,0:22:44.39,Default,,0,0,45,,{\fnSimHei\fs42}答案就是 MCP。所以，\N{\fnSegoe UI\fs32\b1}answer. It's just MCP.
+Dialogue: 0,0:22:44.39,0:22:47.78,Default,,0,0,45,,{\fnSimHei\fs42}你在 Claude AI 里用的那个 MCP 连接器，\N{\fnSegoe UI\fs32\b1}So, the same MCP connector that you have in
+Dialogue: 0,0:22:47.78,0:22:50.80,Default,,0,0,45,,{\fnSimHei\fs42}接上 Salesforce、Google 文档、\N{\fnSegoe UI\fs32\b1}Claude AI, hook up like, know, Salesforce, Google
+Dialogue: 0,0:22:50.80,0:22:53.69,Default,,0,0,45,,{\fnSimHei\fs42}日历什么的，然后 Co-work 就能用上它。\N{\fnSegoe UI\fs32\b1}Docs, Calendar. Uh and then Co-work can use
+Dialogue: 0,0:22:53.69,0:22:55.07,Default,,0,0,45,,{\fnSimHei\fs42}命令行操作，随处编码。\N{\fnSegoe UI\fs32\b1}that. CLI it. Code everywhere
+Dialogue: 0,0:22:56.48,0:22:58.55,Default,,0,0,45,,{\fnSimHei\fs42}对于那些没有 MCP 的系统，\N{\fnSegoe UI\fs32\b1}And for the systems that don't have MCPs,
+Dialogue: 0,0:22:58.55,0:23:02.15,Default,,0,0,45,,{\fnSimHei\fs42}你觉得这是不是意味着“计算机使用”会成为一个大机会？\N{\fnSegoe UI\fs32\b1}like do you think that's where computer use is going to be a big opportunity?
+Dialogue: 0,0:23:02.16,0:23:05.82,Default,,0,0,45,,{\fnSimHei\fs42}没错，我觉得“计算机使用”算是一个万能方案。呃，\N{\fnSegoe UI\fs32\b1}Yeah, I think computer use is kind of a catchall.
+Dialogue: 0,0:23:05.82,0:23:09.78,Default,,0,0,45,,{\fnSimHei\fs42}目前据我所知，Anthropic 在这方面挺领先的。\N{\fnSegoe UI\fs32\b1}Um so, currently, for as far know, Anthropic like pretty ahead
+Dialogue: 0,0:23:09.78,0:23:13.59,Default,,0,0,45,,{\fnSimHei\fs42}如果你通过 Co-work 来运行，效果相当不错。\N{\fnSegoe UI\fs32\b1}on computers. And if you it through Co-work, it's quite
+Dialogue: 0,0:23:13.59,0:23:17.55,Default,,0,0,45,,{\fnSimHei\fs42}基本上能操控你电脑上的任何软件。虽然现在速度还挺慢，\N{\fnSegoe UI\fs32\b1}good. able to much any piece software that have your computer.
+Dialogue: 0,0:23:17.55,0:23:20.75,Default,,0,0,45,,{\fnSimHei\fs42}但表现已经很好，尤其是搭配 4.7 版本。\N{\fnSegoe UI\fs32\b1}It's very slow, but does well now, especially with 4.7.
+Dialogue: 0,0:23:20.76,0:23:25.34,Default,,0,0,45,,{\fnSimHei\fs42}嗯，但除此之外，我觉得 MCP 基本上就是答案了。你看，\N{\fnSegoe UI\fs32\b1}Um Yeah, but I think otherwise like MCP is kind of the answer.
+Dialogue: 0,0:23:25.34,0:23:29.42,Default,,0,0,45,,{\fnSimHei\fs42}这些杂七杂八的东西其实没那么重要。可以是 MCP、\N{\fnSegoe UI\fs32\b1}It's And you know, all this stuff just doesn't matter that
+Dialogue: 0,0:23:29.42,0:23:32.04,Default,,0,0,45,,{\fnSimHei\fs42}API，或者某种程序化访问方式，\N{\fnSegoe UI\fs32\b1}much. It could be MCPs, APIs, some
+Dialogue: 0,0:23:32.04,0:23:35.47,Default,,0,0,45,,{\fnSimHei\fs42}因为模型只关心这个——它只认 Token。\N{\fnSegoe UI\fs32\b1}sort programmatic access cuz model care. to mo- To it's tokens.
+Dialogue: 0,0:23:35.48,0:23:38.19,Default,,0,0,45,,{\fnSimHei\fs42}说到底就是 Token。好了，我们还能再问一个问题。\N{\fnSegoe UI\fs32\b1}it's just tokens. All right, we have time for one more question.
+Dialogue: 0,0:23:41.20,0:23:45.27,Default,,0,0,45,,{\fnSimHei\fs42}Sean，你要不要抛个——谢谢。\N{\fnSegoe UI\fs32\b1}Sean, do you want to toss the Thank you.
+Dialogue: 0,0:23:45.28,0:23:48.11,Default,,0,0,45,,{\fnSimHei\fs42}Sean，你要不要抛个——谢谢。呃，\N{\fnSegoe UI\fs32\b1}Sean, do you want to toss the Thank you.
+Dialogue: 0,0:23:48.11,0:23:50.00,Default,,0,0,45,,{\fnSimHei\fs42}你刚才已经暗示过这一点，\N{\fnSegoe UI\fs32\b1}Um you've kind of alluded this,
+Dialogue: 0,0:23:50.00,0:23:53.31,Default,,0,0,45,,{\fnSimHei\fs42}但如果早些时候看到“概率性产品遗留问题”，\N{\fnSegoe UI\fs32\b1}but if like sometime ago saw probabil- product overhang and
+Dialogue: 0,0:23:53.31,0:23:54.57,Default,,0,0,45,,{\fnSimHei\fs42}想着先搭个东西，\N{\fnSegoe UI\fs32\b1}thought build a that
+Dialogue: 0,0:23:54.57,0:23:58.66,Default,,0,0,45,,{\fnSimHei\fs42}等模型变强之后它会变得更有意思——你能不能大概聊聊，\N{\fnSegoe UI\fs32\b1}would then become more interesting once models got better, could just talk even
+Dialogue: 0,0:23:58.66,0:24:00.87,Default,,0,0,45,,{\fnSimHei\fs42}你觉得从现在起半年到一年后，\N{\fnSegoe UI\fs32\b1}in vague terms about shape you'd today
+Dialogue: 0,0:24:00.87,0:24:03.23,Default,,0,0,45,,{\fnSimHei\fs42}什么样的东西会变得特别有价值？\N{\fnSegoe UI\fs32\b1}think becomes much as get 6 months year?
+Dialogue: 0,0:24:03.24,0:24:04.84,Default,,0,0,45,,{\fnSimHei\fs42}半年到一年后会变得更好？嗯，\N{\fnSegoe UI\fs32\b1}better in 6 months to a year?
+Dialogue: 0,0:24:04.84,0:24:08.04,Default,,0,0,45,,{\fnSimHei\fs42}Claude 设计就是个很好的例子。它现在已经挺不错了，\N{\fnSegoe UI\fs32\b1}Yeah, Claude design I think is really good example. It's uh it's pretty today.
+Dialogue: 0,0:24:08.04,0:24:08.95,Default,,0,0,45,,{\fnSimHei\fs42}但还会变得更好。\N{\fnSegoe UI\fs32\b1}going get lot better.
+Dialogue: 0,0:24:08.96,0:24:12.43,Default,,0,0,45,,{\fnSimHei\fs42}呃，还有一些我们正在为 Claude Code 开发的东\N{\fnSegoe UI\fs32\b1}Um there's also a few things that we're cooking up for Claude Code uh are
+Dialogue: 0,0:24:12.43,0:24:15.15,Default,,0,0,45,,{\fnSimHei\fs42}西，未来几周就会上线。到时候你们就能看到了。\N{\fnSegoe UI\fs32\b1}going to be landing over the coming weeks. So, you'll see those.
+Dialogue: 0,0:24:15.16,0:24:21.05,Default,,0,0,45,,{\fnSimHei\fs42}然后，我觉得像这种循环批处理、大规模并行化智能体的事情，\N{\fnSegoe UI\fs32\b1}Um and then I think uh loop batch things like this around massively parallelizing agents,
+Dialogue: 0,0:24:21.05,0:24:22.95,Default,,0,0,45,,{\fnSimHei\fs42}也会变得越来越好。\N{\fnSegoe UI\fs32\b1}that's going to get better.
+Dialogue: 0,0:24:22.96,0:24:25.91,Default,,0,0,45,,{\fnSimHei\fs42}“计算机使用”也是一个很好的例子。\N{\fnSegoe UI\fs32\b1}And computer use is another good one.
+Dialogue: 0,0:24:25.92,0:24:27.96,Default,,0,0,45,,{\fnSimHei\fs42}“计算机使用”也是一个很好的例子。好了，Boris，\N{\fnSegoe UI\fs32\b1}And computer use is another good one. All right, Boris. Thank you so
+Dialogue: 0,0:24:27.96,0:24:29.61,Default,,0,0,45,,{\fnSimHei\fs42}非常感谢你来做客。我们还会在这儿待一会儿，\N{\fnSegoe UI\fs32\b1}much for joining us. I think we'll be here a
+Dialogue: 0,0:24:29.61,0:24:30.48,Default,,0,0,45,,{\fnSimHei\fs42}如果大家还有问题的话。\N{\fnSegoe UI\fs32\b1}little longer if anyone has questions.
